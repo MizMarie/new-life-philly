@@ -5,11 +5,12 @@ import problemImg from "@/assets/nlp-problem.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { useReveal } from "@/hooks/use-reveal";
+import { abs, breadcrumbJsonLd } from "@/lib/seo";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — New Life Philly" },
+      { title: "About Our Church in Olney, Philadelphia | New Life Philly" },
       {
         name: "description",
         content:
@@ -21,9 +22,15 @@ export const Route = createFileRoute("/about")({
         content:
           "A thriving family in the city where the broken from all nations are made alive and whole — finding hope and purpose in Jesus.",
       },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: abs("/about") },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: abs("/about") }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(breadcrumbJsonLd("About", "/about")),
+      },
+    ],
   }),
   component: AboutPage,
 });

@@ -77,14 +77,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "New Life Philly — Homepage Draft" },
+      { title: "New Life Philly — Church in Olney, Philadelphia" },
       {
         name: "description",
         content:
           "New Life Philly is a non-denominational church in Olney, North Philadelphia. Sundays at 10am — real people, real love, real hope.",
       },
       { name: "author", content: "New Life Philly Church" },
-      { property: "og:title", content: "New Life Philly — Homepage Draft" },
+      { property: "og:site_name", content: "New Life Philly" },
+      { property: "og:title", content: "New Life Philly — Church in Olney, Philadelphia" },
       {
         property: "og:description",
         content:

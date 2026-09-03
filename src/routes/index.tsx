@@ -16,25 +16,29 @@ import {
   STEPS,
 } from "@/lib/site-content";
 import { useReveal } from "@/hooks/use-reveal";
+import { CHURCH_JSONLD, abs } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "New Life Philly — Real People. Real Love. Real Hope." },
+      { title: "Church in Olney, Philadelphia | New Life Philly" },
       {
         name: "description",
         content:
-          "Real People. Real Love. Real Hope. A non-denominational church in Olney, Philadelphia. Sundays at 10am at 425 E Roosevelt Blvd.",
+          "Non-denominational church in Olney, North Philadelphia. Sundays at 10am, 425 E Roosevelt Blvd — free parking, casual dress, kids covered. Plan your visit.",
       },
-      { property: "og:title", content: "New Life Philly — Real People. Real Love. Real Hope." },
+      { property: "og:title", content: "Church in Olney, Philadelphia | New Life Philly" },
       {
         property: "og:description",
         content:
           "Community rooted in Olney. Open to all of Philadelphia. Plan your visit for Sunday at 10am.",
       },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: abs("/") },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: abs("/") }],
+    scripts: [
+      { type: "application/ld+json", children: JSON.stringify(CHURCH_JSONLD) },
+    ],
   }),
   component: Home,
 });
