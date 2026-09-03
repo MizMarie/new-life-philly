@@ -10,7 +10,6 @@ import {
   ADDRESS_1,
   EMAIL,
   FIRST_SUNDAY,
-  NEXT_LINKS,
   PHONE,
   PRAYER_URL,
   STEPS,
