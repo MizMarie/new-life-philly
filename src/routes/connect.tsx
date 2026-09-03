@@ -3,6 +3,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MINISTRIES, RESOURCE_LINKS, YOUTUBE_URL } from "@/lib/site-content";
+import groupsImg from "@/assets/nlp-story.jpg";
+import eventsImg from "@/assets/nlp-guide.jpg";
+import sermonsImg from "@/assets/nlp-step2.jpg";
 import { useReveal } from "@/hooks/use-reveal";
 import { abs, breadcrumbJsonLd } from "@/lib/seo";
 
@@ -138,7 +141,7 @@ function ConnectPage() {
             <Link to="/groups" data-reveal className={CARD}>
               <div className="h-[210px]">
                 <img
-                  src={MINISTRIES[2].img}
+                  src={groupsImg}
                   alt="A Life Group gathered around a table"
                   className="h-full w-full object-cover"
                   loading="lazy"
@@ -162,7 +165,7 @@ function ConnectPage() {
             <Link to="/events" data-reveal className={CARD}>
               <div className="h-[210px]">
                 <img
-                  src={MINISTRIES[4].img}
+                  src={eventsImg}
                   alt="Church members together at a New Life Philly event"
                   className="h-full w-full object-cover"
                   loading="lazy"
@@ -210,7 +213,7 @@ function ConnectPage() {
             <Link to="/sermons" data-reveal className={CARD}>
               <div className="h-[210px]">
                 <img
-                  src={MINISTRIES[1].img}
+                  src={sermonsImg}
                   alt="A pastor preaching on a Sunday morning"
                   className="h-full w-full object-cover"
                   loading="lazy"
