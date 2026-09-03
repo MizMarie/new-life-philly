@@ -24,7 +24,7 @@ export function SiteFooter() {
             height={84}
           />
           <p className="mt-5 mb-0 font-display text-[19px] font-semibold tracking-tight text-white">
-            Real People. Real Love. Real Hope.
+            New Life Philly
           </p>
           <p className="mt-3.5 mb-0 max-w-[34ch] text-[16px] leading-[1.65] text-white/65">
             A non-denominational church in the Olney section of North Philadelphia — wherever
