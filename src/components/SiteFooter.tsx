@@ -23,12 +23,12 @@ export function SiteFooter() {
             width={84}
             height={84}
           />
-          <p className="mt-5 mb-0 font-display text-[19px] font-semibold tracking-tight text-white">
+          <p className="mt-5 mb-0 text-center font-display text-[19px] font-semibold tracking-tight text-white">
             New Life Philly
           </p>
           <p className="mt-3.5 mb-0 max-w-[34ch] text-[16px] leading-[1.65] text-white/65">
-            A non-denominational church in the Olney section of North Philadelphia — wherever
-            you're coming from, you're welcome here.
+            A non-denominational church in the Olney section of Philadelphia — wherever you're
+            coming from, you're welcome here.
           </p>
           <div className="mt-5 flex flex-wrap gap-2.5">
             {SOCIALS.map((s) => (
