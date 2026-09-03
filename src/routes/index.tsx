@@ -16,6 +16,7 @@ import {
   STEPS,
 } from "@/lib/site-content";
 import { useReveal } from "@/hooks/use-reveal";
+import { CHURCH_JSONLD, abs } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
   head: () => ({
