@@ -32,7 +32,7 @@ function AboutPage() {
   const pageRef = useReveal<HTMLDivElement>();
 
   return (
-    <div ref={pageRef} className="overflow-x-hidden bg-white font-sans text-body">
+    <div ref={pageRef} className="bg-white font-sans text-body">
       <SiteHeader />
 
       {/* Intro */}
