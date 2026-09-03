@@ -46,7 +46,7 @@ export const STEPS = [
     title: "Real Love Connects",
     body: "Find your people. There's a place for every age and every stage.",
     cta: "Find a Group →",
-    href: GROUPS_URL,
+    href: CHURCH_CENTER_URL,
   },
   {
     n: "3",

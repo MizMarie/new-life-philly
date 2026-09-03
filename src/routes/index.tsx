@@ -242,10 +242,10 @@ function Home() {
           <div data-reveal className="lg:order-2">
             <div className="eyebrow mb-5 text-olive-light">If you're searching</div>
             <h2 className="m-0 max-w-[20ch] font-display text-[clamp(32px,3.9vw,54px)] leading-[1.1] font-bold tracking-[-0.022em] text-white">
-              Most people don't go looking for a church until something makes them stop.
+              Our lives are full but are we fulfilled?
             </h2>
             <p className="mt-7 mb-0 max-w-[30ch] text-[22px] leading-[1.6] font-semibold text-olive-light">
-              That's not a bad reason to be here. It might be the most honest one.
+              You weren't made to just survive.
             </p>
             <p className="mt-5 mb-0 max-w-[44ch] text-[18px] leading-[1.7] text-white/75">
               Maybe you grew up in church and walked away. Maybe you've never set foot in one. Maybe
