@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ConnectRouteImport } from './routes/connect'
+import { Route as GroupsRouteImport } from './routes/groups'
 import { Route as NextStepsRouteImport } from './routes/next-steps'
 import { Route as PlanYourVisitRouteImport } from './routes/plan-your-visit'
 import { Route as SermonsRouteImport } from './routes/sermons'
@@ -30,6 +31,11 @@ const AboutRoute = AboutRouteImport.update({
 const ConnectRoute = ConnectRouteImport.update({
   id: '/connect',
   path: '/connect',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GroupsRoute = GroupsRouteImport.update({
+  id: '/groups',
+  path: '/groups',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NextStepsRoute = NextStepsRouteImport.update({
@@ -57,6 +63,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/connect': typeof ConnectRoute
+  '/groups': typeof GroupsRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
   '/sermons': typeof SermonsRoute
@@ -66,6 +73,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/connect': typeof ConnectRoute
+  '/groups': typeof GroupsRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
   '/sermons': typeof SermonsRoute
@@ -76,6 +84,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/connect': typeof ConnectRoute
+  '/groups': typeof GroupsRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
   '/sermons': typeof SermonsRoute
@@ -87,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/connect'
+    | '/groups'
     | '/next-steps'
     | '/plan-your-visit'
     | '/sermons'
@@ -96,6 +106,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/connect'
+    | '/groups'
     | '/next-steps'
     | '/plan-your-visit'
     | '/sermons'
@@ -105,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/connect'
+    | '/groups'
     | '/next-steps'
     | '/plan-your-visit'
     | '/sermons'
@@ -115,6 +127,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ConnectRoute: typeof ConnectRoute
+  GroupsRoute: typeof GroupsRoute
   NextStepsRoute: typeof NextStepsRoute
   PlanYourVisitRoute: typeof PlanYourVisitRoute
   SermonsRoute: typeof SermonsRoute
@@ -142,6 +155,13 @@ declare module '@tanstack/react-router' {
       path: '/connect'
       fullPath: '/connect'
       preLoaderRoute: typeof ConnectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/groups': {
+      id: '/groups'
+      path: '/groups'
+      fullPath: '/groups'
+      preLoaderRoute: typeof GroupsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/next-steps': {
@@ -179,6 +199,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ConnectRoute: ConnectRoute,
+  GroupsRoute: GroupsRoute,
   NextStepsRoute: NextStepsRoute,
   PlanYourVisitRoute: PlanYourVisitRoute,
   SermonsRoute: SermonsRoute,
