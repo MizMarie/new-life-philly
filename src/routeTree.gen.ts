@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ConnectRouteImport } from './routes/connect'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as GroupsRouteImport } from './routes/groups'
+import { Route as MinistriesRouteImport } from './routes/ministries'
 import { Route as NextStepsRouteImport } from './routes/next-steps'
 import { Route as PlanYourVisitRouteImport } from './routes/plan-your-visit'
 import { Route as SermonsRouteImport } from './routes/sermons'
@@ -44,6 +45,11 @@ const GroupsRoute = GroupsRouteImport.update({
   path: '/groups',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MinistriesRoute = MinistriesRouteImport.update({
+  id: '/ministries',
+  path: '/ministries',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const NextStepsRoute = NextStepsRouteImport.update({
   id: '/next-steps',
   path: '/next-steps',
@@ -71,6 +77,7 @@ export interface FileRoutesByFullPath {
   '/connect': typeof ConnectRoute
   '/events': typeof EventsRoute
   '/groups': typeof GroupsRoute
+  '/ministries': typeof MinistriesRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
   '/sermons': typeof SermonsRoute
@@ -82,6 +89,7 @@ export interface FileRoutesByTo {
   '/connect': typeof ConnectRoute
   '/events': typeof EventsRoute
   '/groups': typeof GroupsRoute
+  '/ministries': typeof MinistriesRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
   '/sermons': typeof SermonsRoute
@@ -94,6 +102,7 @@ export interface FileRoutesById {
   '/connect': typeof ConnectRoute
   '/events': typeof EventsRoute
   '/groups': typeof GroupsRoute
+  '/ministries': typeof MinistriesRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
   '/sermons': typeof SermonsRoute
@@ -107,6 +116,7 @@ export interface FileRouteTypes {
     | '/connect'
     | '/events'
     | '/groups'
+    | '/ministries'
     | '/next-steps'
     | '/plan-your-visit'
     | '/sermons'
@@ -118,6 +128,7 @@ export interface FileRouteTypes {
     | '/connect'
     | '/events'
     | '/groups'
+    | '/ministries'
     | '/next-steps'
     | '/plan-your-visit'
     | '/sermons'
@@ -129,6 +140,7 @@ export interface FileRouteTypes {
     | '/connect'
     | '/events'
     | '/groups'
+    | '/ministries'
     | '/next-steps'
     | '/plan-your-visit'
     | '/sermons'
@@ -141,6 +153,7 @@ export interface RootRouteChildren {
   ConnectRoute: typeof ConnectRoute
   EventsRoute: typeof EventsRoute
   GroupsRoute: typeof GroupsRoute
+  MinistriesRoute: typeof MinistriesRoute
   NextStepsRoute: typeof NextStepsRoute
   PlanYourVisitRoute: typeof PlanYourVisitRoute
   SermonsRoute: typeof SermonsRoute
@@ -184,6 +197,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GroupsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ministries': {
+      id: '/ministries'
+      path: '/ministries'
+      fullPath: '/ministries'
+      preLoaderRoute: typeof MinistriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/next-steps': {
       id: '/next-steps'
       path: '/next-steps'
@@ -221,6 +241,7 @@ const rootRouteChildren: RootRouteChildren = {
   ConnectRoute: ConnectRoute,
   EventsRoute: EventsRoute,
   GroupsRoute: GroupsRoute,
+  MinistriesRoute: MinistriesRoute,
   NextStepsRoute: NextStepsRoute,
   PlanYourVisitRoute: PlanYourVisitRoute,
   SermonsRoute: SermonsRoute,

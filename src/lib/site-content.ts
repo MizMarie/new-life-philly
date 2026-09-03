@@ -112,8 +112,8 @@ export const STEPS = [
     alt: "A small group laughing together around a table",
     title: "Real Love Connects",
     body: "Find your people. There's a place for every age and every stage.",
-    cta: "Find a Group →",
-    href: CHURCH_CENTER_URL,
+    cta: "Find Your People →",
+    to: "/connect",
   },
   {
     n: "3",
@@ -131,13 +131,13 @@ export const NEXT_LINKS = [
     title: "Find Your Community",
     body: "Real connection in a group committed to honesty and growth.",
     cta: "Explore Groups →",
-    href: GROUPS_URL,
+    to: "/groups",
   },
   {
     title: "Live Out Your Mission",
     body: "Use your gifts and make a tangible impact right here in Philly.",
     cta: "Find a Way to Serve →",
-    href: CHURCH_CENTER_URL,
+    to: "/connect",
   },
   {
     title: "Practice the Way",
