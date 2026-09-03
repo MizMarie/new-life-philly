@@ -1,24 +1,91 @@
 import step1Img from "@/assets/nlp-step1.jpg";
 import step2Img from "@/assets/nlp-step2.jpg";
 import step3Img from "@/assets/nlp-step3.jpg";
+import storyImg from "@/assets/nlp-story.jpg";
+import guideImg from "@/assets/nlp-guide.jpg";
 
 export const GIVE_URL = "https://newlifephilly.churchcenter.com/giving";
 export const PRAYER_URL = "https://newlifephilly.churchcenter.com/people/forms/382423";
 export const CHURCH_CENTER_URL = "https://newlifephilly.churchcenter.com/home";
 export const GROUPS_URL =
   "https://newlifephilly.churchcenter.com/groups/life-groups?enrollment=open_signup%2Crequest_to_join&filter=enrollment";
-export const SERVE_URL = "https://newlifephilly.churchcenter.com/calendar?view=gallery";
+export const CALENDAR_URL = "https://newlifephilly.churchcenter.com/calendar?view=gallery";
+export const SERVE_URL = CALENDAR_URL;
+export const UNBOUND_PRAYER_URL = "https://newlifephilly.churchcenter.com/pages/unbound-prayer";
 export const YOUTUBE_URL = "https://www.youtube.com/@NewLifePhilly";
 export const EMAIL = "newlife@newlifephilly.net";
 export const PHONE = "215-324-4566";
 export const ADDRESS_1 = "425 E Roosevelt Blvd";
 export const ADDRESS_2 = "Philadelphia, PA 19120";
 
+/**
+ * Church Center deep links for the "Additional Resources" row.
+ * TODO (New Life Philly): replace any entry still pointing at CHURCH_CENTER_URL
+ * with the exact form URL from your Church Center admin — this is the only
+ * place these URLs live, so you only have to paste them once.
+ */
+export const RESOURCE_LINKS = [
+  { label: "Serving Interest", href: CHURCH_CENTER_URL }, // TODO: exact form URL
+  { label: "Building Requests", href: CHURCH_CENTER_URL }, // TODO: exact form URL
+  { label: "Counseling Help", href: CHURCH_CENTER_URL }, // TODO: exact form URL
+  { label: "Resources Help", href: CHURCH_CENTER_URL }, // TODO: exact form URL
+  { label: "Baptism / Dedication", href: CHURCH_CENTER_URL }, // TODO: exact form URL
+  { label: "Faith and Politics", href: CHURCH_CENTER_URL }, // TODO: exact form URL
+  { label: "Prayer Ministry", href: PRAYER_URL },
+  { label: "Church Directory", href: CHURCH_CENTER_URL }, // TODO: exact directory URL
+];
+
+/** Ministries — drafted copy and placeholder photos until real ones arrive. */
+export const MINISTRIES = [
+  {
+    id: "kids",
+    name: "Kids",
+    ages: "Ages 1 – 5th grade",
+    img: step1Img,
+    alt: "Children playing together at New Life Philly",
+    body: "Sunday mornings kids have their own space with people who know their names. Safe check-in, age-appropriate teaching, and plenty of room to be a kid.",
+  },
+  {
+    id: "youth",
+    name: "Youth",
+    ages: "Middle & high school",
+    img: step3Img,
+    alt: "Youth group playing games in the gym",
+    body: "Games in the gym, honest conversation, and a place to ask the hard questions without being handed a script. Students find real friendships here.",
+  },
+  {
+    id: "women",
+    name: "Women",
+    ages: "All seasons of life",
+    img: storyImg,
+    alt: "Women gathered around a table together",
+    body: "Tables, Bibles, and coffee. Women across every age and stage gather to study Scripture, pray for one another, and carry each other's real life.",
+  },
+  {
+    id: "men",
+    name: "Men",
+    ages: "All ages",
+    img: step2Img,
+    alt: "Men gathered outside the church building",
+    body: "Straight talk, shared work, and brothers who show up. Men meet to grow in Christ and to take responsibility at home, at work, and in the neighborhood.",
+  },
+  {
+    id: "young-adults",
+    name: "Young Adults",
+    ages: "College & twenties",
+    img: guideImg,
+    alt: "Young adults on a retreat together",
+    body: "For students, workers, and everyone figuring out what's next. Community that meets you in the middle of the mess and points you toward Jesus.",
+  },
+];
+
 export const NAV_LINKS = [
   { label: "About", to: "/about" },
   { label: "Sermons", to: "/sermons" },
+  { label: "Connect", to: "/connect" },
   { label: "Next Steps", to: "/next-steps" },
 ] as const;
+
 
 export const FIRST_SUNDAY = [
   { title: "10:00 AM on Sundays", body: "About 90 minutes, start to finish." },
