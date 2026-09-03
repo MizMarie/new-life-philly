@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
+import { cn } from "@/lib/utils";
 import heroImg from "@/assets/nlp-hero.jpg";
 import problemImg from "@/assets/nlp-problem.jpg";
 import guideImg from "@/assets/nlp-guide.jpg";
