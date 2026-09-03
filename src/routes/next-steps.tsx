@@ -127,39 +127,18 @@ function NextStepsPage() {
             </h2>
           </div>
           <div className="grid gap-10 border-t border-hairline pt-13 md:grid-cols-3">
-            {NEXT_LINKS.map((item) =>
-              "to" in item && item.to ? (
-                <Link
-                  key={item.title}
-                  to={item.to}
-                  data-reveal
-                  className="group block no-underline"
-                >
-                  <div className="font-display text-[23px] font-bold tracking-tight text-navy">
-                    {item.title}
-                  </div>
-                  <div className="mt-2.5 text-[17px] leading-[1.6] text-body-soft">{item.body}</div>
-                  <div className="mt-4 font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase transition-colors group-hover:text-navy">
-                    {item.cta}
-                  </div>
-                </Link>
-              ) : (
-                <a
-                  key={item.title}
-                  href={item.href}
-                  data-reveal
-                  className="group block no-underline"
-                >
-                  <div className="font-display text-[23px] font-bold tracking-tight text-navy">
-                    {item.title}
-                  </div>
-                  <div className="mt-2.5 text-[17px] leading-[1.6] text-body-soft">{item.body}</div>
-                  <div className="mt-4 font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase transition-colors group-hover:text-navy">
-                    {item.cta}
-                  </div>
-                </a>
-              ),
-            )}
+            {NEXT_LINKS.map((item) => (
+              <Link key={item.title} to={item.to} data-reveal className="group block no-underline">
+                <div className="font-display text-[23px] font-bold tracking-tight text-navy">
+                  {item.title}
+                </div>
+                <div className="mt-2.5 text-[17px] leading-[1.6] text-body-soft">{item.body}</div>
+                <div className="mt-4 font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase transition-colors group-hover:text-navy">
+                  {item.cta}
+                </div>
+              </Link>
+            ))}
+
           </div>
         </div>
       </section>
