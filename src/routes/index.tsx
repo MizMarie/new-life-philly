@@ -182,6 +182,40 @@ function Home() {
               </div>
             ))}
           </div>
+          <div className="pointer-events-auto mt-12 grid gap-6 border-t border-hairline pt-8 sm:grid-cols-3">
+            <div>
+              <div className="eyebrow mb-2 text-[11px] text-olive-dark">You're invited</div>
+              <div className="text-[17px] leading-[1.5] text-body">
+                Sundays at 10am
+                <br />
+                <span className="text-body-soft">{ADDRESS_1}, Philadelphia</span>
+              </div>
+            </div>
+            <div>
+              <div className="eyebrow mb-2 text-[11px] text-olive-dark">Contact us</div>
+              <div className="text-[17px] leading-[1.5] text-body">
+                {PHONE}
+                <br />
+                <a
+                  href={`mailto:${EMAIL}`}
+                  className="text-body-soft no-underline transition-colors hover:text-navy"
+                >
+                  {EMAIL}
+                </a>
+              </div>
+            </div>
+            <div>
+              <div className="eyebrow mb-2 text-[11px] text-olive-dark">Need prayer?</div>
+              <div className="text-[17px] leading-[1.5] text-body">
+                <a
+                  href={PRAYER_URL}
+                  className="border-b border-body-faint text-body no-underline transition-colors hover:border-olive-dark"
+                >
+                  Send a prayer request →
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
