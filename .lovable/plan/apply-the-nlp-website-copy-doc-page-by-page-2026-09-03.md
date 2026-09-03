@@ -12,7 +12,7 @@ The uploaded doc (`lovable_NLP_Doc_for_Website_2025.docx`) is fully readable. I'
 ## Phase 2 — About page
 
 - **Our Leadership:** intro copy + staff cards for Tim Bathurst, Seth Cross, Greg Snow, Allison Wanaselija, Sue Carter, each with an expandable "More…" showing their four Q&A answers.
-- **Our Shepherds (Elders)** and **Our Servants (Deacons):** name rosters in clean lists.
+- **Our Shepherds (Elders)** and **Our Servants (Deacons):** name rosters in clean lists. Leave image placeholders for each our shepherds and our servants as I will provide them later
 - **What We Believe:** page intro + the 5 belief sections (Word of God, Nature of God, Salvation, Humanity's Purpose, Unity in Essentials) as an accordion.
 - Reuses existing navy/olive styling, type, and scroll-reveal.
 
