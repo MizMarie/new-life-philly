@@ -160,7 +160,7 @@ function Home() {
       </section>
 
       {/* First Sunday */}
-      <section className="bg-white py-20 md:py-24">
+      <section className="bg-sage py-20 md:py-24">
         <div className="mx-auto max-w-[1240px] px-5 md:px-8">
           <div data-reveal className="mb-11 flex flex-wrap items-end justify-between gap-8">
             <div className="max-w-[600px]">
@@ -176,10 +176,19 @@ function Home() {
               More about visiting →
             </Link>
           </div>
-          <div className="grid gap-px overflow-hidden rounded-[20px] border border-hairline bg-hairline sm:grid-cols-2 lg:grid-cols-3">
-            {FIRST_SUNDAY.map((item) => (
-              <div key={item.title} data-reveal className="bg-white px-7 pt-[30px] pb-8">
-                <div className="font-display text-[19px] font-bold tracking-tight text-navy">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {FIRST_SUNDAY.map((item, i) => (
+              <div
+                key={item.title}
+                data-reveal
+                className="rounded-2xl border border-hairline bg-white px-7 pt-[30px] pb-8 shadow-[0_2px_14px_rgba(0,0,0,0.04)]"
+              >
+                <div
+                  className={cn(
+                    "font-display tracking-tight text-navy",
+                    i >= 3 ? "text-[20px] font-extrabold" : "text-[19px] font-bold"
+                  )}
+                >
                   {item.title}
                 </div>
                 <div className="mt-2 text-[17px] leading-[1.55] text-body-soft">{item.body}</div>
