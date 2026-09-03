@@ -196,16 +196,16 @@ function Home() {
             ))}
           </div>
           <div className="pointer-events-auto mt-12 grid gap-6 border-t border-hairline pt-8 sm:grid-cols-3">
-            <div>
-              <div className="eyebrow mb-2 text-[11px] text-olive-dark">You're invited</div>
+            <div className="text-center">
+              <div className="eyebrow mb-2 text-[13px] text-olive-dark">You're invited</div>
               <div className="text-[17px] leading-[1.5] text-body">
                 Sundays at 10am
                 <br />
                 <span className="text-body-soft">{ADDRESS_1}, Philadelphia</span>
               </div>
             </div>
-            <div>
-              <div className="eyebrow mb-2 text-[11px] text-olive-dark">Contact us</div>
+            <div className="text-center">
+              <div className="eyebrow mb-2 text-[13px] text-olive-dark">Contact us</div>
               <div className="text-[17px] leading-[1.5] text-body">
                 {PHONE}
                 <br />
@@ -217,8 +217,8 @@ function Home() {
                 </a>
               </div>
             </div>
-            <div>
-              <div className="eyebrow mb-2 text-[11px] text-olive-dark">Need prayer?</div>
+            <div className="text-center">
+              <div className="eyebrow mb-2 text-[13px] text-olive-dark">Need prayer?</div>
               <div className="text-[17px] leading-[1.5] text-body">
                 <a
                   href={PRAYER_URL}
