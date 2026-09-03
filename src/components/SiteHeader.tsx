@@ -54,6 +54,8 @@ export function SiteHeader() {
             ))}
             <a
               href={GIVE_URL}
+              target="_blank"
+              rel="noopener"
               className="font-display text-sm font-semibold tracking-[0.04em] text-navy no-underline transition-colors hover:text-olive-dark"
             >
               Give
@@ -114,6 +116,8 @@ export function SiteHeader() {
             ))}
             <a
               href={GIVE_URL}
+              target="_blank"
+              rel="noopener"
               onClick={() => setOpen(false)}
               className="border-b border-hairline py-3.5 font-display text-[19px] font-bold tracking-tight text-navy no-underline"
             >

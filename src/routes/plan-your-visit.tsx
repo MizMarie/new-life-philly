@@ -88,6 +88,8 @@ function PlanYourVisitPage() {
             </div>
             <a
               href={PRAYER_URL}
+              target="_blank"
+              rel="noopener"
               className="mt-8 inline-block border-b-2 border-cream pb-1 font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase no-underline transition-colors hover:border-olive"
             >
               Send a prayer request →

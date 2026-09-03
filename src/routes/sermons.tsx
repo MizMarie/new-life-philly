@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { YOUTUBE_URL, CHURCH_CENTER_URL } from "@/lib/site-content";
+import { YOUTUBE_URL } from "@/lib/site-content";
 import { useReveal } from "@/hooks/use-reveal";
 import { abs, breadcrumbJsonLd } from "@/lib/seo";
 
@@ -66,12 +66,12 @@ function SermonsPage() {
               Watch on YouTube →
             </a>
             <a
-              href={CHURCH_CENTER_URL}
+              href={YOUTUBE_URL + "/videos"}
               target="_blank"
               rel="noopener"
               className="pill border-[1.5px] border-white/55 bg-transparent px-8 py-[19px] text-[15px] text-white no-underline hover:bg-white/15 md:px-[34px]"
             >
-              Browse on Church Center
+              Browse Past Sermons
             </a>
           </div>
         </div>

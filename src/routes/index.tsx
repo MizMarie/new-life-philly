@@ -222,6 +222,8 @@ function Home() {
               <div className="text-[17px] leading-[1.5] text-body">
                 <a
                   href={PRAYER_URL}
+              target="_blank"
+              rel="noopener"
                   className="border-b border-body-faint text-body no-underline transition-colors hover:border-olive-dark"
                 >
                   Send a prayer request →

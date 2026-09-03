@@ -1,12 +1,14 @@
+import { Link } from "@tanstack/react-router";
+
 import logoAsset from "@/assets/nlp-logo.jpg.asset.json";
 import {
   ADDRESS_1,
   ADDRESS_2,
-  CHURCH_CENTER_URL,
   EMAIL,
   GIVE_URL,
   PHONE,
   PRAYER_URL,
+  UNBOUND_PRAYER_URL,
   SOCIALS,
 } from "@/lib/site-content";
 
@@ -86,28 +88,34 @@ export function SiteFooter() {
           <div className="grid gap-2.5 text-[16px]">
             <a
               href={PRAYER_URL}
+              target="_blank"
+              rel="noopener"
               className="text-white/80 no-underline transition-colors hover:text-white"
             >
               Need Prayer?
             </a>
             <a
-              href="https://newlifephilly.churchcenter.com/pages/unbound-prayer"
+              href={UNBOUND_PRAYER_URL}
+              target="_blank"
+              rel="noopener"
               className="text-white/80 no-underline transition-colors hover:text-white"
             >
               Unbound Prayer
             </a>
             <a
               href={GIVE_URL}
+              target="_blank"
+              rel="noopener"
               className="text-white/80 no-underline transition-colors hover:text-white"
             >
               Give
             </a>
-            <a
-              href={CHURCH_CENTER_URL}
+            <Link
+              to="/connect"
               className="text-white/80 no-underline transition-colors hover:text-white"
             >
-              Church Center
-            </a>
+              Connect
+            </Link>
           </div>
         </div>
       </div>
