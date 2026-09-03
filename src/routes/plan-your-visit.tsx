@@ -12,11 +12,12 @@ import {
   PRAYER_URL,
 } from "@/lib/site-content";
 import { useReveal } from "@/hooks/use-reveal";
+import { abs, breadcrumbJsonLd } from "@/lib/seo";
 
 export const Route = createFileRoute("/plan-your-visit")({
   head: () => ({
     meta: [
-      { title: "Plan Your Visit — New Life Philly" },
+      { title: "Plan Your Visit — Sundays 10am in Olney | New Life Philly" },
       {
         name: "description",
         content:
@@ -28,9 +29,15 @@ export const Route = createFileRoute("/plan-your-visit")({
         content:
           "Sundays at 10am in Olney, Philadelphia. Come as you are, sit in the back, decide nothing.",
       },
-      { property: "og:url", content: "/plan-your-visit" },
+      { property: "og:url", content: abs("/plan-your-visit") },
     ],
-    links: [{ rel: "canonical", href: "/plan-your-visit" }],
+    links: [{ rel: "canonical", href: abs("/plan-your-visit") }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(breadcrumbJsonLd("Plan Your Visit", "/plan-your-visit")),
+      },
+    ],
   }),
   component: PlanYourVisitPage,
 });

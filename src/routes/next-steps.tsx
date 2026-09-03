@@ -4,11 +4,12 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { NEXT_LINKS, STEPS } from "@/lib/site-content";
 import { useReveal } from "@/hooks/use-reveal";
+import { abs, breadcrumbJsonLd } from "@/lib/seo";
 
 export const Route = createFileRoute("/next-steps")({
   head: () => ({
     meta: [
-      { title: "Next Steps — New Life Philly" },
+      { title: "Next Steps — Groups & Serving in Philadelphia | New Life Philly" },
       {
         name: "description",
         content:
@@ -20,9 +21,15 @@ export const Route = createFileRoute("/next-steps")({
         content:
           "Real People Gather. Real Love Connects. Real Hope Acts. Find your next step at New Life Philly.",
       },
-      { property: "og:url", content: "/next-steps" },
+      { property: "og:url", content: abs("/next-steps") },
     ],
-    links: [{ rel: "canonical", href: "/next-steps" }],
+    links: [{ rel: "canonical", href: abs("/next-steps") }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(breadcrumbJsonLd("Next Steps", "/next-steps")),
+      },
+    ],
   }),
   component: NextStepsPage,
 });

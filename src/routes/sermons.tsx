@@ -4,11 +4,12 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { YOUTUBE_URL, CHURCH_CENTER_URL } from "@/lib/site-content";
 import { useReveal } from "@/hooks/use-reveal";
+import { abs, breadcrumbJsonLd } from "@/lib/seo";
 
 export const Route = createFileRoute("/sermons")({
   head: () => ({
     meta: [
-      { title: "Sermons — New Life Philly" },
+      { title: "Sermons & Sunday Messages | New Life Philly, Olney PA" },
       {
         name: "description",
         content:
@@ -20,9 +21,15 @@ export const Route = createFileRoute("/sermons")({
         content:
           "Watch and listen to Sunday messages from New Life Philly — discover the way of Jesus and what it looks like on a Tuesday.",
       },
-      { property: "og:url", content: "/sermons" },
+      { property: "og:url", content: abs("/sermons") },
     ],
-    links: [{ rel: "canonical", href: "/sermons" }],
+    links: [{ rel: "canonical", href: abs("/sermons") }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(breadcrumbJsonLd("Sermons", "/sermons")),
+      },
+    ],
   }),
   component: SermonsPage,
 });
