@@ -429,13 +429,13 @@ function Home() {
         </div>
       </section>
 
-      {/* Vision */}
+      {/* Mission */}
       <section className="bg-navy py-24 md:py-[110px]">
         <div data-reveal className="mx-auto max-w-[900px] px-5 text-center md:px-8">
-          <div className="eyebrow mb-5 text-olive-light">Our vision</div>
+          <div className="eyebrow mb-5 text-olive-light">Our Mission</div>
           <p className="m-0 font-display text-[clamp(26px,3vw,40px)] leading-[1.28] font-semibold tracking-[-0.015em] text-white">
-            A thriving family in the city where the broken from all nations are made alive and whole
-            — finding hope and purpose in Jesus.
+            To make disciples of all nations by equipping each member, serving in ministry,
+            connecting in community, and engaging our neighbors.
           </p>
         </div>
       </section>
