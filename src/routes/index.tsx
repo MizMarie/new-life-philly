@@ -46,6 +46,21 @@ function Home() {
     <div ref={pageRef} className="overflow-x-hidden bg-white font-sans text-body">
       <SiteHeader />
 
+      {/* Mobile service-time bar */}
+      <div className="sticky top-[76px] z-50 border-b border-white/10 bg-navy px-5 py-2.5 md:hidden">
+        <div className="mx-auto flex max-w-[1240px] items-center justify-between gap-4 text-[14px] text-white">
+          <span className="truncate">
+            Sundays at 10am · {ADDRESS_1}, Philadelphia
+          </span>
+          <a
+            href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
+            className="flex-none text-olive-light no-underline"
+          >
+            {PHONE}
+          </a>
+        </div>
+      </div>
+
       {/* Hero */}
       <section className="relative flex max-w-[100vw] items-end overflow-hidden bg-navy min-h-[640px] md:min-h-[760px]">
         <div className="absolute inset-0 bg-mist" />
@@ -96,10 +111,29 @@ function Home() {
                 </svg>
               </span>
             </h1>
-            <p className="mt-7 mb-0 max-w-[34ch] text-[22px] leading-[1.55] text-white/90">
+            <div className="pointer-events-auto mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-[17px] leading-[1.5] text-white md:mt-7">
+              <svg
+                aria-hidden="true"
+                className="h-5 w-5 flex-none text-olive-light"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span className="font-semibold">Sundays at 10am</span>
+              <span className="hidden text-white/50 md:inline">·</span>
+              <span className="w-full md:hidden" />
+              <span className="text-white/80">{ADDRESS_1}, Olney, Philadelphia</span>
+            </div>
+            <p className="mt-5 mb-0 max-w-[34ch] text-[22px] leading-[1.55] text-white/90 md:mt-7">
               Community rooted in Olney. Open to all of Philadelphia.
             </p>
-            <div className="pointer-events-auto mt-10 flex flex-wrap gap-3.5">
+            <div className="pointer-events-auto mt-8 flex flex-wrap gap-3.5 md:mt-10">
               <Link
                 to="/plan-your-visit"
                 className="pill relative bg-olive px-8 py-[19px] text-[15px] text-navy no-underline hover:bg-olive-light md:px-[38px]"
@@ -108,7 +142,7 @@ function Home() {
                   aria-hidden="true"
                   className="animate-ring pointer-events-none absolute inset-0 rounded-full border-2 border-olive"
                 />
-                Plan Your Visit →
+                I'm New — Plan Your Visit →
               </Link>
               <Link
                 to="/sermons"
@@ -116,40 +150,6 @@ function Home() {
               >
                 Watch a Sermon
               </Link>
-            </div>
-            <div className="pointer-events-auto mt-14 grid gap-6 border-t border-white/20 pt-8 sm:grid-cols-3">
-              <div>
-                <div className="eyebrow mb-2 text-[11px] text-olive-light">You're invited</div>
-                <div className="text-[17px] leading-[1.5] text-white">
-                  Sundays at 10am
-                  <br />
-                  <span className="text-white/70">{ADDRESS_1}, Philadelphia</span>
-                </div>
-              </div>
-              <div>
-                <div className="eyebrow mb-2 text-[11px] text-olive-light">Contact us</div>
-                <div className="text-[17px] leading-[1.5] text-white">
-                  {PHONE}
-                  <br />
-                  <a
-                    href={`mailto:${EMAIL}`}
-                    className="text-white/70 no-underline transition-colors hover:text-white"
-                  >
-                    {EMAIL}
-                  </a>
-                </div>
-              </div>
-              <div>
-                <div className="eyebrow mb-2 text-[11px] text-olive-light">Need prayer?</div>
-                <div className="text-[17px] leading-[1.5] text-white">
-                  <a
-                    href={PRAYER_URL}
-                    className="border-b border-white/40 text-white no-underline transition-colors hover:border-olive"
-                  >
-                    Send a prayer request →
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
