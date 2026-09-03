@@ -13,7 +13,7 @@ import {
 export function SiteFooter() {
   return (
     <footer className="bg-navy-deep pt-20 pb-8 text-white">
-      <div className="mx-auto grid max-w-[1240px] gap-11 px-5 md:px-8 lg:grid-cols-[1.4fr_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)]">
+      <div className="mx-auto grid max-w-[1240px] gap-11 px-5 md:px-8 lg:grid-cols-4">
         <div>
           <img
             src={logoAsset.url}
