@@ -17,6 +17,7 @@ import { Route as GroupsRouteImport } from './routes/groups'
 import { Route as MinistriesRouteImport } from './routes/ministries'
 import { Route as NextStepsRouteImport } from './routes/next-steps'
 import { Route as PlanYourVisitRouteImport } from './routes/plan-your-visit'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as SermonsRouteImport } from './routes/sermons'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 
@@ -60,6 +61,11 @@ const PlanYourVisitRoute = PlanYourVisitRouteImport.update({
   path: '/plan-your-visit',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SermonsRoute = SermonsRouteImport.update({
   id: '/sermons',
   path: '/sermons',
@@ -80,6 +86,7 @@ export interface FileRoutesByFullPath {
   '/ministries': typeof MinistriesRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/sermons': typeof SermonsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
@@ -92,6 +99,7 @@ export interface FileRoutesByTo {
   '/ministries': typeof MinistriesRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/sermons': typeof SermonsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
@@ -105,6 +113,7 @@ export interface FileRoutesById {
   '/ministries': typeof MinistriesRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/sermons': typeof SermonsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
@@ -119,6 +128,7 @@ export interface FileRouteTypes {
     | '/ministries'
     | '/next-steps'
     | '/plan-your-visit'
+    | '/robots.txt'
     | '/sermons'
     | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
@@ -131,6 +141,7 @@ export interface FileRouteTypes {
     | '/ministries'
     | '/next-steps'
     | '/plan-your-visit'
+    | '/robots.txt'
     | '/sermons'
     | '/sitemap.xml'
   id:
@@ -143,6 +154,7 @@ export interface FileRouteTypes {
     | '/ministries'
     | '/next-steps'
     | '/plan-your-visit'
+    | '/robots.txt'
     | '/sermons'
     | '/sitemap.xml'
   fileRoutesById: FileRoutesById
@@ -156,6 +168,7 @@ export interface RootRouteChildren {
   MinistriesRoute: typeof MinistriesRoute
   NextStepsRoute: typeof NextStepsRoute
   PlanYourVisitRoute: typeof PlanYourVisitRoute
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
   SermonsRoute: typeof SermonsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
@@ -218,6 +231,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlanYourVisitRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sermons': {
       id: '/sermons'
       path: '/sermons'
@@ -244,6 +264,7 @@ const rootRouteChildren: RootRouteChildren = {
   MinistriesRoute: MinistriesRoute,
   NextStepsRoute: NextStepsRoute,
   PlanYourVisitRoute: PlanYourVisitRoute,
+  RobotsDottxtRoute: RobotsDottxtRoute,
   SermonsRoute: SermonsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
