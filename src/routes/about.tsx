@@ -342,9 +342,6 @@ function AboutPage() {
         <div className="mx-auto max-w-[1240px] px-5 md:px-8">
           <div data-reveal className="mx-auto max-w-[820px] text-center">
             <div className="eyebrow mb-5 text-olive-dark">Our Leadership</div>
-            <h1 className="m-0 font-display text-[clamp(32px,4vw,48px)] leading-[1.08] font-extrabold tracking-[-0.02em] text-navy">
-              Leadership
-            </h1>
             <p className="mt-5 mb-0 text-[18px] leading-[1.7] text-body">
               Our leaders are everyday people with deep faith, committed to walking alongside you
               through the real stuff of life. They're here to guide, encourage, and help our
