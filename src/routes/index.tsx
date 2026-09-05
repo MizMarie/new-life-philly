@@ -53,7 +53,7 @@ function Home() {
       {/* Hero */}
       <section className="relative flex max-w-[100vw] items-end overflow-hidden bg-navy min-h-[640px] md:min-h-[760px]">
         <div className="absolute inset-0 bg-mist" />
-        <div className="absolute inset-y-0 right-0 left-0 md:left-[max(58%,780px)]">
+        <div className="absolute inset-y-0 right-0 left-0 md:left-[56%]">
           <img
             src={heroImg}
             alt="Members of New Life Philly laughing together after a Sunday service"
@@ -68,7 +68,7 @@ function Home() {
         />
         <div
           aria-hidden="true"
-          className="animate-drift pointer-events-none absolute -bottom-[220px] -left-[160px] h-[620px] w-[620px] rounded-full bg-[radial-gradient(circle_at_40%_40%,color-mix(in_oklab,var(--olive)_36%,transparent),transparent_68%)]"
+          className="animate-drift pointer-events-none absolute -bottom-[220px] -left-[160px] h-[620px] w-[620px] rounded-full bg-[radial-gradient(circle_at_40%_40%,color-mix(in_oklab,var(--mist)_22%,transparent),transparent_68%)]"
         />
         <div className="pointer-events-none relative mx-auto w-full max-w-[1240px] px-5 pt-28 pb-16 md:px-8 md:pt-[120px] md:pb-[84px]">
           <div className="max-w-[660px]">
@@ -103,7 +103,7 @@ function Home() {
             <div className="pointer-events-auto mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-[17px] leading-[1.5] text-white md:mt-7">
               <svg
                 aria-hidden="true"
-                className="h-5 w-5 flex-none text-olive-light"
+                className="h-5 w-5 flex-none text-white/80"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
