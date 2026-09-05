@@ -286,6 +286,81 @@ function Home() {
         </div>
       </section>
 
+      {/* First Sunday */}
+      <section className="bg-sage py-20 md:py-24">
+        <div className="mx-auto max-w-[1240px] px-5 md:px-8">
+          <div data-reveal className="mb-11 flex flex-wrap items-end justify-between gap-8">
+            <div className="max-w-[600px]">
+              <div className="eyebrow mb-4 text-olive-dark">Before you come</div>
+              <h2 className="m-0 font-display text-[clamp(30px,3.2vw,44px)] leading-[1.1] font-bold tracking-[-0.02em] text-navy">
+                Your first Sunday, answered.
+              </h2>
+            </div>
+            <Link
+              to="/plan-your-visit"
+              className="border-b-2 border-cream pb-1 font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase no-underline transition-colors hover:border-olive"
+            >
+              More about visiting →
+            </Link>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {FIRST_SUNDAY.map((item, i) => (
+              <div
+                key={item.title}
+                data-reveal
+                className="rounded-2xl border border-hairline bg-white px-7 pt-[30px] pb-8 shadow-[0_2px_14px_rgba(0,0,0,0.04)]"
+              >
+                <div
+                  className={cn(
+                    "font-display tracking-tight text-navy",
+                    i >= 3 ? "text-[20px] font-extrabold" : "text-[19px] font-bold"
+                  )}
+                >
+                  {item.title}
+                </div>
+                <div className="mt-2 text-[17px] leading-[1.55] text-body-soft">{item.body}</div>
+              </div>
+            ))}
+          </div>
+          <div className="pointer-events-auto mt-12 grid gap-6 border-t border-hairline pt-8 sm:grid-cols-3">
+            <div className="text-center">
+              <div className="eyebrow mb-2 text-[13px] text-olive-dark">You're invited</div>
+              <div className="text-[17px] leading-[1.5] text-body">
+                Sundays at 10am
+                <br />
+                <span className="text-body-soft">{ADDRESS_1}, Philadelphia</span>
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="eyebrow mb-2 text-[13px] text-olive-dark">Contact us</div>
+              <div className="text-[17px] leading-[1.5] text-body">
+                {PHONE}
+                <br />
+                <a
+                  href={`mailto:${EMAIL}`}
+                  className="text-body-soft no-underline transition-colors hover:text-navy"
+                >
+                  {EMAIL}
+                </a>
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="eyebrow mb-2 text-[13px] text-olive-dark">Need prayer?</div>
+              <div className="text-[17px] leading-[1.5] text-body">
+                <a
+                  href={PRAYER_URL}
+              target="_blank"
+              rel="noopener"
+                  className="border-b border-body-faint text-body no-underline transition-colors hover:border-olive-dark"
+                >
+                  Send a prayer request →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Story / About */}
       <section className="max-w-[100vw] overflow-hidden bg-sage py-24 md:py-[120px]">
         <div className="mx-auto max-w-[1240px] px-5 md:px-8">
