@@ -1,8 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 
-import storyImg from "@/assets/nlp-story.jpg";
-import problemImg from "@/assets/nlp-problem.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { useReveal } from "@/hooks/use-reveal";
@@ -11,17 +9,17 @@ import { abs, breadcrumbJsonLd } from "@/lib/seo";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Our Church in Olney, Philadelphia | New Life Philly" },
+      { title: "Leadership & Beliefs | New Life Philly" },
       {
         name: "description",
         content:
-          "A non-denominational church in Olney, North Philadelphia. Learn our story, our vision, and why people stay.",
+          "Meet the leaders of New Life Philly and read what we believe about Scripture, God, salvation, and unity in Christ.",
       },
-      { property: "og:title", content: "About — New Life Philly" },
+      { property: "og:title", content: "Leadership & Beliefs — New Life Philly" },
       {
         property: "og:description",
         content:
-          "A thriving family in the city where the broken from all nations are made alive and whole — finding hope and purpose in Jesus.",
+          "Meet the leaders of New Life Philly and read what we believe about Scripture, God, salvation, and unity in Christ.",
       },
       { property: "og:url", content: abs("/about") },
     ],
@@ -149,6 +147,61 @@ const TEAM: TeamMember[] = [
   },
 ];
 
+type Belief = {
+  id: string;
+  heading: string;
+  bullets: string[];
+};
+
+const BELIEFS: Belief[] = [
+  {
+    id: "word-of-god",
+    heading: "The Word of God",
+    bullets: [
+      "The Bible is the written word of God, inspired by the Holy Spirit and without error in the original manuscripts.",
+      "Scripture is infallible and authoritative in all matters of faith and practice.",
+    ],
+  },
+  {
+    id: "nature-of-god",
+    heading: "The Nature of God",
+    bullets: [
+      "There is one God who exists eternally in three persons: Father, Son, and Holy Spirit.",
+      "God is gracious and faithful to His people across generations through His Covenant promises.",
+      "The Holy Spirit indwells believers, providing strength and wisdom.",
+    ],
+  },
+  {
+    id: "salvation-through-christ",
+    heading: "Salvation Through Christ",
+    bullets: [
+      "Jesus Christ is the eternal Son of God who atoned for sins through His perfect life and sacrificial death.",
+      "Salvation comes by grace alone through faith in Jesus Christ.",
+      "Jesus will return bodily to judge humanity and receive His people.",
+    ],
+  },
+  {
+    id: "humanitys-purpose-and-need",
+    heading: "Humanity's Purpose and Need",
+    bullets: [
+      "All humans are made in God's image and deserve dignity and love as His image-bearers.",
+      "All are sinners unable to save themselves except through God's mercy.",
+      "Every aspect of life is to be lived for God's glory under Christ's Lordship.",
+    ],
+  },
+  {
+    id: "unity-in-essential-beliefs",
+    heading: "Unity in Essential Beliefs, Charity in Differences",
+    bullets: [
+      "We embrace a generous orthodoxy that holds firmly to historic Christian truths while engaging thoughtfully with various Christian traditions.",
+      "We value deep theological understanding and careful Biblical interpretation.",
+      "We seek unity in essential doctrines while showing grace in areas where faithful Christians may differ.",
+      "Our community includes believers from various denominational backgrounds, enriching our church family with diverse perspectives within orthodox Christianity.",
+      "We are committed to prayerfully examining Scripture together as we consider questions about church leadership and practice.",
+    ],
+  },
+];
+
 function TeamCard({
   member,
   expanded,
@@ -197,12 +250,66 @@ function TeamCard({
   );
 }
 
+function BeliefItem({
+  belief,
+  expanded,
+  onToggle,
+}: {
+  belief: Belief;
+  expanded: boolean;
+  onToggle: () => void;
+}) {
+  return (
+    <div
+      data-reveal
+      className="rounded-[22px] bg-white p-6 shadow-[0_12px_32px_color-mix(in_oklab,var(--navy)_8%,transparent)] md:p-8"
+    >
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={expanded}
+        className="flex w-full cursor-pointer items-center justify-between border-none bg-transparent p-0 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2"
+      >
+        <span className="font-display text-[18px] font-bold text-navy md:text-[20px]">
+          {belief.heading}
+        </span>
+        <span
+          aria-hidden="true"
+          className={`ml-4 text-olive-dark transition-transform ${expanded ? "rotate-180" : ""}`}
+        >
+          ▼
+        </span>
+      </button>
+      {expanded && (
+        <ul className="mt-5 list-disc space-y-3 pl-5 text-[15px] leading-[1.6] text-body">
+          {belief.bullets.map((bullet) => (
+            <li key={bullet}>{bullet}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
 function AboutPage() {
   const pageRef = useReveal<HTMLDivElement>();
-  const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
+  const [expandedTeamIds, setExpandedTeamIds] = useState<Set<string>>(new Set());
+  const [expandedBeliefIds, setExpandedBeliefIds] = useState<Set<string>>(new Set());
 
-  const toggle = (id: string) => {
-    setExpandedIds((prev) => {
+  const toggleTeam = (id: string) => {
+    setExpandedTeamIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  };
+
+  const toggleBelief = (id: string) => {
+    setExpandedBeliefIds((prev) => {
       const next = new Set(prev);
       if (next.has(id)) {
         next.delete(id);
@@ -217,58 +324,14 @@ function AboutPage() {
     <div ref={pageRef} className="bg-white font-sans text-body">
       <SiteHeader />
 
-      {/* Intro */}
-      <section className="relative overflow-hidden bg-navy py-24 md:py-[130px]">
-        <div
-          aria-hidden="true"
-          className="animate-drift pointer-events-none absolute -top-[180px] -right-[180px] h-[620px] w-[620px] rounded-full bg-[radial-gradient(circle_at_45%_45%,color-mix(in_oklab,var(--olive)_24%,transparent),transparent_70%)]"
-        />
-        <div className="relative mx-auto grid max-w-[1240px] items-center gap-12 px-5 md:px-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-[72px]">
-          <div data-reveal>
-            <div className="eyebrow mb-5 text-olive-light">About New Life Philly</div>
-            <h1 className="m-0 max-w-[16ch] font-display text-[clamp(40px,5vw,64px)] leading-[1.05] font-extrabold tracking-[-0.024em] text-white">
-              A thriving family in the city where the broken from all nations are made alive and whole — finding hope and purpose in Jesus.
-            </h1>
-            <p className="mt-7 mb-0 max-w-[46ch] text-[20px] leading-[1.68] text-white/80">
-              New Life Philly is a non-denominational church in the Olney section of North
-              Philadelphia. We gather every Sunday at 10am — real people, from every background,
-              learning to follow Jesus together.
-            </p>
-            <p className="mt-5 mb-0 max-w-[44ch] text-[18px] leading-[1.7] text-white/65">
-              Maybe you grew up in church and walked away. Maybe you've never set foot in one.
-              However you got here — you can come as you are, sit in the back, and decide nothing.
-            </p>
-            <Link
-              to="/plan-your-visit"
-              className="pill mt-9 inline-block bg-olive px-8 py-[19px] text-[15px] text-navy no-underline hover:bg-olive-light md:px-9"
-            >
-              Plan Your Visit →
-            </Link>
-          </div>
-          <div
-            data-reveal
-            className="relative overflow-hidden rounded-[22px] bg-mist shadow-[0_26px_60px_rgba(0,0,0,0.25)]"
-          >
-            <img
-              src={problemImg}
-              alt="A person sitting quietly by a window, deep in thought"
-              className="h-[320px] w-full object-cover md:h-[440px]"
-              loading="lazy"
-              width={1200}
-              height={900}
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Leadership */}
       <section className="bg-sage py-24 md:py-[110px]">
         <div className="mx-auto max-w-[1240px] px-5 md:px-8">
           <div data-reveal className="mx-auto max-w-[820px] text-center">
             <div className="eyebrow mb-5 text-olive-dark">Our Leadership</div>
-            <h2 className="m-0 font-display text-[clamp(32px,4vw,48px)] leading-[1.08] font-extrabold tracking-[-0.02em] text-navy">
+            <h1 className="m-0 font-display text-[clamp(32px,4vw,48px)] leading-[1.08] font-extrabold tracking-[-0.02em] text-navy">
               Leadership
-            </h2>
+            </h1>
             <p className="mt-5 mb-0 text-[18px] leading-[1.7] text-body">
               Our leaders are everyday people with deep faith, committed to walking alongside you
               through the real stuff of life. They're here to guide, encourage, and help our
@@ -278,16 +341,16 @@ function AboutPage() {
 
           {/* Meet Our Team */}
           <div className="mt-16 md:mt-20">
-            <h3 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
+            <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
               Meet Our Team
-            </h3>
+            </h2>
             <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {TEAM.map((member) => (
                 <TeamCard
                   key={member.id}
                   member={member}
-                  expanded={expandedIds.has(member.id)}
-                  onToggle={() => toggle(member.id)}
+                  expanded={expandedTeamIds.has(member.id)}
+                  onToggle={() => toggleTeam(member.id)}
                 />
               ))}
             </div>
@@ -295,9 +358,9 @@ function AboutPage() {
 
           {/* Our Shepherds (Elders) */}
           <div data-reveal className="mt-20 md:mt-24">
-            <h3 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
+            <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
               Our Shepherds (Elders)
-            </h3>
+            </h2>
             <ul className="mt-8 grid gap-x-8 gap-y-3 text-center text-[17px] leading-[1.55] text-body md:grid-cols-2 lg:grid-cols-4">
               <li>Tim Bathurst</li>
               <li>Mike Del Vecchio</li>
@@ -308,9 +371,9 @@ function AboutPage() {
 
           {/* Elder's Council */}
           <div data-reveal className="mt-20 md:mt-24">
-            <h3 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
+            <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
               Elder's Council
-            </h3>
+            </h2>
             <ul className="mt-8 grid gap-x-8 gap-y-3 text-center text-[17px] leading-[1.55] text-body md:grid-cols-2 lg:grid-cols-4">
               <li>Pam Bryan</li>
               <li>Nes Espinosa</li>
@@ -324,9 +387,9 @@ function AboutPage() {
 
           {/* Our Servants (Deacons) */}
           <div data-reveal className="mt-20 md:mt-24">
-            <h3 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
+            <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
               Our Servants (Deacons)
-            </h3>
+            </h2>
             <ul className="mt-8 grid gap-x-8 gap-y-3 text-center text-[17px] leading-[1.55] text-body md:grid-cols-2 lg:grid-cols-4">
               <li>Tom de Rivera</li>
               <li>Jacob Good</li>
@@ -344,57 +407,30 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Member story */}
-      <section className="max-w-[100vw] overflow-hidden bg-sage py-24 md:py-[120px]">
+      {/* What We Believe */}
+      <section className="bg-sage py-24 md:py-[110px]">
         <div className="mx-auto max-w-[1240px] px-5 md:px-8">
-          <div
-            data-reveal
-            className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-16"
-          >
-            <div className="relative">
-              <div
-                aria-hidden="true"
-                className="absolute -right-[30px] -bottom-[30px] hidden h-[60%] w-[60%] rounded-3xl bg-mist-deep md:block"
+          <div data-reveal className="mx-auto max-w-[820px] text-center">
+            <div className="eyebrow mb-5 text-olive-dark">What We Believe</div>
+            <h1 className="m-0 font-display text-[clamp(32px,4vw,48px)] leading-[1.08] font-extrabold tracking-[-0.02em] text-navy">
+              What We Believe
+            </h1>
+            <p className="mt-5 mb-0 text-[18px] leading-[1.7] text-body">
+              Our Real Hope is founded entirely on the truth of Scripture, which guides every aspect
+              of our lives and practice. We hold firmly to the essential Christian truths while
+              extending grace in all other matters.
+            </p>
+          </div>
+
+          <div className="mt-16 grid gap-6 md:mt-20">
+            {BELIEFS.map((belief) => (
+              <BeliefItem
+                key={belief.id}
+                belief={belief}
+                expanded={expandedBeliefIds.has(belief.id)}
+                onToggle={() => toggleBelief(belief.id)}
               />
-              <div className="relative overflow-hidden rounded-[22px] bg-mist shadow-[0_24px_56px_color-mix(in_oklab,var(--navy)_16%,transparent)]">
-                <img
-                  src={storyImg}
-                  alt="Portrait of a longtime New Life Philly member"
-                  className="h-[400px] w-full object-cover md:h-[520px]"
-                  loading="lazy"
-                  width={1100}
-                  height={1300}
-                />
-              </div>
-            </div>
-            <div>
-              <div className="eyebrow mb-6 text-olive-dark">Why people stay</div>
-              <div
-                aria-hidden="true"
-                className="font-display text-[64px] leading-[0.6] font-extrabold text-olive-light"
-              >
-                &ldquo;
-              </div>
-              <blockquote className="mt-3.5 mb-0 max-w-[22ch] font-display text-[clamp(24px,2.7vw,36px)] leading-[1.32] font-semibold tracking-[-0.016em] text-navy">
-                I came in late and sat in the back for about two months before anyone knew my name.
-                Nobody rushed me. That's why I'm still here.
-              </blockquote>
-              <div className="mt-7 flex items-center gap-3.5">
-                <div className="h-0.5 w-11 rounded-full bg-olive" />
-                <div>
-                  <div className="font-display text-[17px] font-bold text-navy">
-                    First name, Last initial
-                  </div>
-                  <div className="mt-0.5 text-[15px] text-body-faint">
-                    Neighborhood · at New Life since 20XX
-                  </div>
-                </div>
-              </div>
-              <p className="mt-6 mb-0 max-w-[44ch] text-[15px] leading-[1.6] text-olive-dark italic">
-                Placeholder — replace with a real member quote and portrait. Two or three sentences,
-                in their own words, about what made them stay.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
