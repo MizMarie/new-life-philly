@@ -66,68 +66,9 @@ function Home() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,var(--navy)_0%,color-mix(in_oklab,var(--navy)_78%,transparent)_55%,color-mix(in_oklab,var(--navy)_55%,transparent)_100%)] opacity-95 md:bg-[linear-gradient(102deg,var(--navy)_0%,color-mix(in_oklab,var(--navy)_72%,transparent)_38%,color-mix(in_oklab,var(--navy)_18%,transparent)_72%,color-mix(in_oklab,var(--navy)_5%,transparent)_100%)]"
         />
-        <div
-          aria-hidden="true"
-          className="animate-drift pointer-events-none absolute -bottom-[220px] -left-[160px] h-[620px] w-[620px] rounded-full bg-[radial-gradient(circle_at_40%_40%,color-mix(in_oklab,var(--mist)_22%,transparent),transparent_68%)]"
-        />
         <div className="pointer-events-none relative mx-auto w-full max-w-[1240px] px-5 pt-28 pb-16 md:px-8 md:pt-[120px] md:pb-[84px]">
-          <div className="max-w-[660px]">
-            <h1 className="m-0 max-w-[13ch] font-display text-[clamp(46px,6.4vw,92px)] leading-[0.98] font-extrabold tracking-[-0.028em] text-white">
-              Real People.
-              <br />
-              Real Love.
-              <br />
-              <span className="relative inline-block">
-                Real Hope.
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 300 14"
-                  preserveAspectRatio="none"
-                  className="absolute -bottom-[0.34em] -left-[1%] h-[0.17em] w-[104%] overflow-visible"
-                >
-                  <path
-                    d="M2 9C38 4.4 74 3.2 110 4.1c36 .9 72 3.6 108 3.1 26-.4 52-2.1 78-4.6"
-                    fill="none"
-                    stroke="var(--olive)"
-                    strokeWidth="7"
-                    strokeLinecap="round"
-                    vectorEffect="non-scaling-stroke"
-                  />
-                </svg>
-              </span>
-            </h1>
-            <div className="pointer-events-auto mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-[17px] leading-[1.5] text-white md:mt-7">
-              <svg
-                aria-hidden="true"
-                className="h-5 w-5 flex-none text-white/80"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg>
-              <span className="font-semibold">Sundays at 10am</span>
-              <span className="hidden text-white/50 md:inline">·</span>
-              <span className="w-full md:hidden" />
-              <span className="text-white/80">{ADDRESS_1}, Olney, Philadelphia</span>
-            </div>
-            <h2 className="mt-5 mb-0 max-w-[34ch] text-[22px] leading-[1.55] font-normal text-white/90 md:mt-7">
-              Community rooted in Olney. Open to all of Philadelphia.
-            </h2>
-            <div className="pointer-events-auto mt-8 flex flex-wrap gap-3.5 md:mt-10">
-              <Link
-                to="/plan-your-visit"
-                className="pill relative bg-olive px-8 py-[19px] text-[15px] text-navy no-underline hover:bg-olive-light md:px-[38px]"
-              >
-                <span
-                  aria-hidden="true"
-                  className="animate-ring pointer-events-none absolute inset-0 rounded-full border-2 border-olive"
-                />
-                I'm New — Plan Your Visit →
+          ...
+                Plan Your Visit →
               </Link>
               <Link
                 to="/sermons"
