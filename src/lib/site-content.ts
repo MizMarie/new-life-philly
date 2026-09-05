@@ -4,6 +4,9 @@ import step3Img from "@/assets/nlp-step3.jpg";
 import storyImg from "@/assets/nlp-story.jpg";
 import guideImg from "@/assets/nlp-guide.jpg";
 
+/** Set to false when the site is ready for public search indexing. */
+export const IS_STAGING_PREVIEW = true;
+
 export const GIVE_URL = "https://newlifephilly.churchcenter.com/giving";
 export const PRAYER_URL = "https://newlifephilly.churchcenter.com/people/forms/382423";
 export const CHURCH_CENTER_URL = "https://newlifephilly.churchcenter.com/home";
