@@ -399,15 +399,19 @@ function AboutPage() {
             <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
               Elder's Council
             </h2>
-            <ul className="mt-8 grid gap-x-8 gap-y-3 text-center text-[17px] leading-[1.55] text-body md:grid-cols-2 lg:grid-cols-4">
-              <li>Pam Bryan</li>
-              <li>Nes Espinosa</li>
-              <li>Jacob Good</li>
-              <li>Marissa Morales</li>
-              <li>Christiana Ogunsami</li>
-              <li>Greg Snow (Pastoral Apprentice)</li>
-              <li>Dan Schafhauser</li>
-            </ul>
+            <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
+              {[
+                "Pam Bryan",
+                "Nes Espinosa",
+                "Jacob Good",
+                "Marissa Morales",
+                "Christiana Ogunsami",
+                "Greg Snow (Pastoral Apprentice)",
+                "Dan Schafhauser",
+              ].map((name) => (
+                <NameCard key={name} name={name} />
+              ))}
+            </div>
           </div>
 
           {/* Our Servants (Deacons) */}
