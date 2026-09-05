@@ -387,12 +387,11 @@ function AboutPage() {
             <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
               Our Shepherds (Elders)
             </h2>
-            <ul className="mt-8 grid gap-x-8 gap-y-3 text-center text-[17px] leading-[1.55] text-body md:grid-cols-2 lg:grid-cols-4">
-              <li>Tim Bathurst</li>
-              <li>Mike Del Vecchio</li>
-              <li>Jose Negron</li>
-              <li>Jed Trott</li>
-            </ul>
+            <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
+              {["Tim Bathurst", "Mike Del Vecchio", "Jose Negron", "Jed Trott"].map((name) => (
+                <NameCard key={name} name={name} />
+              ))}
+            </div>
           </div>
 
           {/* Elder's Council */}
