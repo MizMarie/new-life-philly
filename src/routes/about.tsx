@@ -227,7 +227,7 @@ function AboutPage() {
           <div data-reveal>
             <div className="eyebrow mb-5 text-olive-light">About New Life Philly</div>
             <h1 className="m-0 max-w-[16ch] font-display text-[clamp(40px,5vw,64px)] leading-[1.05] font-extrabold tracking-[-0.024em] text-white">
-              Community rooted in Olney. Open to all of Philadelphia.
+              A thriving family in the city where the broken from all nations are made alive and whole — finding hope and purpose in Jesus.
             </h1>
             <p className="mt-7 mb-0 max-w-[46ch] text-[20px] leading-[1.68] text-white/80">
               New Life Philly is a non-denominational church in the Olney section of North
