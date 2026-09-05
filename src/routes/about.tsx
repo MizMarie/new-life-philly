@@ -419,16 +419,20 @@ function AboutPage() {
             <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
               Our Servants (Deacons)
             </h2>
-            <ul className="mt-8 grid gap-x-8 gap-y-3 text-center text-[17px] leading-[1.55] text-body md:grid-cols-2 lg:grid-cols-4">
-              <li>Tom de Rivera</li>
-              <li>Jacob Good</li>
-              <li>Eunice Kalbach</li>
-              <li>Darlene Holman</li>
-              <li>Brian Mast</li>
-              <li>Robert Morales, Sr.</li>
-              <li>Matt Theogood</li>
-              <li>Mike Wood</li>
-            </ul>
+            <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
+              {[
+                "Tom de Rivera",
+                "Jacob Good",
+                "Eunice Kalbach",
+                "Darlene Holman",
+                "Brian Mast",
+                "Robert Morales, Sr.",
+                "Matt Theogood",
+                "Mike Wood",
+              ].map((name) => (
+                <NameCard key={name} name={name} />
+              ))}
+            </div>
             <p className="mt-6 text-center text-[17px] leading-[1.55] text-body">
               <strong className="text-navy">Diaconal Assistant:</strong> Len Nicoletti
             </p>
