@@ -115,9 +115,9 @@ function Home() {
               <span className="w-full md:hidden" />
               <span className="text-white/80">{ADDRESS_1}, Olney, Philadelphia</span>
             </div>
-            <p className="mt-5 mb-0 max-w-[34ch] text-[22px] leading-[1.55] text-white/90 md:mt-7">
+            <h2 className="mt-5 mb-0 max-w-[34ch] text-[22px] leading-[1.55] font-normal text-white/90 md:mt-7">
               Community rooted in Olney. Open to all of Philadelphia.
-            </p>
+            </h2>
             <div className="pointer-events-auto mt-8 flex flex-wrap gap-3.5 md:mt-10">
               <Link
                 to="/plan-your-visit"
