@@ -291,6 +291,22 @@ function BeliefItem({
   );
 }
 
+function NameCard({ name }: { name: string }) {
+  return (
+    <div
+      data-reveal
+      className="rounded-[22px] bg-white p-5 text-center shadow-[0_12px_32px_color-mix(in_oklab,var(--navy)_8%,transparent)]"
+    >
+      <div className="mx-auto flex aspect-square w-20 items-center justify-center rounded-full bg-mist md:w-24">
+        <span className="text-[11px] font-semibold text-body-faint md:text-[12px]">
+          Photo coming soon
+        </span>
+      </div>
+      <div className="mt-4 font-display text-[16px] font-bold text-navy md:text-[17px]">{name}</div>
+    </div>
+  );
+}
+
 function AboutPage() {
   const pageRef = useReveal<HTMLDivElement>();
   const [expandedTeamIds, setExpandedTeamIds] = useState<Set<string>>(new Set());
@@ -324,14 +340,24 @@ function AboutPage() {
     <div ref={pageRef} className="bg-white font-sans text-body">
       <SiteHeader />
 
+      {/* Leadership Hero */}
+      <section className="relative flex h-[55vh] min-h-[320px] max-h-[580px] items-center justify-center bg-mist">
+        <span className="absolute inset-0 flex items-center justify-center text-[15px] font-semibold text-body-faint">
+          Photo coming soon
+        </span>
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/50 to-navy/25" />
+        <div className="relative z-10 mx-auto max-w-[1240px] px-5 text-center md:px-8">
+          <h1 className="m-0 font-display text-[clamp(36px,5vw,64px)] leading-[1.05] font-extrabold tracking-[-0.02em] text-white">
+            Leadership
+          </h1>
+        </div>
+      </section>
+
       {/* Leadership */}
       <section className="bg-sage py-24 md:py-[110px]">
         <div className="mx-auto max-w-[1240px] px-5 md:px-8">
           <div data-reveal className="mx-auto max-w-[820px] text-center">
             <div className="eyebrow mb-5 text-olive-dark">Our Leadership</div>
-            <h1 className="m-0 font-display text-[clamp(32px,4vw,48px)] leading-[1.08] font-extrabold tracking-[-0.02em] text-navy">
-              Leadership
-            </h1>
             <p className="mt-5 mb-0 text-[18px] leading-[1.7] text-body">
               Our leaders are everyday people with deep faith, committed to walking alongside you
               through the real stuff of life. They're here to guide, encourage, and help our
@@ -361,12 +387,11 @@ function AboutPage() {
             <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
               Our Shepherds (Elders)
             </h2>
-            <ul className="mt-8 grid gap-x-8 gap-y-3 text-center text-[17px] leading-[1.55] text-body md:grid-cols-2 lg:grid-cols-4">
-              <li>Tim Bathurst</li>
-              <li>Mike Del Vecchio</li>
-              <li>Jose Negron</li>
-              <li>Jed Trott</li>
-            </ul>
+            <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
+              {["Tim Bathurst", "Mike Del Vecchio", "Jose Negron", "Jed Trott"].map((name) => (
+                <NameCard key={name} name={name} />
+              ))}
+            </div>
           </div>
 
           {/* Elder's Council */}
@@ -374,15 +399,19 @@ function AboutPage() {
             <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
               Elder's Council
             </h2>
-            <ul className="mt-8 grid gap-x-8 gap-y-3 text-center text-[17px] leading-[1.55] text-body md:grid-cols-2 lg:grid-cols-4">
-              <li>Pam Bryan</li>
-              <li>Nes Espinosa</li>
-              <li>Jacob Good</li>
-              <li>Marissa Morales</li>
-              <li>Christiana Ogunsami</li>
-              <li>Greg Snow (Pastoral Apprentice)</li>
-              <li>Dan Schafhauser</li>
-            </ul>
+            <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
+              {[
+                "Pam Bryan",
+                "Nes Espinosa",
+                "Jacob Good",
+                "Marissa Morales",
+                "Christiana Ogunsami",
+                "Greg Snow (Pastoral Apprentice)",
+                "Dan Schafhauser",
+              ].map((name) => (
+                <NameCard key={name} name={name} />
+              ))}
+            </div>
           </div>
 
           {/* Our Servants (Deacons) */}
@@ -390,16 +419,20 @@ function AboutPage() {
             <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
               Our Servants (Deacons)
             </h2>
-            <ul className="mt-8 grid gap-x-8 gap-y-3 text-center text-[17px] leading-[1.55] text-body md:grid-cols-2 lg:grid-cols-4">
-              <li>Tom de Rivera</li>
-              <li>Jacob Good</li>
-              <li>Eunice Kalbach</li>
-              <li>Darlene Holman</li>
-              <li>Brian Mast</li>
-              <li>Robert Morales, Sr.</li>
-              <li>Matt Theogood</li>
-              <li>Mike Wood</li>
-            </ul>
+            <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
+              {[
+                "Tom de Rivera",
+                "Jacob Good",
+                "Eunice Kalbach",
+                "Darlene Holman",
+                "Brian Mast",
+                "Robert Morales, Sr.",
+                "Matt Theogood",
+                "Mike Wood",
+              ].map((name) => (
+                <NameCard key={name} name={name} />
+              ))}
+            </div>
             <p className="mt-6 text-center text-[17px] leading-[1.55] text-body">
               <strong className="text-navy">Diaconal Assistant:</strong> Len Nicoletti
             </p>
