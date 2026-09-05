@@ -344,17 +344,6 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Vision */}
-      <section className="bg-white py-24 md:py-[110px]">
-        <div data-reveal className="mx-auto max-w-[900px] px-5 text-center md:px-8">
-          <div className="eyebrow mb-5 text-olive-dark">Our vision</div>
-          <p className="m-0 font-display text-[clamp(26px,3vw,40px)] leading-[1.28] font-semibold tracking-[-0.015em] text-navy">
-            A thriving family in the city where the broken from all nations are made alive and whole
-            — finding hope and purpose in Jesus.
-          </p>
-        </div>
-      </section>
-
       {/* Member story */}
       <section className="max-w-[100vw] overflow-hidden bg-sage py-24 md:py-[120px]">
         <div className="mx-auto max-w-[1240px] px-5 md:px-8">
