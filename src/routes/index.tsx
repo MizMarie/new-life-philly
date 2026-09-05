@@ -52,7 +52,7 @@ function Home() {
 
       {/* Hero */}
       <section className="relative flex max-w-[100vw] items-end overflow-hidden bg-navy min-h-[640px] md:min-h-[760px]">
-        <div className="absolute inset-0 bg-mist" />
+        <div className="absolute inset-0 bg-navy" />
         <div className="absolute inset-y-0 right-0 left-0 md:left-[56%]">
           <img
             src={heroImg}
@@ -142,7 +142,7 @@ function Home() {
 
 
       {/* Problem */}
-      <section className="relative max-w-[100vw] overflow-hidden bg-navy py-24 md:py-[120px]">
+      <section className="relative max-w-[100vw] overflow-hidden rounded-t-[28px] bg-navy py-24 md:py-[120px]">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -top-[140px] -right-[180px] h-[620px] w-[620px] rounded-full bg-[radial-gradient(circle_at_45%_45%,color-mix(in_oklab,var(--olive)_22%,transparent),transparent_70%)]"
