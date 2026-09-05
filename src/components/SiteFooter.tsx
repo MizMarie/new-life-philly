@@ -20,12 +20,12 @@ export function SiteFooter() {
           <img
             src={logoAsset.url}
             alt="New Life Philly"
-            className="mx-auto block h-[84px] w-[84px] rounded-full bg-white object-cover"
+            className="block h-[84px] w-[84px] rounded-full bg-white object-cover"
             loading="lazy"
             width={84}
             height={84}
           />
-          <p className="mt-5 mb-0 text-center font-display text-[19px] font-semibold tracking-tight text-white">
+          <p className="mt-5 mb-0 font-display text-[19px] font-semibold tracking-tight text-white">
             New Life Philly
           </p>
           <p className="mt-3.5 mb-0 max-w-[34ch] text-[16px] leading-[1.65] text-white/65">
