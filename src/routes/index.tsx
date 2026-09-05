@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 import heroImg from "@/assets/nlp-hero.jpg";
 import problemImg from "@/assets/nlp-problem.jpg";
 import guideImg from "@/assets/nlp-guide.jpg";
-import storyImg from "@/assets/nlp-story.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import {
@@ -66,10 +65,6 @@ function Home() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,var(--navy)_0%,color-mix(in_oklab,var(--navy)_78%,transparent)_55%,color-mix(in_oklab,var(--navy)_55%,transparent)_100%)] opacity-95 md:bg-[linear-gradient(102deg,var(--navy)_0%,color-mix(in_oklab,var(--navy)_72%,transparent)_38%,color-mix(in_oklab,var(--navy)_18%,transparent)_72%,color-mix(in_oklab,var(--navy)_5%,transparent)_100%)]"
         />
-        <div
-          aria-hidden="true"
-          className="animate-drift pointer-events-none absolute -bottom-[220px] -left-[160px] h-[620px] w-[620px] rounded-full bg-[radial-gradient(circle_at_40%_40%,color-mix(in_oklab,var(--mist)_22%,transparent),transparent_68%)]"
-        />
         <div className="pointer-events-none relative mx-auto w-full max-w-[1240px] px-5 pt-28 pb-16 md:px-8 md:pt-[120px] md:pb-[84px]">
           <div className="max-w-[660px]">
             <h1 className="m-0 max-w-[13ch] font-display text-[clamp(46px,6.4vw,92px)] leading-[0.98] font-extrabold tracking-[-0.028em] text-white">
@@ -127,7 +122,7 @@ function Home() {
                   aria-hidden="true"
                   className="animate-ring pointer-events-none absolute inset-0 rounded-full border-2 border-olive"
                 />
-                I'm New — Plan Your Visit →
+                Plan Your Visit →
               </Link>
               <Link
                 to="/sermons"
@@ -142,21 +137,21 @@ function Home() {
 
 
       {/* Problem */}
-      <section className="relative max-w-[100vw] overflow-hidden rounded-t-[28px] bg-navy py-24 md:py-[120px]">
+      <section className="relative max-w-[100vw] overflow-hidden rounded-t-[28px] bg-sage py-24 md:py-[120px]">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -top-[140px] -right-[180px] h-[620px] w-[620px] rounded-full bg-[radial-gradient(circle_at_45%_45%,color-mix(in_oklab,var(--olive)_22%,transparent),transparent_70%)]"
+          className="pointer-events-none absolute -top-[140px] -right-[180px] h-[620px] w-[620px] rounded-full bg-[radial-gradient(circle_at_45%_45%,color-mix(in_oklab,var(--olive)_16%,transparent),transparent_70%)]"
         />
         <div className="relative mx-auto grid max-w-[1240px] items-center gap-12 px-5 md:px-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-[72px]">
           <div data-reveal className="lg:order-2">
-            <div className="eyebrow mb-5 text-olive-light">If you're searching</div>
-            <h2 className="m-0 max-w-[20ch] font-display text-[clamp(32px,3.9vw,54px)] leading-[1.1] font-bold tracking-[-0.022em] text-white">
+            <div className="eyebrow mb-5 text-olive-dark">If you're searching</div>
+            <h2 className="m-0 max-w-[20ch] font-display text-[clamp(32px,3.9vw,54px)] leading-[1.1] font-bold tracking-[-0.022em] text-navy">
               Our lives are full but are we fulfilled?
             </h2>
-            <p className="mt-7 mb-0 max-w-[30ch] text-[22px] leading-[1.6] font-semibold text-olive-light">
+            <p className="mt-7 mb-0 max-w-[30ch] text-[22px] leading-[1.6] font-semibold text-olive-dark">
               You weren't made to just survive.
             </p>
-            <p className="mt-5 mb-0 max-w-[44ch] text-[18px] leading-[1.7] text-white/75">
+            <p className="mt-5 mb-0 max-w-[44ch] text-[18px] leading-[1.7] text-body-soft">
               Maybe you grew up in church and walked away. Maybe you've never set foot in one. Maybe
               you just moved to Philly and the city feels bigger than you expected. However you got
               to this page — you can come as you are, sit in the back, and decide nothing.
@@ -358,68 +353,6 @@ function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Story / About */}
-      <section className="max-w-[100vw] overflow-hidden bg-sage py-24 md:py-[120px]">
-        <div className="mx-auto max-w-[1240px] px-5 md:px-8">
-          <div
-            data-reveal
-            className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-16"
-          >
-            <div className="relative">
-              <div
-                aria-hidden="true"
-                className="absolute -right-[30px] -bottom-[30px] hidden h-[60%] w-[60%] rounded-3xl bg-mist-deep md:block"
-              />
-              <div className="relative overflow-hidden rounded-[22px] bg-mist shadow-[0_24px_56px_color-mix(in_oklab,var(--navy)_16%,transparent)]">
-                <img
-                  src={storyImg}
-                  alt="Portrait of a longtime New Life Philly member"
-                  className="h-[400px] w-full object-cover md:h-[520px]"
-                  loading="lazy"
-                  width={1100}
-                  height={1300}
-                />
-              </div>
-            </div>
-            <div>
-              <div className="eyebrow mb-6 text-olive-dark">Why people stay</div>
-              <div
-                aria-hidden="true"
-                className="font-display text-[64px] leading-[0.6] font-extrabold text-olive-light"
-              >
-                &ldquo;
-              </div>
-              <blockquote className="mt-3.5 mb-0 max-w-[22ch] font-display text-[clamp(24px,2.7vw,36px)] leading-[1.32] font-semibold tracking-[-0.016em] text-navy">
-                I came in late and sat in the back for about two months before anyone knew my name.
-                Nobody rushed me. That's why I'm still here.
-              </blockquote>
-              <div className="mt-7 flex items-center gap-3.5">
-                <div className="h-0.5 w-11 rounded-full bg-olive" />
-                <div>
-                  <div className="font-display text-[17px] font-bold text-navy">
-                    First name, Last initial
-                  </div>
-                  <div className="mt-0.5 text-[15px] text-body-faint">
-                    Neighborhood · at New Life since 20XX
-                  </div>
-                </div>
-              </div>
-              <p className="mt-6 mb-0 max-w-[44ch] text-[15px] leading-[1.6] text-olive-dark italic">
-                Placeholder — replace with a real member quote and portrait. Two or three sentences,
-                in their own words, about what made them stay.
-              </p>
-              <Link
-                to="/about"
-                className="mt-8 inline-block border-b-2 border-cream pb-1 font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase no-underline transition-colors hover:border-olive"
-              >
-                More about us →
-              </Link>
-            </div>
-          </div>
-
         </div>
       </section>
 
