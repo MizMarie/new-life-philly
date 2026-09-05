@@ -50,21 +50,6 @@ function Home() {
     <div ref={pageRef} className="bg-white font-sans text-body">
       <SiteHeader />
 
-      {/* Mobile service-time bar */}
-      <div className="sticky top-[76px] z-50 border-b border-white/10 bg-navy px-5 py-2.5 md:hidden">
-        <div className="mx-auto flex max-w-[1240px] items-center justify-between gap-4 text-[14px] text-white">
-          <span className="truncate">
-            Sundays at 10am · {ADDRESS_1}, Philadelphia
-          </span>
-          <a
-            href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
-            className="flex-none text-olive-light no-underline"
-          >
-            {PHONE}
-          </a>
-        </div>
-      </div>
-
       {/* Hero */}
       <section className="relative flex max-w-[100vw] items-end overflow-hidden bg-navy min-h-[640px] md:min-h-[760px]">
         <div className="absolute inset-0 bg-mist" />
