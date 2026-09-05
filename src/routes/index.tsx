@@ -50,25 +50,10 @@ function Home() {
     <div ref={pageRef} className="bg-white font-sans text-body">
       <SiteHeader />
 
-      {/* Mobile service-time bar */}
-      <div className="sticky top-[76px] z-50 border-b border-white/10 bg-navy px-5 py-2.5 md:hidden">
-        <div className="mx-auto flex max-w-[1240px] items-center justify-between gap-4 text-[14px] text-white">
-          <span className="truncate">
-            Sundays at 10am · {ADDRESS_1}, Philadelphia
-          </span>
-          <a
-            href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
-            className="flex-none text-olive-light no-underline"
-          >
-            {PHONE}
-          </a>
-        </div>
-      </div>
-
       {/* Hero */}
       <section className="relative flex max-w-[100vw] items-end overflow-hidden bg-navy min-h-[640px] md:min-h-[760px]">
         <div className="absolute inset-0 bg-mist" />
-        <div className="absolute inset-y-0 right-0 left-0 md:left-[max(58%,780px)]">
+        <div className="absolute inset-y-0 right-0 left-0 md:left-[56%]">
           <img
             src={heroImg}
             alt="Members of New Life Philly laughing together after a Sunday service"
@@ -83,14 +68,10 @@ function Home() {
         />
         <div
           aria-hidden="true"
-          className="animate-drift pointer-events-none absolute -bottom-[220px] -left-[160px] h-[620px] w-[620px] rounded-full bg-[radial-gradient(circle_at_40%_40%,color-mix(in_oklab,var(--olive)_36%,transparent),transparent_68%)]"
+          className="animate-drift pointer-events-none absolute -bottom-[220px] -left-[160px] h-[620px] w-[620px] rounded-full bg-[radial-gradient(circle_at_40%_40%,color-mix(in_oklab,var(--mist)_22%,transparent),transparent_68%)]"
         />
         <div className="pointer-events-none relative mx-auto w-full max-w-[1240px] px-5 pt-28 pb-16 md:px-8 md:pt-[120px] md:pb-[84px]">
           <div className="max-w-[660px]">
-            <div className="eyebrow mb-7 inline-flex items-center gap-2.5 rounded-full border border-white/25 bg-white/15 text-white">
-              <span className="block h-[7px] w-[7px] rounded-full bg-olive-light" />
-              A church in Olney, Philadelphia
-            </div>
             <h1 className="m-0 max-w-[13ch] font-display text-[clamp(46px,6.4vw,92px)] leading-[0.98] font-extrabold tracking-[-0.028em] text-white">
               Real People.
               <br />
@@ -118,7 +99,7 @@ function Home() {
             <div className="pointer-events-auto mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-[17px] leading-[1.5] text-white md:mt-7">
               <svg
                 aria-hidden="true"
-                className="h-5 w-5 flex-none text-olive-light"
+                className="h-5 w-5 flex-none text-white/80"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -134,9 +115,9 @@ function Home() {
               <span className="w-full md:hidden" />
               <span className="text-white/80">{ADDRESS_1}, Olney, Philadelphia</span>
             </div>
-            <p className="mt-5 mb-0 max-w-[34ch] text-[22px] leading-[1.55] text-white/90 md:mt-7">
+            <h2 className="mt-5 mb-0 max-w-[34ch] text-[22px] leading-[1.55] font-normal text-white/90 md:mt-7">
               Community rooted in Olney. Open to all of Philadelphia.
-            </p>
+            </h2>
             <div className="pointer-events-auto mt-8 flex flex-wrap gap-3.5 md:mt-10">
               <Link
                 to="/plan-your-visit"
