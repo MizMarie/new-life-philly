@@ -412,9 +412,9 @@ function AboutPage() {
         <div className="mx-auto max-w-[1240px] px-5 md:px-8">
           <div data-reveal className="mx-auto max-w-[820px] text-center">
             <div className="eyebrow mb-5 text-olive-dark">What We Believe</div>
-            <h1 className="m-0 font-display text-[clamp(32px,4vw,48px)] leading-[1.08] font-extrabold tracking-[-0.02em] text-navy">
+            <h2 className="m-0 font-display text-[clamp(32px,4vw,48px)] leading-[1.08] font-extrabold tracking-[-0.02em] text-navy">
               What We Believe
-            </h1>
+            </h2>
             <p className="mt-5 mb-0 text-[18px] leading-[1.7] text-body">
               Our Real Hope is founded entirely on the truth of Scripture, which guides every aspect
               of our lives and practice. We hold firmly to the essential Christian truths while
