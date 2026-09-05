@@ -72,6 +72,7 @@
   --color-navy: var(--navy);
   --color-navy-deep: var(--navy-deep);
   --color-navy-mid: var(--navy-mid);
+  --color-near-black: var(--near-black);
   --color-olive: var(--olive);
   --color-olive-dark: var(--olive-dark);
   --color-olive-light: var(--olive-light);
@@ -93,6 +94,7 @@
   --navy: oklch(0.3130 0.0686 248.67);
   --navy-deep: oklch(0.2785 0.0608 249.58);
   --navy-mid: oklch(0.4469 0.0973 246.95);
+  --near-black: oklch(0.1690 0.0446 272.82);
   --olive: oklch(0.7163 0.1578 120.20);
   --olive-dark: oklch(0.6343 0.1337 120.87);
   --olive-light: oklch(0.8224 0.1414 117.91);
@@ -143,6 +145,7 @@
 .dark {
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
+  --near-black: oklch(0.1690 0.0446 272.82);
   --card: oklch(0.208 0.042 265.755);
   --card-foreground: oklch(0.984 0.003 247.858);
   --popover: oklch(0.208 0.042 265.755);

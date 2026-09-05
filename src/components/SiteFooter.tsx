@@ -14,7 +14,7 @@ import {
 
 export function SiteFooter() {
   return (
-    <footer className="bg-navy-deep pt-20 pb-8 text-white">
+    <footer className="bg-near-black pt-20 pb-8 text-white">
       <div className="mx-auto grid max-w-[1240px] gap-11 px-5 md:px-8 lg:grid-cols-4">
         <div>
           <img
