@@ -72,10 +72,6 @@ function Home() {
         />
         <div className="pointer-events-none relative mx-auto w-full max-w-[1240px] px-5 pt-28 pb-16 md:px-8 md:pt-[120px] md:pb-[84px]">
           <div className="max-w-[660px]">
-            <div className="eyebrow mb-7 inline-flex items-center gap-2.5 rounded-full border border-white/25 bg-white/15 text-white">
-              <span className="block h-[7px] w-[7px] rounded-full bg-olive-light" />
-              A church in Olney, Philadelphia
-            </div>
             <h1 className="m-0 max-w-[13ch] font-display text-[clamp(46px,6.4vw,92px)] leading-[0.98] font-extrabold tracking-[-0.028em] text-white">
               Real People.
               <br />
