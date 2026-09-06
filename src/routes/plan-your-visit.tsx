@@ -137,7 +137,7 @@ function PlanYourVisitPage() {
           <div data-reveal className="mb-11 max-w-[600px]">
             <div className="eyebrow mb-4 text-olive-dark">Before you come</div>
             <h2 className="m-0 font-display text-[clamp(30px,3.2vw,44px)] leading-[1.1] font-bold tracking-[-0.02em] text-navy">
-              Your first Sunday, answered.
+              Everything you're wondering about.
             </h2>
           </div>
           <div data-reveal className="rounded-[20px] border border-hairline bg-white px-7 md:px-9">
