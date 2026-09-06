@@ -319,7 +319,7 @@ function NameCard({ name }: { name: string }) {
 function AboutPage() {
   const pageRef = useReveal<HTMLDivElement>();
   const [expandedTeamIds, setExpandedTeamIds] = useState<Set<string>>(new Set());
-  const [expandedBeliefIds, setExpandedBeliefIds] = useState<Set<string>>(new Set());
+  
 
   const toggleTeam = (id: string) => {
     setExpandedTeamIds((prev) => {
