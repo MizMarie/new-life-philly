@@ -333,17 +333,6 @@ function AboutPage() {
     });
   };
 
-  const toggleBelief = (id: string) => {
-    setExpandedBeliefIds((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) {
-        next.delete(id);
-      } else {
-        next.add(id);
-      }
-      return next;
-    });
-  };
 
   return (
     <div ref={pageRef} className="bg-white font-sans text-body">
