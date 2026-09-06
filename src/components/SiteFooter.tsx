@@ -84,7 +84,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <div className="eyebrow mb-4 text-[11px] text-olive-light">Connect</div>
+          <div className="eyebrow mb-4 text-[11px] text-olive-light">Next Steps</div>
           <div className="grid gap-2.5 text-[16px]">
             <a
               href={PRAYER_URL}
