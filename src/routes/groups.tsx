@@ -161,7 +161,7 @@ function GroupsPage() {
               Browse Open Groups →
             </a>
             <Link
-              to="/connect"
+              to="/next-steps"
               className="pill border-[1.5px] border-navy/25 bg-transparent px-8 py-[19px] text-[15px] text-navy no-underline hover:bg-cream md:px-8"
             >
               See All Ministries

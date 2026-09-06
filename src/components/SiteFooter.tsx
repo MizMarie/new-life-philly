@@ -111,7 +111,7 @@ export function SiteFooter() {
               Give
             </a>
             <Link
-              to="/connect"
+              to="/next-steps"
               className="text-white/80 no-underline transition-colors hover:text-white"
             >
               Connect
