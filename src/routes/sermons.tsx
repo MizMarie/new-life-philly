@@ -96,7 +96,7 @@ function SermonsPage() {
           </h2>
           <div className="relative w-full overflow-hidden rounded-[20px] border border-hairline bg-black aspect-video">
             <iframe
-              src="https://www.youtube.com/embed/videoseries?list=UUZ3zurv6cRygshWvdQa42Wg"
+              src="https://www.youtube-nocookie.com/embed/videoseries?list=UUZ3zurv6cRygshWvdQa42Wg"
               title="New Life Philly Sunday messages"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
