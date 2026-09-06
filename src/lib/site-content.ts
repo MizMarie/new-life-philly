@@ -21,6 +21,10 @@ export const BAPTISM_URL = "https://newlifephilly.churchcenter.com/people/forms/
 export const RESOURCES_HELP_URL = "https://newlifephilly.churchcenter.com/people/forms/875034";
 export const BUILDING_REQUEST_URL = "https://newlifephilly.churchcenter.com/people/forms/400853";
 export const YOUTUBE_URL = "https://www.youtube.com/@NewLifePhilly";
+export const YOUTUBE_PLAYLISTS_URL = "https://www.youtube.com/@NewLifePhilly/playlists";
+export const APPLE_PODCAST_URL = "https://podcasts.apple.com/us/podcast/new-life-philly/id1566807007";
+export const SPOTIFY_PODCAST_URL = "https://open.spotify.com/show/6O3AeJlMXHC2GmTl6NJVGc";
+
 export const EMAIL = "newlife@newlifephilly.net";
 export const PHONE = "215-324-4566";
 export const ADDRESS_1 = "425 E Roosevelt Blvd";

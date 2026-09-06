@@ -2,9 +2,15 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { YOUTUBE_URL } from "@/lib/site-content";
+import {
+  APPLE_PODCAST_URL,
+  SPOTIFY_PODCAST_URL,
+  YOUTUBE_PLAYLISTS_URL,
+  YOUTUBE_URL,
+} from "@/lib/site-content";
 import { useReveal } from "@/hooks/use-reveal";
 import { abs, breadcrumbJsonLd } from "@/lib/seo";
+
 
 export const Route = createFileRoute("/sermons")({
   head: () => ({
