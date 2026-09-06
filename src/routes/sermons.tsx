@@ -2,9 +2,15 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { YOUTUBE_URL } from "@/lib/site-content";
+import {
+  APPLE_PODCAST_URL,
+  SPOTIFY_PODCAST_URL,
+  YOUTUBE_PLAYLISTS_URL,
+  YOUTUBE_URL,
+} from "@/lib/site-content";
 import { useReveal } from "@/hooks/use-reveal";
 import { abs, breadcrumbJsonLd } from "@/lib/seo";
+
 
 export const Route = createFileRoute("/sermons")({
   head: () => ({
@@ -66,18 +72,72 @@ function SermonsPage() {
               Watch on YouTube →
             </a>
             <a
-              href={YOUTUBE_URL + "/videos"}
+              href={YOUTUBE_PLAYLISTS_URL}
               target="_blank"
               rel="noopener"
               className="pill border-[1.5px] border-white/55 bg-transparent px-8 py-[19px] text-[15px] text-white no-underline hover:bg-white/15 md:px-[34px]"
             >
               Browse Past Sermons
             </a>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Watch */}
+      <section className="bg-white py-24 md:py-[110px]">
+        <div data-reveal className="mx-auto max-w-[1100px] px-5 md:px-8">
+          <div className="eyebrow mb-5 text-olive-dark">Watch</div>
+          <h2 className="m-0 mb-10 font-display text-[clamp(30px,3.4vw,48px)] leading-[1.09] font-bold tracking-[-0.02em] text-navy">
+            Latest Sunday messages
+          </h2>
+          <div className="relative w-full overflow-hidden rounded-[20px] border border-hairline bg-black aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/videoseries?list=UUZ3zurv6cRygshWvdQa42Wg"
+              title="New Life Philly Sunday messages"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              loading="lazy"
+              className="absolute inset-0 h-full w-full border-0"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Podcast */}
+      <section className="bg-sage py-24 md:py-[110px]">
+        <div data-reveal className="mx-auto max-w-[760px] px-5 text-center md:px-8">
+          <div className="eyebrow mb-5 text-olive-dark">Listen</div>
+          <h2 className="m-0 font-display text-[clamp(30px,3.4vw,48px)] leading-[1.09] font-bold tracking-[-0.02em] text-navy">
+            The sermon doesn't stop when Sunday does.
+          </h2>
+          <p className="mx-auto mt-6 mb-0 max-w-[50ch] text-[19px] leading-[1.65] text-body-soft">
+            Whether you're on the bus, on a break, or just not ready to walk through the doors yet,
+            the podcast is here for you.
+          </p>
+          <div className="mt-10 flex flex-wrap justify-center gap-3.5">
+            <a
+              href={APPLE_PODCAST_URL}
+              target="_blank"
+              rel="noopener"
+              className="pill bg-navy px-8 py-[19px] text-[15px] text-white no-underline hover:bg-navy-mid md:px-[38px]"
+            >
+              Listen on Apple Podcasts →
+            </a>
+            <a
+              href={SPOTIFY_PODCAST_URL}
+              target="_blank"
+              rel="noopener"
+              className="pill border-[1.5px] border-navy/55 bg-transparent px-8 py-[19px] text-[15px] text-navy no-underline hover:bg-navy/10 md:px-[34px]"
+            >
+              Listen on Spotify
+            </a>
           </div>
         </div>
       </section>
 
       {/* Why we preach */}
+
       <section className="bg-white py-24 md:py-[110px]">
         <div className="mx-auto grid max-w-[1240px] gap-12 px-5 md:px-8 lg:grid-cols-3 lg:gap-10">
           {[
