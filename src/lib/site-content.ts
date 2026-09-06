@@ -15,6 +15,11 @@ export const GROUPS_URL =
 export const CALENDAR_URL = "https://newlifephilly.churchcenter.com/calendar?view=gallery";
 export const SERVE_URL = CALENDAR_URL;
 export const UNBOUND_PRAYER_URL = "https://newlifephilly.churchcenter.com/pages/unbound-prayer";
+export const SERVING_INTEREST_URL = "https://newlifephilly.churchcenter.com/people/forms/559863";
+export const COUNSELING_URL = "https://docs.google.com/forms/d/e/1FAIpQLScWzQqmwyWp5h_xrPQBX1BPltE9q7nZU1rY98tlrTqwoEcqEQ/viewform?pli=1";
+export const BAPTISM_URL = "https://newlifephilly.churchcenter.com/people/forms/474912";
+export const RESOURCES_HELP_URL = "https://newlifephilly.churchcenter.com/people/forms/875034";
+export const BUILDING_REQUEST_URL = "https://newlifephilly.churchcenter.com/people/forms/400853";
 export const YOUTUBE_URL = "https://www.youtube.com/@NewLifePhilly";
 export const EMAIL = "newlife@newlifephilly.net";
 export const PHONE = "215-324-4566";
@@ -23,18 +28,15 @@ export const ADDRESS_2 = "Philadelphia, PA 19120";
 
 /**
  * Church Center deep links for the "Additional Resources" row.
- * TODO (New Life Philly): replace any entry still pointing at CHURCH_CENTER_URL
- * with the exact form URL from your Church Center admin — this is the only
- * place these URLs live, so you only have to paste them once.
  */
 export const RESOURCE_LINKS = [
-  { label: "Serving Interest", href: CHURCH_CENTER_URL }, // TODO: exact form URL
   { label: "How Can We Pray for You?", href: PRAYER_URL },
   { label: "Unbound Prayer", href: UNBOUND_PRAYER_URL },
-  { label: "Counseling Help", href: CHURCH_CENTER_URL }, // TODO: exact form URL
-  { label: "Baptism / Dedication", href: CHURCH_CENTER_URL }, // TODO: exact form URL
-  { label: "Resources Help", href: CHURCH_CENTER_URL }, // TODO: exact form URL
-  { label: "Building Requests", href: CHURCH_CENTER_URL }, // TODO: exact form URL
+  { label: "Counseling Help", href: COUNSELING_URL },
+  { label: "Resources Help", href: RESOURCES_HELP_URL },
+  { label: "Baptism / Dedication", href: BAPTISM_URL },
+  { label: "Building Requests", href: BUILDING_REQUEST_URL },
+  { label: "Serving Interest", href: SERVING_INTEREST_URL },
 ];
 
 /** Ministries — drafted copy and placeholder photos until real ones arrive. */
