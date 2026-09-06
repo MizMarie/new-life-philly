@@ -235,11 +235,12 @@ function Home() {
               See all next steps →
             </Link>
           </div>
-          <div className="grid gap-[26px] md:grid-cols-3">
-            {STEPS.map((step) => {
+          <div className="grid gap-[26px] lg:grid-cols-12">
+            {(() => {
+              const step = STEPS[0]!;
               const inner = (
                 <>
-                  <div className="relative h-[240px]">
+                  <div className="relative h-[240px] lg:h-[340px]">
                     <img
                       src={step.img}
                       alt={step.alt}
@@ -268,18 +269,63 @@ function Home() {
                   </div>
                 </>
               );
-              const cardClass =
-                "block overflow-hidden rounded-[20px] bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)]";
-              return "to" in step && step.to ? (
-                <Link key={step.n} to={step.to} data-reveal className={cardClass}>
+              return (
+                <Link
+                  key={step.n}
+                  to={step.to!}
+                  data-reveal
+                  className="block overflow-hidden rounded-[20px] bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)] lg:col-span-7"
+                >
                   {inner}
                 </Link>
-              ) : (
-                <a key={step.n} href={step.href} data-reveal className={cardClass}>
-                  {inner}
-                </a>
               );
-            })}
+            })()}
+            <div className="grid gap-[26px] lg:col-span-5 lg:grid-rows-2">
+              {STEPS.slice(1).map((step) => {
+                const inner = (
+                  <>
+                    <div className="relative h-[240px] lg:h-[152px]">
+                      <img
+                        src={step.img}
+                        alt={step.alt}
+                        className="h-full w-full object-cover"
+                        loading="lazy"
+                        width={1200}
+                        height={800}
+                      />
+                      <span
+                        aria-hidden="true"
+                        className="pointer-events-none absolute top-5 left-5 flex h-[38px] w-[38px] items-center justify-center rounded-full bg-olive font-display text-[15px] font-extrabold text-navy"
+                      >
+                        {step.n}
+                      </span>
+                    </div>
+                    <div className="px-[26px] pt-6 pb-[26px]">
+                      <h3 className="m-0 font-display text-[22px] font-bold tracking-tight text-navy">
+                        {step.title}
+                      </h3>
+                      <p className="mt-2.5 mb-0 text-[16px] leading-[1.55] text-body-soft">
+                        {step.body}
+                      </p>
+                      <span className="mt-4 inline-block font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase">
+                        {step.cta}
+                      </span>
+                    </div>
+                  </>
+                );
+                const cardClass =
+                  "block overflow-hidden rounded-[20px] bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)]";
+                return "to" in step && step.to ? (
+                  <Link key={step.n} to={step.to} data-reveal className={cardClass}>
+                    {inner}
+                  </Link>
+                ) : (
+                  <a key={step.n} href={step.href} data-reveal className={cardClass}>
+                    {inner}
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
