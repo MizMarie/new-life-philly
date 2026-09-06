@@ -1,16 +1,16 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-@import "@fontsource/montserrat/400.css";
-@import "@fontsource/montserrat/500.css";
-@import "@fontsource/montserrat/600.css";
-@import "@fontsource/montserrat/700.css";
-@import "@fontsource/montserrat/800.css";
-@import "@fontsource/source-sans-3/400.css";
-@import "@fontsource/source-sans-3/400-italic.css";
-@import "@fontsource/source-sans-3/500.css";
-@import "@fontsource/source-sans-3/600.css";
-@import "@fontsource/source-sans-3/700.css";
+@import "@fontsource/inter-tight/400.css";
+@import "@fontsource/inter-tight/500.css";
+@import "@fontsource/inter-tight/600.css";
+@import "@fontsource/inter-tight/700.css";
+@import "@fontsource/inter-tight/800.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/400-italic.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -85,28 +85,28 @@
   --color-body: var(--body);
   --color-body-soft: var(--body-soft);
   --color-body-faint: var(--body-faint);
-  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.625rem;
-  --navy: oklch(0.3130 0.0686 248.67);
-  --navy-deep: oklch(0.2785 0.0608 249.58);
-  --navy-mid: oklch(0.4469 0.0973 246.95);
+  --navy: oklch(0.4472 0.0970 247.23);
+  --navy-deep: oklch(0.3722 0.1050 247.23);
+  --navy-mid: oklch(0.5772 0.0890 247.23);
   --near-black: oklch(0.1566 0.0108 248.32);
-  --olive: oklch(0.7163 0.1578 120.20);
-  --olive-dark: oklch(0.6343 0.1337 120.87);
-  --olive-light: oklch(0.8224 0.1414 117.91);
-  --cream: oklch(0.9408 0.0466 116.49);
-  --sage: oklch(0.9725 0.0213 115.42);
-  --sage-line: oklch(0.9128 0.0471 117.80);
-  --mist: oklch(0.9638 0.0084 236.56);
-  --mist-deep: oklch(0.9060 0.0196 240.75);
-  --hairline: oklch(0.9283 0.0076 241.67);
-  --body: oklch(0.3820 0.0194 248.33);
-  --body-soft: oklch(0.4437 0.0216 245.74);
-  --body-faint: oklch(0.5009 0.0209 245.66);
+  --olive: oklch(0.8012 0.1600 119.19);
+  --olive-dark: oklch(0.7012 0.1500 119.19);
+  --olive-light: oklch(0.8812 0.1300 119.19);
+  --cream: oklch(0.9850 0.0080 196.20);
+  --sage: oklch(0.9450 0.0300 196.20);
+  --sage-line: oklch(0.8950 0.0480 196.20);
+  --mist: oklch(0.9650 0.0180 196.20);
+  --mist-deep: oklch(0.9110 0.0568 196.20);
+  --hairline: oklch(0.9283 0.0100 247.23);
+  --body: oklch(0.3820 0.0200 247.23);
+  --body-soft: oklch(0.4437 0.0200 247.23);
+  --body-faint: oklch(0.5009 0.0180 247.23);
 
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
