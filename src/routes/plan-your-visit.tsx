@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import guideImg from "@/assets/nlp-guide.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { BrushstrokeAccent } from "@/components/BrushstrokeAccent";
 import {
   Accordion,
   AccordionContent,
