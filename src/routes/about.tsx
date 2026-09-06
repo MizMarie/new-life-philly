@@ -202,6 +202,15 @@ const BELIEFS: Belief[] = [
   },
 ];
 
+/** Asymmetric 12-column layout: 7+5, 5+7, then a full-width closer. */
+const BELIEF_SPANS: Record<string, string> = {
+  "word-of-god": "lg:col-span-7",
+  "nature-of-god": "lg:col-span-5",
+  "salvation-through-christ": "lg:col-span-5",
+  "humanitys-purpose-and-need": "lg:col-span-7",
+  "unity-in-essential-beliefs": "lg:col-span-12",
+};
+
 function TeamCard({
   member,
   expanded,
