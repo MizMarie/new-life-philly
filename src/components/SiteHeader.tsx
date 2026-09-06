@@ -35,6 +35,7 @@ export function SiteHeader() {
             className="block h-12 w-12 rounded-full bg-white object-cover"
             width={48}
             height={48}
+            fetchPriority="low"
           />
           <span className="font-display text-[19px] font-extrabold tracking-tight text-navy">
             New Life <span className="text-olive-dark">Philly</span>
