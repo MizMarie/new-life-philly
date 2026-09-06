@@ -25,6 +25,10 @@ export const EMAIL = "newlife@newlifephilly.net";
 export const PHONE = "215-324-4566";
 export const ADDRESS_1 = "425 E Roosevelt Blvd";
 export const ADDRESS_2 = "Philadelphia, PA 19120";
+export const MAP_EMBED_URL =
+  "https://www.google.com/maps?q=425+E+Roosevelt+Blvd,+Philadelphia,+PA+19120&output=embed";
+export const MAP_DIRECTIONS_URL =
+  "https://www.google.com/maps/dir/?api=1&destination=425+E+Roosevelt+Blvd,+Philadelphia,+PA+19120";
 
 /**
  * Church Center deep links for the "Additional Resources" row.

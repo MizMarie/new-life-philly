@@ -64,3 +64,16 @@ export const breadcrumbJsonLd = (name: string, path: string) => ({
     { "@type": "ListItem", position: 2, name, item: abs(path) },
   ],
 });
+
+export const faqJsonLd = (faqs: { question: string; answer: string }[]) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+});
