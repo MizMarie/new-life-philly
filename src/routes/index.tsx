@@ -236,7 +236,8 @@ function Home() {
             </Link>
           </div>
           <div className="grid gap-[26px] lg:grid-cols-12">
-            {[STEPS[0]].map((step) => {
+            {(() => {
+              const step = STEPS[0]!;
               const inner = (
                 <>
                   <div className="relative h-[240px] lg:h-[340px]">
