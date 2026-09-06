@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { MINISTRIES, RESOURCE_LINKS } from "@/lib/site-content";
+import { CALENDAR_URL, GROUPS_URL, MINISTRIES, RESOURCE_LINKS } from "@/lib/site-content";
 import groupsImg from "@/assets/nlp-story.jpg";
 import eventsImg from "@/assets/nlp-guide.jpg";
 import { useReveal } from "@/hooks/use-reveal";
@@ -75,7 +75,7 @@ function NextStepsPage() {
             </h2>
           </div>
           <div className="grid gap-[26px] sm:grid-cols-2 lg:grid-cols-3">
-            <Link to="/groups" data-reveal className={CARD}>
+            <a href={GROUPS_URL} target="_blank" rel="noopener" data-reveal className={CARD}>
               <div className="h-[210px]">
                 <img
                   src={groupsImg}
@@ -97,9 +97,9 @@ function NextStepsPage() {
                   How Groups Work →
                 </span>
               </div>
-            </Link>
+            </a>
 
-            <Link to="/events" data-reveal className={CARD}>
+            <a href={CALENDAR_URL} target="_blank" rel="noopener" data-reveal className={CARD}>
               <div className="h-[210px]">
                 <img
                   src={eventsImg}
@@ -118,10 +118,10 @@ function NextStepsPage() {
                   See What's Coming →
                 </span>
               </div>
-            </Link>
+            </a>
 
             {MINISTRIES.map((m) => (
-              <Link key={m.id} to="/ministries" hash={m.id} data-reveal className={CARD}>
+              <a key={m.id} href={m.url} target="_blank" rel="noopener" data-reveal className={CARD}>
                 <div className="h-[210px]">
                   <img
                     src={m.img}
@@ -140,7 +140,7 @@ function NextStepsPage() {
                     Learn More →
                   </span>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
