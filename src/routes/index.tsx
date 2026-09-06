@@ -13,6 +13,7 @@ import {
   PHONE,
   PRAYER_URL,
   STEPS,
+  YOUTUBE_LIVE_URL,
 } from "@/lib/site-content";
 import { useReveal } from "@/hooks/use-reveal";
 import { CHURCH_JSONLD, abs } from "@/lib/seo";
@@ -124,12 +125,14 @@ function Home() {
                 />
                 Plan Your Visit →
               </Link>
-              <Link
-                to="/sermons"
+              <a
+                href={YOUTUBE_LIVE_URL}
+                target="_blank"
+                rel="noopener"
                 className="pill border-[1.5px] border-white/55 bg-transparent px-8 py-[19px] text-[15px] text-white no-underline hover:bg-white/15 md:px-[34px]"
               >
-                Watch a Sermon
-              </Link>
+                Watch Live
+              </a>
             </div>
           </div>
         </div>
