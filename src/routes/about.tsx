@@ -455,13 +455,14 @@ function AboutPage() {
             </p>
           </div>
 
-          <div className="mt-16 grid gap-6 md:mt-20">
-            {BELIEFS.map((belief) => (
-              <BeliefItem
+          <div className="mt-16 grid grid-cols-1 gap-6 md:mt-20 lg:grid-cols-12">
+            {BELIEFS.map((belief, i) => (
+              <BeliefCard
                 key={belief.id}
                 belief={belief}
-                expanded={expandedBeliefIds.has(belief.id)}
-                onToggle={() => toggleBelief(belief.id)}
+                index={i}
+                spanClass={BELIEF_SPANS[belief.id] ?? "lg:col-span-6"}
+                wide={belief.id === "unity-in-essential-beliefs"}
               />
             ))}
           </div>
