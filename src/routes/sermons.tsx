@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { BrushstrokeAccent } from "@/components/BrushstrokeAccent";
 import {
   APPLE_PODCAST_URL,
   SPOTIFY_PODCAST_URL,
