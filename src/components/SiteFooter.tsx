@@ -114,7 +114,7 @@ export function SiteFooter() {
               to="/next-steps"
               className="text-white/80 no-underline transition-colors hover:text-white"
             >
-              Connect
+              Next Steps
             </Link>
           </div>
         </div>
