@@ -272,14 +272,14 @@ function Home() {
               return (
                 <Link
                   key={step.n}
-                  to={step.to}
+                  to={step.to!}
                   data-reveal
                   className="block overflow-hidden rounded-[20px] bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)] lg:col-span-7"
                 >
                   {inner}
                 </Link>
               );
-            })}
+            })()}
             <div className="grid gap-[26px] lg:col-span-5 lg:grid-rows-2">
               {STEPS.slice(1).map((step) => {
                 const inner = (
