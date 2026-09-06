@@ -5,8 +5,8 @@ import { SiteFooter } from "@/components/SiteFooter";
 import {
   APPLE_PODCAST_URL,
   SPOTIFY_PODCAST_URL,
+  YOUTUBE_LIVE_URL,
   YOUTUBE_PLAYLISTS_URL,
-  YOUTUBE_URL,
 } from "@/lib/site-content";
 import { useReveal } from "@/hooks/use-reveal";
 import { abs, breadcrumbJsonLd } from "@/lib/seo";
@@ -64,12 +64,12 @@ function SermonsPage() {
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3.5">
             <a
-              href={YOUTUBE_URL}
+              href={YOUTUBE_LIVE_URL}
               target="_blank"
               rel="noopener"
               className="pill bg-olive px-8 py-[19px] text-[15px] text-navy no-underline hover:bg-olive-light md:px-[38px]"
             >
-              Watch on YouTube →
+              Watch Live →
             </a>
             <a
               href={YOUTUBE_PLAYLISTS_URL}
