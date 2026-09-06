@@ -90,7 +90,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         property: "og:description",
         content:
-          "A church in Olney, Philadelphia. Sundays at 10am — come as you are, sit in the back, decide nothing.",
+          "Our greatest hope is that you find your way to Jesus. We're simply here to walk alongside you at whatever pace you need.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
