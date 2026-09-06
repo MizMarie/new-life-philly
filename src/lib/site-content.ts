@@ -29,13 +29,12 @@ export const ADDRESS_2 = "Philadelphia, PA 19120";
  */
 export const RESOURCE_LINKS = [
   { label: "Serving Interest", href: CHURCH_CENTER_URL }, // TODO: exact form URL
-  { label: "Building Requests", href: CHURCH_CENTER_URL }, // TODO: exact form URL
+  { label: "How Can We Pray for You?", href: PRAYER_URL },
+  { label: "Unbound Prayer", href: UNBOUND_PRAYER_URL },
   { label: "Counseling Help", href: CHURCH_CENTER_URL }, // TODO: exact form URL
-  { label: "Resources Help", href: CHURCH_CENTER_URL }, // TODO: exact form URL
   { label: "Baptism / Dedication", href: CHURCH_CENTER_URL }, // TODO: exact form URL
-  { label: "Faith and Politics", href: CHURCH_CENTER_URL }, // TODO: exact form URL
-  { label: "Prayer Ministry", href: PRAYER_URL },
-  { label: "Church Directory", href: CHURCH_CENTER_URL }, // TODO: exact directory URL
+  { label: "Resources Help", href: CHURCH_CENTER_URL }, // TODO: exact form URL
+  { label: "Building Requests", href: CHURCH_CENTER_URL }, // TODO: exact form URL
 ];
 
 /** Ministries — drafted copy and placeholder photos until real ones arrive. */
@@ -85,7 +84,6 @@ export const MINISTRIES = [
 export const NAV_LINKS = [
   { label: "About", to: "/about" },
   { label: "Sermons", to: "/sermons" },
-  { label: "Connect", to: "/connect" },
   { label: "Next Steps", to: "/next-steps" },
 ] as const;
 
@@ -116,7 +114,7 @@ export const STEPS = [
     title: "Real Love Connects",
     body: "Find your people. There's a place for every age and every stage.",
     cta: "Find Your People →",
-    to: "/connect",
+    to: "/next-steps",
   },
   {
     n: "3",
@@ -129,26 +127,6 @@ export const STEPS = [
   },
 ];
 
-export const NEXT_LINKS = [
-  {
-    title: "Find Your Community",
-    body: "Real connection in a group committed to honesty and growth.",
-    cta: "Explore Groups →",
-    to: "/groups",
-  },
-  {
-    title: "Live Out Your Mission",
-    body: "Use your gifts and make a tangible impact right here in Philly.",
-    cta: "Find a Way to Serve →",
-    to: "/connect",
-  },
-  {
-    title: "Practice the Way",
-    body: "Discover the way of Jesus and what it looks like on a Tuesday.",
-    cta: "Watch Sermons →",
-    to: "/sermons",
-  },
-];
 
 export const SOCIALS = [
   {

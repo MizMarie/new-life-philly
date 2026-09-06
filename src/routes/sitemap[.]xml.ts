@@ -8,7 +8,6 @@ const entries = [
   { path: "/plan-your-visit", changefreq: "monthly", priority: "0.9" },
   { path: "/about", changefreq: "monthly", priority: "0.8" },
   { path: "/sermons", changefreq: "weekly", priority: "0.8" },
-  { path: "/connect", changefreq: "weekly", priority: "0.8" },
   { path: "/groups", changefreq: "monthly", priority: "0.7" },
   { path: "/ministries", changefreq: "monthly", priority: "0.7" },
   { path: "/events", changefreq: "weekly", priority: "0.7" },
