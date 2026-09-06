@@ -250,44 +250,44 @@ function TeamCard({
   );
 }
 
-function BeliefItem({
+function BeliefCard({
   belief,
-  expanded,
-  onToggle,
+  index,
+  spanClass,
+  wide = false,
 }: {
   belief: Belief;
-  expanded: boolean;
-  onToggle: () => void;
+  index: number;
+  spanClass: string;
+  wide?: boolean;
 }) {
   return (
-    <div
+    <article
       data-reveal
-      className="rounded-[22px] bg-white p-6 shadow-[0_12px_32px_color-mix(in_oklab,var(--navy)_8%,transparent)] md:p-8"
+      className={`${spanClass} relative overflow-hidden rounded-[22px] bg-white p-7 shadow-[0_12px_32px_color-mix(in_oklab,var(--navy)_8%,transparent)] md:p-9`}
     >
-      <button
-        type="button"
-        onClick={onToggle}
-        aria-expanded={expanded}
-        className="flex w-full cursor-pointer items-center justify-between border-none bg-transparent p-0 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2"
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-4 right-4 font-display text-[96px] leading-none font-extrabold tracking-[-0.04em] text-mist md:text-[124px]"
       >
-        <span className="font-display text-[18px] font-bold text-navy md:text-[20px]">
+        {index + 1}
+      </span>
+      <div className="relative">
+        <div className="mb-4 h-[3px] w-12 rounded-full bg-olive" />
+        <h3 className="m-0 max-w-[26ch] font-display text-[21px] leading-[1.2] font-bold tracking-[-0.012em] text-navy md:text-[25px]">
           {belief.heading}
-        </span>
-        <span
-          aria-hidden="true"
-          className={`ml-4 text-olive-dark transition-transform ${expanded ? "rotate-180" : ""}`}
+        </h3>
+        <ul
+          className={`mt-6 list-disc space-y-3 pl-5 text-[16px] leading-[1.62] text-body ${
+            wide ? "md:columns-2 md:gap-10 md:space-y-0 md:[&>li]:mb-3" : ""
+          }`}
         >
-          ▼
-        </span>
-      </button>
-      {expanded && (
-        <ul className="mt-5 list-disc space-y-3 pl-5 text-[15px] leading-[1.6] text-body">
           {belief.bullets.map((bullet) => (
             <li key={bullet}>{bullet}</li>
           ))}
         </ul>
-      )}
-    </div>
+      </div>
+    </article>
   );
 }
 
