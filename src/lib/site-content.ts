@@ -60,6 +60,15 @@ export const MINISTRIES = [
     body: "Games in the gym, honest conversation, and a place to ask the hard questions without being handed a script. Students find real friendships here.",
   },
   {
+    id: "young-adults",
+    name: "Young Adults",
+    ages: "College & twenties",
+    url: "https://newlifephilly.churchcenter.com/groups/fellowship-groups/young-adults",
+    img: guideImg,
+    alt: "Young adults on a retreat together",
+    body: "For students, workers, and everyone figuring out what's next. Community that meets you in the middle of the mess and points you toward Jesus.",
+  },
+  {
     id: "women",
     name: "Women",
     ages: "All seasons of life",
@@ -76,15 +85,6 @@ export const MINISTRIES = [
     img: step2Img,
     alt: "Men gathered outside the church building",
     body: "Straight talk, shared work, and brothers who show up. Men meet to grow in Christ and to take responsibility at home, at work, and in the neighborhood.",
-  },
-  {
-    id: "young-adults",
-    name: "Young Adults",
-    ages: "College & twenties",
-    url: "https://newlifephilly.churchcenter.com/groups/fellowship-groups/young-adults",
-    img: guideImg,
-    alt: "Young adults on a retreat together",
-    body: "For students, workers, and everyone figuring out what's next. Community that meets you in the middle of the mess and points you toward Jesus.",
   },
 ];
 
