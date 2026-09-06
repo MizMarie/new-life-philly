@@ -194,7 +194,7 @@ function PlanYourVisitPage() {
         <div data-reveal className="relative mx-auto max-w-[760px] px-5 text-center md:px-8">
           <div className="eyebrow mb-5 text-olive-light">No pressure, ever</div>
           <p className="m-0 font-display text-[clamp(26px,3vw,40px)] leading-[1.28] font-semibold tracking-[-0.015em] text-white">
-            Come as you are, sit in the back, and decide nothing. We'll save you a seat.
+            Our greatest hope is that you find your way to Jesus. We're simply here to walk alongside you at whatever pace you need.
           </p>
         </div>
       </section>
