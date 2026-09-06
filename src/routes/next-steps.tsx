@@ -96,9 +96,15 @@ function NextStepsPage() {
               Pick the room that fits your life.
             </h2>
           </div>
-          <div className="grid gap-[26px] sm:grid-cols-2 lg:grid-cols-3">
-            <a href={GROUPS_URL} target="_blank" rel="noopener" data-reveal className={CARD}>
-              <div className="h-[210px]">
+          <div className="grid gap-[26px] lg:grid-cols-12">
+            <a
+              href={GROUPS_URL}
+              target="_blank"
+              rel="noopener"
+              data-reveal
+              className={`${CARD} lg:col-span-6`}
+            >
+              <div className="h-[210px] lg:h-[320px]">
                 <img
                   src={groupsImg}
                   alt="A Life Group gathered around a table"
@@ -109,19 +115,25 @@ function NextStepsPage() {
                 />
               </div>
               <div className="px-[26px] pt-7 pb-[30px]">
-                <h3 className="m-0 font-display text-[23px] font-bold tracking-tight text-navy">
+                <h3 className="m-0 font-display text-[26px] font-bold tracking-tight text-navy">
                   Life Groups
                 </h3>
                 <p className="mt-2.5 mb-0 text-[17px] leading-[1.6] text-body-soft">
                   Small groups that meet each week to eat, talk about real life, and pray together.
                 </p>
-                <span className="mt-4 inline-block font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase">
+                <span className="mt-5 inline-block rounded-full bg-olive px-6 py-3 font-display text-[13px] font-bold tracking-[0.08em] text-navy uppercase">
                   How Groups Work →
                 </span>
               </div>
             </a>
 
-            <a href={CALENDAR_URL} target="_blank" rel="noopener" data-reveal className={CARD}>
+            <a
+              href={CALENDAR_URL}
+              target="_blank"
+              rel="noopener"
+              data-reveal
+              className={`${CARD} lg:col-span-3`}
+            >
               <div className="h-[210px]">
                 <img
                   src={eventsImg}
@@ -143,7 +155,14 @@ function NextStepsPage() {
             </a>
 
             {MINISTRIES.map((m) => (
-              <a key={m.id} href={m.url} target="_blank" rel="noopener" data-reveal className={CARD}>
+              <a
+                key={m.id}
+                href={m.url}
+                target="_blank"
+                rel="noopener"
+                data-reveal
+                className={`${CARD} lg:col-span-3`}
+              >
                 <div className="h-[210px]">
                   <img
                     src={m.img}
