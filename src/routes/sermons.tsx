@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { BrushstrokeAccent } from "@/components/BrushstrokeAccent";
 import {
   APPLE_PODCAST_URL,
   SPOTIFY_PODCAST_URL,
@@ -49,9 +50,11 @@ function SermonsPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-navy py-24 md:py-[140px]">
-        <div
-          aria-hidden="true"
-          className="animate-drift pointer-events-none absolute -bottom-[220px] -left-[160px] h-[620px] w-[620px] rounded-full bg-[radial-gradient(circle_at_40%_40%,color-mix(in_oklab,var(--olive)_30%,transparent),transparent_68%)]"
+        <BrushstrokeAccent
+          drift
+          rotate={-10}
+          opacity={0.16}
+          className="absolute -bottom-[70px] -left-[120px] h-[300px] w-[760px] text-olive"
         />
         <div data-reveal className="relative mx-auto max-w-[860px] px-5 text-center md:px-8">
           <div className="eyebrow mb-5 text-olive-light">Sermons</div>

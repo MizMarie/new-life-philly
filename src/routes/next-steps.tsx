@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { BrushstrokeAccent } from "@/components/BrushstrokeAccent";
 import { CALENDAR_URL, GROUPS_URL, MINISTRIES, RESOURCE_LINKS } from "@/lib/site-content";
 import groupsImg from "@/assets/nlp-story.jpg";
 import eventsImg from "@/assets/nlp-guide.jpg";
@@ -46,22 +47,43 @@ function NextStepsPage() {
     <div ref={pageRef} className="bg-white font-sans text-body">
       <SiteHeader />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-navy py-24 md:py-[130px]">
-        <div
-          aria-hidden="true"
-          className="animate-drift pointer-events-none absolute -top-[180px] -right-[180px] h-[620px] w-[620px] rounded-full bg-[radial-gradient(circle_at_45%_45%,color-mix(in_oklab,var(--olive)_24%,transparent),transparent_70%)]"
+      {/* Hero — asymmetric, brushstroke-led */}
+      <section className="relative overflow-hidden bg-navy pt-20 pb-24 md:pt-[120px] md:pb-[140px]">
+        {/* Flagship brushstroke, sweeping across the headline at large scale */}
+        <BrushstrokeAccent
+          rotate={-7}
+          opacity={0.3}
+          className="absolute top-[24%] -left-[8%] h-[420px] w-[130%] text-olive md:h-[560px]"
         />
-        <div data-reveal className="relative mx-auto max-w-[860px] px-5 md:px-8">
-          <div className="eyebrow mb-5 text-olive-light">Next steps</div>
-          <h1 className="m-0 max-w-[18ch] font-display text-[clamp(40px,5vw,64px)] leading-[1.05] font-extrabold tracking-[-0.024em] text-white">
-            Sunday is the front door.
-          </h1>
-          <p className="mt-7 mb-0 max-w-[48ch] text-[20px] leading-[1.68] text-white/80">
-            The rest of the week is where real friendships — with Jesus, and with each other — get
-            built: around tables, in the gym, on the street. Here's everything happening at New
-            Life Philly.
-          </p>
+        <BrushstrokeAccent
+          drift
+          flip
+          rotate={12}
+          opacity={0.12}
+          className="absolute -bottom-[90px] right-[-14%] h-[300px] w-[70%] text-olive-light"
+        />
+
+        <div className="relative mx-auto grid max-w-[1240px] grid-cols-12 gap-y-10 px-5 md:px-8">
+          <div data-reveal className="col-span-12 lg:col-span-9">
+            <div className="eyebrow mb-6 text-olive-light">Next steps</div>
+            <h1 className="m-0 max-w-[16ch] font-display text-[clamp(46px,9vw,120px)] leading-[0.94] font-extrabold tracking-[-0.035em] text-white">
+              Sunday is the
+              <span className="block text-olive-light">front door.</span>
+            </h1>
+          </div>
+
+          <div
+            data-reveal
+            className="col-span-12 mt-2 lg:col-span-5 lg:col-start-8 lg:mt-8 lg:text-right"
+          >
+            <div className="inline-block border-l-2 border-olive pl-6 text-left lg:border-l-0 lg:border-r-2 lg:pl-0 lg:pr-6 lg:text-right">
+              <p className="m-0 max-w-[44ch] text-[19px] leading-[1.66] text-white/80 md:text-[20px]">
+                The rest of the week is where real friendships — with Jesus, and with each other —
+                get built: around tables, in the gym, on the street. Here's everything happening at
+                New Life Philly.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

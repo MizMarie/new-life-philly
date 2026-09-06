@@ -202,6 +202,15 @@ const BELIEFS: Belief[] = [
   },
 ];
 
+/** Asymmetric 12-column layout: 7+5, 5+7, then a full-width closer. */
+const BELIEF_SPANS: Record<string, string> = {
+  "word-of-god": "lg:col-span-7",
+  "nature-of-god": "lg:col-span-5",
+  "salvation-through-christ": "lg:col-span-5",
+  "humanitys-purpose-and-need": "lg:col-span-7",
+  "unity-in-essential-beliefs": "lg:col-span-12",
+};
+
 function TeamCard({
   member,
   expanded,
@@ -250,44 +259,44 @@ function TeamCard({
   );
 }
 
-function BeliefItem({
+function BeliefCard({
   belief,
-  expanded,
-  onToggle,
+  index,
+  spanClass,
+  wide = false,
 }: {
   belief: Belief;
-  expanded: boolean;
-  onToggle: () => void;
+  index: number;
+  spanClass: string;
+  wide?: boolean;
 }) {
   return (
-    <div
+    <article
       data-reveal
-      className="rounded-[22px] bg-white p-6 shadow-[0_12px_32px_color-mix(in_oklab,var(--navy)_8%,transparent)] md:p-8"
+      className={`${spanClass} relative overflow-hidden rounded-[22px] bg-white p-7 shadow-[0_12px_32px_color-mix(in_oklab,var(--navy)_8%,transparent)] md:p-9`}
     >
-      <button
-        type="button"
-        onClick={onToggle}
-        aria-expanded={expanded}
-        className="flex w-full cursor-pointer items-center justify-between border-none bg-transparent p-0 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2"
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-4 right-4 font-display text-[96px] leading-none font-extrabold tracking-[-0.04em] text-mist md:text-[124px]"
       >
-        <span className="font-display text-[18px] font-bold text-navy md:text-[20px]">
+        {index + 1}
+      </span>
+      <div className="relative">
+        <div className="mb-4 h-[3px] w-12 rounded-full bg-olive" />
+        <h3 className="m-0 max-w-[26ch] font-display text-[21px] leading-[1.2] font-bold tracking-[-0.012em] text-navy md:text-[25px]">
           {belief.heading}
-        </span>
-        <span
-          aria-hidden="true"
-          className={`ml-4 text-olive-dark transition-transform ${expanded ? "rotate-180" : ""}`}
+        </h3>
+        <ul
+          className={`mt-6 list-disc space-y-3 pl-5 text-[16px] leading-[1.62] text-body ${
+            wide ? "md:columns-2 md:gap-10 md:space-y-0 md:[&>li]:mb-3" : ""
+          }`}
         >
-          ▼
-        </span>
-      </button>
-      {expanded && (
-        <ul className="mt-5 list-disc space-y-3 pl-5 text-[15px] leading-[1.6] text-body">
           {belief.bullets.map((bullet) => (
             <li key={bullet}>{bullet}</li>
           ))}
         </ul>
-      )}
-    </div>
+      </div>
+    </article>
   );
 }
 
@@ -310,7 +319,7 @@ function NameCard({ name }: { name: string }) {
 function AboutPage() {
   const pageRef = useReveal<HTMLDivElement>();
   const [expandedTeamIds, setExpandedTeamIds] = useState<Set<string>>(new Set());
-  const [expandedBeliefIds, setExpandedBeliefIds] = useState<Set<string>>(new Set());
+  
 
   const toggleTeam = (id: string) => {
     setExpandedTeamIds((prev) => {
@@ -324,17 +333,6 @@ function AboutPage() {
     });
   };
 
-  const toggleBelief = (id: string) => {
-    setExpandedBeliefIds((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) {
-        next.delete(id);
-      } else {
-        next.add(id);
-      }
-      return next;
-    });
-  };
 
   return (
     <div ref={pageRef} className="bg-white font-sans text-body">
@@ -455,13 +453,14 @@ function AboutPage() {
             </p>
           </div>
 
-          <div className="mt-16 grid gap-6 md:mt-20">
-            {BELIEFS.map((belief) => (
-              <BeliefItem
+          <div className="mt-16 grid grid-cols-1 gap-6 md:mt-20 lg:grid-cols-12">
+            {BELIEFS.map((belief, i) => (
+              <BeliefCard
                 key={belief.id}
                 belief={belief}
-                expanded={expandedBeliefIds.has(belief.id)}
-                onToggle={() => toggleBelief(belief.id)}
+                index={i}
+                spanClass={BELIEF_SPANS[belief.id] ?? "lg:col-span-6"}
+                wide={belief.id === "unity-in-essential-beliefs"}
               />
             ))}
           </div>

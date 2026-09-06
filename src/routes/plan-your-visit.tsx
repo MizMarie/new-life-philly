@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import guideImg from "@/assets/nlp-guide.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { BrushstrokeAccent } from "@/components/BrushstrokeAccent";
 import {
   Accordion,
   AccordionContent,
@@ -187,9 +188,12 @@ function PlanYourVisitPage() {
 
       {/* Reassurance */}
       <section className="relative overflow-hidden bg-navy py-24 md:py-[110px]">
-        <div
-          aria-hidden="true"
-          className="animate-drift pointer-events-none absolute -bottom-[220px] -left-[160px] h-[620px] w-[620px] rounded-full bg-[radial-gradient(circle_at_40%_40%,color-mix(in_oklab,var(--olive)_30%,transparent),transparent_68%)]"
+        <BrushstrokeAccent
+          drift
+          rotate={8}
+          flip
+          opacity={0.16}
+          className="absolute -bottom-[60px] -left-[100px] h-[280px] w-[720px] text-olive"
         />
         <div data-reveal className="relative mx-auto max-w-[760px] px-5 text-center md:px-8">
           <div className="eyebrow mb-5 text-olive-light">No pressure, ever</div>
