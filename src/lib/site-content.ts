@@ -98,8 +98,8 @@ export const MINISTRIES = [
 ];
 
 export const NAV_LINKS = [
-  { label: "Meet Our Leaders", to: "/leadership" },
   { label: "What We Believe", to: "/what-we-believe" },
+  { label: "Meet Our Leaders", to: "/leadership" },
   { label: "Sermons", to: "/sermons" },
   { label: "Next Steps", to: "/next-steps" },
 ] as const;
