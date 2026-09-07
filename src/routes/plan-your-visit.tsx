@@ -18,7 +18,7 @@ const VISIT_FAQS = [
   {
     question: "Where are you located?",
     answer:
-      "We're located in the Olney section of North Philadelphia at 425 E. Roosevelt Blvd, Philadelphia, PA 19120.",
+      "We're located in the Olney section of Philadelphia at 425 E. Roosevelt Blvd, Philadelphia, PA 19120.",
   },
   {
     question: "Where can I park?",
@@ -44,6 +44,27 @@ const VISIT_FAQS = [
     question: "What happens during the service?",
     answer:
       "Our gathering runs about 1.5 hours and includes: Worship — our worship team leads attendees in a unified worship experience, with song lyrics projected on screens so you can sing along or engage however you feel comfortable. Prayer & Announcements — a brief time of prayer, church announcements, and an offering. The Lord's Prayer — recited together as a congregation. The Message — one of our leaders shares an encouraging, hope-filled message about Jesus. After the service, we gather informally in the Fellowship Hall on the first floor to share snacks and connect with one another — consider it an extension of the service!",
+    intro: "Our gathering runs about 1.5 hours and includes:",
+    bullets: [
+      {
+        label: "Worship",
+        body: "our worship team leads attendees in a unified worship experience, with song lyrics projected on screens so you can sing along or engage however you feel comfortable.",
+      },
+      {
+        label: "Prayer & Announcements",
+        body: "a brief time of prayer, church announcements, and an offering.",
+      },
+      {
+        label: "The Lord's Prayer",
+        body: "recited together as a congregation.",
+      },
+      {
+        label: "The Message",
+        body: "one of our leaders shares an encouraging, hope-filled message about Jesus.",
+      },
+    ],
+    closing:
+      "After the service, we gather informally in the Fellowship Hall on the first floor to share snacks and connect with one another — consider it an extension of the service!",
   },
   {
     question: "Do you have programs for children?",
