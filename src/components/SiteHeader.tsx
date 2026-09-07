@@ -32,7 +32,7 @@ export function SiteHeader() {
           <img
             src={logoAsset.url}
             alt="New Life Philly"
-            className="block h-12 w-12 rounded-full bg-white object-cover"
+            className="block h-12 w-12 object-contain"
             width={48}
             height={48}
             fetchPriority="low"
