@@ -300,16 +300,20 @@ function BeliefCard({
   );
 }
 
-function NameCard({ name }: { name: string }) {
+function NameCard({ name, photoUrl }: { name: string; photoUrl?: string }) {
   return (
     <div
       data-reveal
       className="rounded-[22px] bg-white p-5 text-center shadow-[0_12px_32px_color-mix(in_oklab,var(--navy)_8%,transparent)]"
     >
-      <div className="mx-auto flex aspect-square w-20 items-center justify-center rounded-full bg-mist md:w-24">
-        <span className="text-[11px] font-semibold text-body-faint md:text-[12px]">
-          Photo coming soon
-        </span>
+      <div className="mx-auto flex aspect-square w-20 items-center justify-center overflow-hidden rounded-full bg-mist md:w-24">
+        {photoUrl ? (
+          <img src={photoUrl} alt={name} className="h-full w-full object-cover" />
+        ) : (
+          <span className="text-[11px] font-semibold text-body-faint md:text-[12px]">
+            Photo coming soon
+          </span>
+        )}
       </div>
       <div className="mt-4 font-display text-[16px] font-bold text-navy md:text-[17px]">{name}</div>
     </div>
@@ -419,16 +423,16 @@ function AboutPage() {
             </h2>
             <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {[
-                "Tom de Rivera",
-                "Jacob Good",
-                "Eunice Kalbach",
-                "Darlene Holman",
-                "Brian Mast",
-                "Robert Morales, Sr.",
-                "Matt Theogood",
-                "Mike Wood",
-              ].map((name) => (
-                <NameCard key={name} name={name} />
+                { name: "Tom de Rivera", photoUrl: "https://drive.google.com/uc?export=download&id=19pcsbweO1HgstFURK83ZydYsSqvndGFc" },
+                { name: "Jacob Good", photoUrl: "https://drive.google.com/uc?export=download&id=1-ntnqTwVf2gtAkcBINsoGOGFjkyv-38I" },
+                { name: "Eunice Kalbach", photoUrl: "https://drive.google.com/uc?export=download&id=1q4jxeJ2dPG4YMPFDd-9a4hg5RFGoz3IX" },
+                { name: "Darlene Holman", photoUrl: "https://drive.google.com/uc?export=download&id=1ts7OtKFuApXKoHc_dzt2t58xtfEEsXxj" },
+                { name: "Brian Mast", photoUrl: "https://drive.google.com/uc?export=download&id=1LWtXcRoyzMsmthiY0nF07FcxAZHrgbmE" },
+                { name: "Robert Morales, Sr.", photoUrl: "https://drive.google.com/uc?export=download&id=1r0aLqvuUTFNCGPm_cHXnf94AbdG6okbS" },
+                { name: "Matt Theogood", photoUrl: "https://drive.google.com/uc?export=download&id=1t8ZI6FuiLKTi1bc1AwvIrod8HOGlDaWj" },
+                { name: "Mike Wood", photoUrl: "https://drive.google.com/uc?export=download&id=1qdRUqrO1WuDpDMtQfVYwINtbDF0j437c" },
+              ].map((deacon) => (
+                <NameCard key={deacon.name} name={deacon.name} photoUrl={deacon.photoUrl} />
               ))}
             </div>
             <p className="mt-6 text-center text-[17px] leading-[1.55] text-body">
