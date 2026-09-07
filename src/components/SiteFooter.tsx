@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 
-import logoAsset from "@/assets/nlp-logo.jpg.asset.json";
+import logoAsset from "@/assets/new-life-logo-2026.png.asset.json";
 import {
   ADDRESS_1,
   ADDRESS_2,

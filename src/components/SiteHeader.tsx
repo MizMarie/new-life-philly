@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 
-import logoAsset from "@/assets/nlp-logo.jpg.asset.json";
+import logoAsset from "@/assets/new-life-logo-2026.png.asset.json";
 import { NAV_LINKS, GIVE_URL, PHONE } from "@/lib/site-content";
 
 export function SiteHeader() {
