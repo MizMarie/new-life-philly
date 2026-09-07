@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as NextStepsRouteImport } from './routes/next-steps'
 import { Route as PlanYourVisitRouteImport } from './routes/plan-your-visit'
@@ -22,11 +21,6 @@ import { Route as WhatWeBelieveRouteImport } from './routes/what-we-believe'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LeadershipRoute = LeadershipRouteImport.update({
@@ -67,7 +61,6 @@ const WhatWeBelieveRoute = WhatWeBelieveRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/leadership': typeof LeadershipRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
@@ -78,7 +71,6 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/leadership': typeof LeadershipRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
@@ -90,7 +82,6 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/leadership': typeof LeadershipRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
@@ -103,7 +94,6 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/about'
     | '/leadership'
     | '/next-steps'
     | '/plan-your-visit'
@@ -114,7 +104,6 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/about'
     | '/leadership'
     | '/next-steps'
     | '/plan-your-visit'
@@ -125,7 +114,6 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/about'
     | '/leadership'
     | '/next-steps'
     | '/plan-your-visit'
@@ -137,7 +125,6 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
   LeadershipRoute: typeof LeadershipRoute
   NextStepsRoute: typeof NextStepsRoute
   PlanYourVisitRoute: typeof PlanYourVisitRoute
@@ -154,13 +141,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/leadership': {
@@ -217,7 +197,6 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
   LeadershipRoute: LeadershipRoute,
   NextStepsRoute: NextStepsRoute,
   PlanYourVisitRoute: PlanYourVisitRoute,

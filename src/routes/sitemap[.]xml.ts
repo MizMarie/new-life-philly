@@ -6,7 +6,8 @@ const BASE_URL = "https://new-life-philly.lovable.app";
 const entries = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
   { path: "/plan-your-visit", changefreq: "monthly", priority: "0.9" },
-  { path: "/about", changefreq: "monthly", priority: "0.8" },
+  { path: "/leadership", changefreq: "monthly", priority: "0.8" },
+  { path: "/what-we-believe", changefreq: "monthly", priority: "0.8" },
   { path: "/sermons", changefreq: "weekly", priority: "0.8" },
   { path: "/next-steps", changefreq: "monthly", priority: "0.7" },
 ];
