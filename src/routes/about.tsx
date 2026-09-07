@@ -416,7 +416,6 @@ function AboutPage() {
                 "Jacob Good",
                 "Marissa Morales",
                 "Christiana Ogunsami",
-                "Greg Snow (Pastoral Apprentice)",
                 "Dan Schafhauser",
               ].map((name) => (
                 <NameCard key={name} name={name} />
