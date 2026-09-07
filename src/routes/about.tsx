@@ -1,6 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 
+import deaconBrianMast from "@/assets/deacon-brian-mast.jpg";
+import deaconDarleneHolman from "@/assets/deacon-darlene-holman.jpg";
+import deaconEuniceKalbach from "@/assets/deacon-eunice-kalbach.jpg";
+import deaconJacobGood from "@/assets/deacon-jacob-good.jpg";
+import deaconMattTheogood from "@/assets/deacon-matt-theogood.jpg";
+import deaconMikeWood from "@/assets/deacon-mike-wood.jpg";
+import deaconRobertMorales from "@/assets/deacon-robert-morales.jpg";
+import deaconTomDeRivera from "@/assets/deacon-tom-de-rivera.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { useReveal } from "@/hooks/use-reveal";
@@ -423,14 +431,14 @@ function AboutPage() {
             </h2>
             <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {[
-                { name: "Tom de Rivera", photoUrl: "https://drive.google.com/uc?export=download&id=19pcsbweO1HgstFURK83ZydYsSqvndGFc" },
-                { name: "Jacob Good", photoUrl: "https://drive.google.com/uc?export=download&id=1-ntnqTwVf2gtAkcBINsoGOGFjkyv-38I" },
-                { name: "Eunice Kalbach", photoUrl: "https://drive.google.com/uc?export=download&id=1q4jxeJ2dPG4YMPFDd-9a4hg5RFGoz3IX" },
-                { name: "Darlene Holman", photoUrl: "https://drive.google.com/uc?export=download&id=1ts7OtKFuApXKoHc_dzt2t58xtfEEsXxj" },
-                { name: "Brian Mast", photoUrl: "https://drive.google.com/uc?export=download&id=1LWtXcRoyzMsmthiY0nF07FcxAZHrgbmE" },
-                { name: "Robert Morales, Sr.", photoUrl: "https://drive.google.com/uc?export=download&id=1r0aLqvuUTFNCGPm_cHXnf94AbdG6okbS" },
-                { name: "Matt Theogood", photoUrl: "https://drive.google.com/uc?export=download&id=1t8ZI6FuiLKTi1bc1AwvIrod8HOGlDaWj" },
-                { name: "Mike Wood", photoUrl: "https://drive.google.com/uc?export=download&id=1qdRUqrO1WuDpDMtQfVYwINtbDF0j437c" },
+                { name: "Tom de Rivera", photoUrl: deaconTomDeRivera },
+                { name: "Jacob Good", photoUrl: deaconJacobGood },
+                { name: "Eunice Kalbach", photoUrl: deaconEuniceKalbach },
+                { name: "Darlene Holman", photoUrl: deaconDarleneHolman },
+                { name: "Brian Mast", photoUrl: deaconBrianMast },
+                { name: "Robert Morales, Sr.", photoUrl: deaconRobertMorales },
+                { name: "Matt Theogood", photoUrl: deaconMattTheogood },
+                { name: "Mike Wood", photoUrl: deaconMikeWood },
               ].map((deacon) => (
                 <NameCard key={deacon.name} name={deacon.name} photoUrl={deacon.photoUrl} />
               ))}
