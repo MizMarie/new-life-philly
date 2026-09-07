@@ -20,7 +20,7 @@ export function SiteFooter() {
           <img
             src={logoAsset.url}
             alt="New Life Philly"
-            className="block h-[84px] w-[84px] rounded-full bg-white object-cover"
+            className="block h-[84px] w-[84px] object-contain"
             loading="lazy"
             width={84}
             height={84}
