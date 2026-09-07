@@ -209,7 +209,7 @@ function NameCard({ name, photoUrl }: { name: string; photoUrl?: string }) {
       data-reveal
       className="rounded-[22px] bg-white p-5 text-center shadow-[0_12px_32px_color-mix(in_oklab,var(--navy)_8%,transparent)]"
     >
-      <div className="mx-auto flex aspect-square w-20 items-center justify-center overflow-hidden rounded-full bg-mist md:w-24">
+      <div className="mx-auto flex aspect-square w-24 items-center justify-center overflow-hidden rounded-full bg-mist">
         {photoUrl ? (
           <img src={photoUrl} alt={name} className="h-full w-full object-cover" />
         ) : (
