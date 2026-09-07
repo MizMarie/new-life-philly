@@ -423,14 +423,14 @@ function AboutPage() {
             </h2>
             <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {[
-                { name: "Tom de Rivera", photoUrl: "https://drive.google.com/uc?export=download&id=19pcsbweO1HgstFURK83ZydYsSqvndGFc" },
-                { name: "Jacob Good", photoUrl: "https://drive.google.com/uc?export=download&id=1-ntnqTwVf2gtAkcBINsoGOGFjkyv-38I" },
-                { name: "Eunice Kalbach", photoUrl: "https://drive.google.com/uc?export=download&id=1q4jxeJ2dPG4YMPFDd-9a4hg5RFGoz3IX" },
-                { name: "Darlene Holman", photoUrl: "https://drive.google.com/uc?export=download&id=1ts7OtKFuApXKoHc_dzt2t58xtfEEsXxj" },
-                { name: "Brian Mast", photoUrl: "https://drive.google.com/uc?export=download&id=1LWtXcRoyzMsmthiY0nF07FcxAZHrgbmE" },
-                { name: "Robert Morales, Sr.", photoUrl: "https://drive.google.com/uc?export=download&id=1r0aLqvuUTFNCGPm_cHXnf94AbdG6okbS" },
-                { name: "Matt Theogood", photoUrl: "https://drive.google.com/uc?export=download&id=1t8ZI6FuiLKTi1bc1AwvIrod8HOGlDaWj" },
-                { name: "Mike Wood", photoUrl: "https://drive.google.com/uc?export=download&id=1qdRUqrO1WuDpDMtQfVYwINtbDF0j437c" },
+                { name: "Tom de Rivera", photoUrl: "https://drive.google.com/thumbnail?id=19pcsbweO1HgstFURK83ZydYsSqvndGFc&sz=w1000" },
+                { name: "Jacob Good", photoUrl: "https://drive.google.com/thumbnail?id=1-ntnqTwVf2gtAkcBINsoGOGFjkyv-38I&sz=w1000" },
+                { name: "Eunice Kalbach", photoUrl: "https://drive.google.com/thumbnail?id=1q4jxeJ2dPG4YMPFDd-9a4hg5RFGoz3IX&sz=w1000" },
+                { name: "Darlene Holman", photoUrl: "https://drive.google.com/thumbnail?id=1ts7OtKFuApXKoHc_dzt2t58xtfEEsXxj&sz=w1000" },
+                { name: "Brian Mast", photoUrl: "https://drive.google.com/thumbnail?id=1LWtXcRoyzMsmthiY0nF07FcxAZHrgbmE&sz=w1000" },
+                { name: "Robert Morales, Sr.", photoUrl: "https://drive.google.com/thumbnail?id=1r0aLqvuUTFNCGPm_cHXnf94AbdG6okbS&sz=w1000" },
+                { name: "Matt Theogood", photoUrl: "https://drive.google.com/thumbnail?id=1t8ZI6FuiLKTi1bc1AwvIrod8HOGlDaWj&sz=w1000" },
+                { name: "Mike Wood", photoUrl: "https://drive.google.com/thumbnail?id=1qdRUqrO1WuDpDMtQfVYwINtbDF0j437c&sz=w1000" },
               ].map((deacon) => (
                 <NameCard key={deacon.name} name={deacon.name} photoUrl={deacon.photoUrl} />
               ))}
