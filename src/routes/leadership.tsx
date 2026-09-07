@@ -17,17 +17,17 @@ import { abs, breadcrumbJsonLd } from "@/lib/seo";
 export const Route = createFileRoute("/leadership")({
   head: () => ({
     meta: [
-      { title: "Meet Our Leaders | New Life Philly" },
+      { title: "Meet Our Team | New Life Philly" },
       {
         name: "description",
         content:
-          "Meet the leaders of New Life Philly — everyday people with deep faith, committed to walking alongside you through the real stuff of life.",
+          "Meet the team of New Life Philly — everyday people with deep faith, committed to walking alongside you through the real stuff of life.",
       },
-      { property: "og:title", content: "Meet Our Leaders | New Life Philly" },
+      { property: "og:title", content: "Meet Our Team | New Life Philly" },
       {
         property: "og:description",
         content:
-          "Meet the leaders of New Life Philly — everyday people with deep faith, committed to walking alongside you through the real stuff of life.",
+          "Meet the team of New Life Philly — everyday people with deep faith, committed to walking alongside you through the real stuff of life.",
       },
       { property: "og:url", content: abs("/leadership") },
     ],
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/leadership")({
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(breadcrumbJsonLd("Meet Our Leaders", "/leadership")),
+        children: JSON.stringify(breadcrumbJsonLd("Meet Our Team", "/leadership")),
       },
     ],
   }),
@@ -251,7 +251,7 @@ function LeadershipPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/50 to-navy/25" />
         <div className="relative z-10 mx-auto max-w-[1240px] px-5 text-center md:px-8">
           <h1 className="m-0 font-display text-[clamp(36px,5vw,64px)] leading-[1.05] font-extrabold tracking-[-0.02em] text-white">
-            Meet Our Leaders
+            Meet Our Team
           </h1>
         </div>
       </section>
@@ -268,10 +268,10 @@ function LeadershipPage() {
             </p>
           </div>
 
-          {/* Meet Our Team */}
+          {/* Our Staff */}
           <div className="mt-16 md:mt-20">
             <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
-              Meet Our Team
+              Our Staff
             </h2>
             <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {TEAM.map((member) => (
