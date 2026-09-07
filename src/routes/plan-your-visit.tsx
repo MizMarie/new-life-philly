@@ -18,7 +18,7 @@ const VISIT_FAQS = [
   {
     question: "Where are you located?",
     answer:
-      "We're located in the Olney section of North Philadelphia at 425 E. Roosevelt Blvd, Philadelphia, PA 19120.",
+      "We're located in the Olney section of Philadelphia at 425 E. Roosevelt Blvd, Philadelphia, PA 19120.",
   },
   {
     question: "Where can I park?",
@@ -44,6 +44,27 @@ const VISIT_FAQS = [
     question: "What happens during the service?",
     answer:
       "Our gathering runs about 1.5 hours and includes: Worship — our worship team leads attendees in a unified worship experience, with song lyrics projected on screens so you can sing along or engage however you feel comfortable. Prayer & Announcements — a brief time of prayer, church announcements, and an offering. The Lord's Prayer — recited together as a congregation. The Message — one of our leaders shares an encouraging, hope-filled message about Jesus. After the service, we gather informally in the Fellowship Hall on the first floor to share snacks and connect with one another — consider it an extension of the service!",
+    intro: "Our gathering runs about 1.5 hours and includes:",
+    bullets: [
+      {
+        label: "Worship",
+        body: "our worship team leads attendees in a unified worship experience, with song lyrics projected on screens so you can sing along or engage however you feel comfortable.",
+      },
+      {
+        label: "Prayer & Announcements",
+        body: "a brief time of prayer, church announcements, and an offering.",
+      },
+      {
+        label: "The Lord's Prayer",
+        body: "recited together as a congregation.",
+      },
+      {
+        label: "The Message",
+        body: "one of our leaders shares an encouraging, hope-filled message about Jesus.",
+      },
+    ],
+    closing:
+      "After the service, we gather informally in the Fellowship Hall on the first floor to share snacks and connect with one another — consider it an extension of the service!",
   },
   {
     question: "Do you have programs for children?",
@@ -153,7 +174,22 @@ function PlanYourVisitPage() {
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-[17px] leading-[1.65] text-body-soft">
-                    {faq.answer}
+                    {"bullets" in faq && faq.bullets ? (
+                      <>
+                        <p className="m-0">{faq.intro}</p>
+                        <ul className="mt-4 list-disc space-y-3 pl-5 text-[16px] leading-[1.62] text-body">
+                          {faq.bullets.map((bullet) => (
+                            <li key={bullet.label}>
+                              <span className="font-bold text-navy">{bullet.label}</span>{" "}
+                              — {bullet.body}
+                            </li>
+                          ))}
+                        </ul>
+                        <p className="mb-0 mt-4">{faq.closing}</p>
+                      </>
+                    ) : (
+                      faq.answer
+                    )}
                   </AccordionContent>
                 </AccordionItem>
               ))}
