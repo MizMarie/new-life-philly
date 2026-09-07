@@ -174,7 +174,22 @@ function PlanYourVisitPage() {
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-[17px] leading-[1.65] text-body-soft">
-                    {faq.answer}
+                    {"bullets" in faq && faq.bullets ? (
+                      <>
+                        <p className="m-0">{faq.intro}</p>
+                        <ul className="mt-4 list-disc space-y-3 pl-5 text-[16px] leading-[1.62] text-body">
+                          {faq.bullets.map((bullet) => (
+                            <li key={bullet.label}>
+                              <span className="font-bold text-navy">{bullet.label}</span>{" "}
+                              — {bullet.body}
+                            </li>
+                          ))}
+                        </ul>
+                        <p className="mb-0 mt-4">{faq.closing}</p>
+                      </>
+                    ) : (
+                      faq.answer
+                    )}
                   </AccordionContent>
                 </AccordionItem>
               ))}
