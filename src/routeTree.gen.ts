@@ -11,11 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as NextStepsRouteImport } from './routes/next-steps'
 import { Route as PlanYourVisitRouteImport } from './routes/plan-your-visit'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as SermonsRouteImport } from './routes/sermons'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as WhatWeBelieveRouteImport } from './routes/what-we-believe'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -25,6 +27,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LeadershipRoute = LeadershipRouteImport.update({
+  id: '/leadership',
+  path: '/leadership',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NextStepsRoute = NextStepsRouteImport.update({
@@ -52,73 +59,92 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WhatWeBelieveRoute = WhatWeBelieveRouteImport.update({
+  id: '/what-we-believe',
+  path: '/what-we-believe',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/leadership': typeof LeadershipRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sermons': typeof SermonsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/what-we-believe': typeof WhatWeBelieveRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/leadership': typeof LeadershipRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sermons': typeof SermonsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/what-we-believe': typeof WhatWeBelieveRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/leadership': typeof LeadershipRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sermons': typeof SermonsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/what-we-believe': typeof WhatWeBelieveRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
+    | '/leadership'
     | '/next-steps'
     | '/plan-your-visit'
     | '/robots.txt'
     | '/sermons'
     | '/sitemap.xml'
+    | '/what-we-believe'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/leadership'
     | '/next-steps'
     | '/plan-your-visit'
     | '/robots.txt'
     | '/sermons'
     | '/sitemap.xml'
+    | '/what-we-believe'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/leadership'
     | '/next-steps'
     | '/plan-your-visit'
     | '/robots.txt'
     | '/sermons'
     | '/sitemap.xml'
+    | '/what-we-believe'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  LeadershipRoute: typeof LeadershipRoute
   NextStepsRoute: typeof NextStepsRoute
   PlanYourVisitRoute: typeof PlanYourVisitRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SermonsRoute: typeof SermonsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  WhatWeBelieveRoute: typeof WhatWeBelieveRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -135,6 +161,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leadership': {
+      id: '/leadership'
+      path: '/leadership'
+      fullPath: '/leadership'
+      preLoaderRoute: typeof LeadershipRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/next-steps': {
@@ -172,17 +205,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/what-we-believe': {
+      id: '/what-we-believe'
+      path: '/what-we-believe'
+      fullPath: '/what-we-believe'
+      preLoaderRoute: typeof WhatWeBelieveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  LeadershipRoute: LeadershipRoute,
   NextStepsRoute: NextStepsRoute,
   PlanYourVisitRoute: PlanYourVisitRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   SermonsRoute: SermonsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  WhatWeBelieveRoute: WhatWeBelieveRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
