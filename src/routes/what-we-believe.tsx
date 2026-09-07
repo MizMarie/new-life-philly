@@ -150,7 +150,7 @@ function WhatWeBelievePage() {
         <span className="absolute inset-0 flex items-center justify-center text-[15px] font-semibold text-body-faint">
           Photo coming soon
         </span>
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/50 to-navy/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/100 via-navy/90 to-navy/80" />
         <div className="relative z-10 mx-auto max-w-[1240px] px-5 text-center md:px-8">
           <h1 className="m-0 font-display text-[clamp(36px,5vw,64px)] leading-[1.05] font-extrabold tracking-[-0.02em] text-white">
             What We Believe
@@ -162,11 +162,7 @@ function WhatWeBelievePage() {
       <section className="bg-sage py-24 md:py-[110px]">
         <div className="mx-auto max-w-[1240px] px-5 md:px-8">
           <div data-reveal className="mx-auto max-w-[820px] text-center">
-            <div className="eyebrow mb-5 text-olive-dark">What We Believe</div>
-            <h2 className="m-0 font-display text-[clamp(32px,4vw,48px)] leading-[1.08] font-extrabold tracking-[-0.02em] text-navy">
-              What We Believe
-            </h2>
-            <p className="mt-5 mb-0 text-[18px] leading-[1.7] text-body">
+            <p className="m-0 text-[18px] leading-[1.7] text-body">
               Our Real Hope is founded entirely on the truth of Scripture, which guides every aspect
               of our lives and practice. We hold firmly to the essential Christian truths while
               extending grace in all other matters.
