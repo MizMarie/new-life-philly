@@ -21,7 +21,7 @@ import { CHURCH_JSONLD, abs } from "@/lib/seo";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Church in Olney, Philadelphia | New Life Philly" },
+      { title: "New Life Philly" },
       {
         name: "description",
         content:
