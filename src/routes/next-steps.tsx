@@ -59,7 +59,7 @@ function NextStepsPage() {
           drift
           flip
           rotate={12}
-          opacity={0.12}
+          opacity={0.08}
           className="absolute -bottom-[90px] right-[-14%] h-[300px] w-[70%] text-olive-light"
         />
 
