@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import allisonWanaselija from "@/assets/allison-wanaselija.jpg";
 import deaconBrianMast from "@/assets/deacon-brian-mast.jpg";
 import deaconDarleneHolman from "@/assets/deacon-darlene-holman.jpg";
 import deaconEuniceKalbach from "@/assets/deacon-eunice-kalbach.jpg";
@@ -12,6 +13,9 @@ import elderJedTrott from "@/assets/elder-jed-trott.jpg";
 import elderJoseNegron from "@/assets/elder-jose-negron.jpg";
 import elderMikeDelVecchio from "@/assets/elder-mike-del-vecchio.jpg";
 import elderTimBathurst from "@/assets/elder-tim-bathurst.jpg";
+import gregSnow from "@/assets/greg-snow.jpg";
+import sethCross from "@/assets/seth-cross.jpg";
+import timBathurstStaff from "@/assets/tim-bathurst.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { useReveal } from "@/hooks/use-reveal";
@@ -49,6 +53,7 @@ type TeamMember = {
   id: string;
   name: string;
   title: string;
+  photo?: string;
   qa: { q: string; a: string }[];
 };
 
@@ -57,6 +62,7 @@ const TEAM: TeamMember[] = [
     id: "tim-bathurst",
     name: "Tim Bathurst",
     title: "Pastor of Spiritual Formation",
+    photo: timBathurstStaff,
     qa: [
       {
         q: "I feel most alive when:",
@@ -80,6 +86,7 @@ const TEAM: TeamMember[] = [
     id: "seth-cross",
     name: "Seth Cross",
     title: "Youth Ministry Director",
+    photo: sethCross,
     qa: [
       { q: "I feel most alive when:", a: "Exploring a new place with my girls." },
       {
@@ -94,6 +101,7 @@ const TEAM: TeamMember[] = [
     id: "greg-snow",
     name: "Greg Snow",
     title: "Pastoral Apprentice",
+    photo: gregSnow,
     qa: [
       {
         q: "I feel most alive when:",
@@ -117,6 +125,7 @@ const TEAM: TeamMember[] = [
     id: "allison-wanaselija",
     name: "Allison Wanaselija",
     title: "Children's Ministry Director",
+    photo: allisonWanaselija,
     qa: [
       {
         q: "I feel most alive when:",
@@ -164,8 +173,8 @@ function NameCard({
   role,
 }: {
   name: string;
-  photoUrl?: string;
-  role?: string;
+  photoUrl?: string | undefined;
+  role?: string | undefined;
 }) {
   return (
     <div
@@ -306,7 +315,7 @@ function LeadershipPage() {
             </h2>
             <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {TEAM.map((member) => (
-                <NameCard key={member.id} name={member.name} role={member.title} />
+                <NameCard key={member.id} name={member.name} role={member.title} photoUrl={member.photo} />
               ))}
             </div>
           </div>
