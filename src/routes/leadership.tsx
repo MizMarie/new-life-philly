@@ -86,6 +86,7 @@ const TEAM: TeamMember[] = [
     id: "seth-cross",
     name: "Seth Cross",
     title: "Youth Ministry Director",
+    photo: sethCross,
     qa: [
       { q: "I feel most alive when:", a: "Exploring a new place with my girls." },
       {
