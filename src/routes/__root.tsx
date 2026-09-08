@@ -10,27 +10,80 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { IS_STAGING_PREVIEW } from "../lib/site-content";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
-        </p>
-        <div className="mt-6">
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Go home
-          </Link>
-        </div>
-      </div>
+    <div className="flex min-h-screen flex-col bg-white font-sans text-body">
+      <SiteHeader />
+      <main className="flex-1">
+        <section className="bg-sage py-24 md:py-[110px]">
+          <div className="mx-auto max-w-[760px] px-5 text-center md:px-8">
+            <h1 className="m-0 font-display text-[clamp(40px,5.4vw,72px)] leading-[1.03] font-extrabold tracking-[-0.024em] text-navy">
+              404: Lost, but not alone.
+            </h1>
+            <p className="mx-auto mt-7 mb-0 max-w-[50ch] text-[19px] leading-[1.65] text-body-soft">
+              Turns out even our website needs a little grace sometimes. This page isn't where you
+              left it, but we are, right here, Sundays at 10am.
+            </p>
+            <div className="mt-10 flex flex-wrap justify-center gap-3.5">
+              <Link
+                to="/"
+                className="pill bg-olive px-8 py-[19px] text-[15px] text-navy no-underline hover:bg-olive-light md:px-[38px]"
+              >
+                Take Me Home
+              </Link>
+              <Link
+                to="/plan-your-visit"
+                className="pill border-[1.5px] border-navy/55 bg-transparent px-8 py-[19px] text-[15px] text-navy no-underline hover:bg-navy/10 md:px-[34px]"
+              >
+                Plan Your Visit
+              </Link>
+            </div>
+            <div className="mt-14">
+              <p className="m-0 font-display text-[13px] font-bold tracking-[0.08em] text-body-faint uppercase">
+                You might be looking for
+              </p>
+              <nav className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-[16px]">
+                <Link
+                  to="/what-we-believe"
+                  className="text-navy no-underline transition-colors hover:text-olive-dark"
+                >
+                  What We Believe
+                </Link>
+                <Link
+                  to="/leadership"
+                  className="text-navy no-underline transition-colors hover:text-olive-dark"
+                >
+                  Meet Our Team
+                </Link>
+                <Link
+                  to="/sermons"
+                  className="text-navy no-underline transition-colors hover:text-olive-dark"
+                >
+                  Sermons
+                </Link>
+                <Link
+                  to="/next-steps"
+                  className="text-navy no-underline transition-colors hover:text-olive-dark"
+                >
+                  Next Steps
+                </Link>
+                <Link
+                  to="/plan-your-visit"
+                  className="text-navy no-underline transition-colors hover:text-olive-dark"
+                >
+                  Plan Your Visit
+                </Link>
+              </nav>
+            </div>
+          </div>
+        </section>
+      </main>
+      <SiteFooter />
     </div>
   );
 }
@@ -43,32 +96,39 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   }, [error]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
-        </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
-        </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-2">
-          <button
-            onClick={() => {
-              router.invalidate();
-              reset();
-            }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Try again
-          </button>
-          <a
-            href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
-          >
-            Go home
-          </a>
-        </div>
-      </div>
+    <div className="flex min-h-screen flex-col bg-white font-sans text-body">
+      <SiteHeader />
+      <main className="flex-1">
+        <section className="bg-sage py-24 md:py-[110px]">
+          <div className="mx-auto max-w-[760px] px-5 text-center md:px-8">
+            <h1 className="m-0 font-display text-[clamp(40px,5.4vw,72px)] leading-[1.03] font-extrabold tracking-[-0.024em] text-navy">
+              That one's on us.
+            </h1>
+            <p className="mx-auto mt-7 mb-0 max-w-[50ch] text-[19px] leading-[1.65] text-body-soft">
+              Something didn't load right, promise it's not a sign. Try again, or just head home,
+              either way we're glad you're here.
+            </p>
+            <div className="mt-10 flex flex-wrap justify-center gap-3.5">
+              <button
+                onClick={() => {
+                  router.invalidate();
+                  reset();
+                }}
+                className="pill cursor-pointer bg-olive px-8 py-[19px] text-[15px] text-navy no-underline hover:bg-olive-light md:px-[38px]"
+              >
+                Try Again
+              </button>
+              <Link
+                to="/"
+                className="pill border-[1.5px] border-navy/55 bg-transparent px-8 py-[19px] text-[15px] text-navy no-underline hover:bg-navy/10 md:px-[34px]"
+              >
+                Take Me Home
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+      <SiteFooter />
     </div>
   );
 }
