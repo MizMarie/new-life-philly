@@ -48,25 +48,25 @@ function NextStepsPage() {
       <SiteHeader />
 
       {/* Hero — asymmetric, brushstroke-led */}
-      <section className="relative overflow-hidden bg-navy pt-20 pb-24 md:pt-[120px] md:pb-[140px]">
+      <section className="relative flex min-h-[320px] max-h-[520px] items-center overflow-hidden bg-navy py-16 md:py-20">
         {/* Flagship brushstroke, sweeping across the headline at large scale */}
         <BrushstrokeAccent
           rotate={-7}
-          opacity={0.3}
+          opacity={0.15}
           className="absolute top-[24%] -left-[8%] h-[420px] w-[130%] text-olive md:h-[560px]"
         />
         <BrushstrokeAccent
           drift
           flip
           rotate={12}
-          opacity={0.12}
+          opacity={0.08}
           className="absolute -bottom-[90px] right-[-14%] h-[300px] w-[70%] text-olive-light"
         />
 
         <div className="relative mx-auto grid max-w-[1240px] grid-cols-12 gap-y-10 px-5 md:px-8">
           <div data-reveal className="col-span-12 lg:col-span-9">
             <div className="eyebrow mb-6 text-olive-light">Next steps</div>
-            <h1 className="m-0 max-w-[16ch] font-display text-[clamp(46px,9vw,120px)] leading-[0.94] font-extrabold tracking-[-0.035em] text-white">
+            <h1 className="m-0 max-w-[16ch] font-display text-[clamp(36px,5vw,64px)] leading-[1.05] font-extrabold tracking-[-0.02em] text-white">
               Sunday is the
               <span className="block text-olive-light">front door.</span>
             </h1>
@@ -77,7 +77,7 @@ function NextStepsPage() {
             className="col-span-12 mt-2 lg:col-span-5 lg:col-start-8 lg:mt-8 lg:text-right"
           >
             <div className="inline-block border-l-2 border-olive pl-6 text-left lg:border-l-0 lg:border-r-2 lg:pl-0 lg:pr-6 lg:text-right">
-              <p className="m-0 max-w-[44ch] text-[19px] leading-[1.66] text-white/80 md:text-[20px]">
+              <p className="m-0 max-w-[44ch] text-[17px] leading-[1.66] text-white/80 md:text-[18px]">
                 The rest of the week is where real friendships — with Jesus, and with each other —
                 get built: around tables, in the gym, on the street. Here's everything happening at
                 New Life Philly.
