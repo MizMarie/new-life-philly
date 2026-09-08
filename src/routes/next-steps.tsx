@@ -77,7 +77,7 @@ function NextStepsPage() {
             className="col-span-12 mt-2 lg:col-span-5 lg:col-start-8 lg:mt-8 lg:text-right"
           >
             <div className="inline-block border-l-2 border-olive pl-6 text-left lg:border-l-0 lg:border-r-2 lg:pl-0 lg:pr-6 lg:text-right">
-              <p className="m-0 max-w-[44ch] text-[19px] leading-[1.66] text-white/80 md:text-[20px]">
+              <p className="m-0 max-w-[44ch] text-[17px] leading-[1.66] text-white/80 md:text-[18px]">
                 The rest of the week is where real friendships — with Jesus, and with each other —
                 get built: around tables, in the gym, on the street. Here's everything happening at
                 New Life Philly.
