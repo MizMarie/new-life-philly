@@ -295,8 +295,13 @@ function LeadershipPage() {
               Our Shepherds (Elders)
             </h2>
             <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
-              {["Tim Bathurst", "Mike Del Vecchio", "Jose Negron", "Jed Trott"].map((name) => (
-                <NameCard key={name} name={name} />
+              {[
+                { name: "Tim Bathurst", photoUrl: elderTimBathurst },
+                { name: "Mike Del Vecchio", photoUrl: elderMikeDelVecchio },
+                { name: "Jose Negron", photoUrl: elderJoseNegron },
+                { name: "Jed Trott", photoUrl: elderJedTrott },
+              ].map((elder) => (
+                <NameCard key={elder.name} name={elder.name} photoUrl={elder.photoUrl} />
               ))}
             </div>
           </div>
