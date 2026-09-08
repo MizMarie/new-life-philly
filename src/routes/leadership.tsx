@@ -315,7 +315,7 @@ function LeadershipPage() {
             </h2>
             <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {TEAM.map((member) => (
-                <NameCard key={member.id} name={member.name} role={member.title} />
+                <NameCard key={member.id} name={member.name} role={member.title} photoUrl={member.photo} />
               ))}
             </div>
           </div>
