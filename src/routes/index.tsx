@@ -235,7 +235,7 @@ function Home() {
               See all next steps →
             </Link>
           </div>
-          <div className="grid gap-[26px] lg:grid-cols-12">
+          <div className="grid gap-[26px] lg:items-start lg:grid-cols-12">
             {(() => {
               const step = STEPS[0]!;
               const inner = (
@@ -256,15 +256,13 @@ function Home() {
                       {step.n}
                     </span>
                   </div>
-                  <div className="flex flex-1 flex-col justify-between px-[26px] pt-7 pb-[30px]">
-                    <div>
-                      <h3 className="m-0 font-display text-[24px] font-bold tracking-tight text-navy">
-                        {step.title}
-                      </h3>
-                      <p className="mt-3 mb-0 text-[17px] leading-[1.6] text-body-soft">
-                        {step.body}
-                      </p>
-                    </div>
+                  <div className="px-[26px] pt-7 pb-[30px]">
+                    <h3 className="m-0 font-display text-[24px] font-bold tracking-tight text-navy">
+                      {step.title}
+                    </h3>
+                    <p className="mt-3 mb-0 text-[17px] leading-[1.6] text-body-soft">
+                      {step.body}
+                    </p>
                     <span className="mt-[18px] inline-block font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase">
                       {step.cta}
                     </span>
@@ -276,7 +274,7 @@ function Home() {
                   key={step.n}
                   to={step.to!}
                   data-reveal
-                  className="flex flex-col overflow-hidden rounded-[20px] bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)] lg:col-span-7"
+                  className="block overflow-hidden rounded-[20px] bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)] lg:col-span-7"
                 >
                   {inner}
                 </Link>
