@@ -209,9 +209,9 @@ function LeadershipPage() {
         <img
           src={heroImg}
           alt="Pastor Tim with his arm around the shoulder of another man"
-          className="absolute inset-0 h-full w-full object-cover object-[50%_25%]"
+          className="absolute inset-0 h-full w-full object-cover object-[55%_25%] md:object-[50%_25%]"
           width={1600}
-          height={1082}
+          height={1219}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy/100 via-navy/90 to-navy/80" />
         <div className="relative z-10 mx-auto max-w-[1240px] px-5 text-center md:px-8">
