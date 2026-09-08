@@ -38,7 +38,7 @@ export const Route = createFileRoute("/next-steps")({
 });
 
 const CARD =
-  "block overflow-hidden rounded-[20px] border border-hairline bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)]";
+  "block overflow-hidden rounded-tl-[20px] rounded-br-[20px] rounded-tr-none rounded-bl-none border border-hairline bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)]";
 
 function NextStepsPage() {
   const pageRef = useReveal<HTMLDivElement>();

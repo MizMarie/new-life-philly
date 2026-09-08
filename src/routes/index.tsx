@@ -268,7 +268,7 @@ function Home() {
                   key={step.n}
                   to={step.to!}
                   data-reveal
-                  className="block overflow-hidden rounded-[20px] bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)] lg:col-span-7"
+                  className="block overflow-hidden rounded-tl-[20px] rounded-br-[20px] rounded-tr-none rounded-bl-none bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)] lg:col-span-7"
                 >
                   {inner}
                 </Link>
@@ -302,7 +302,7 @@ function Home() {
                   </>
                 );
                 const cardClass =
-                  "block overflow-hidden rounded-[20px] bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)]";
+                  "block overflow-hidden rounded-tl-[20px] rounded-br-[20px] rounded-tr-none rounded-bl-none bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)]";
                 return "to" in step && step.to ? (
                   <Link key={step.n} to={step.to} data-reveal className={cardClass}>
                     {inner}
