@@ -281,25 +281,8 @@ function LeadershipPage() {
             </p>
           </div>
 
-          {/* Our Staff */}
-          <div className="mt-16 md:mt-20">
-            <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
-              Our Staff
-            </h2>
-            <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {TEAM.map((member) => (
-                <TeamCard
-                  key={member.id}
-                  member={member}
-                  expanded={expandedTeamIds.has(member.id)}
-                  onToggle={() => toggleTeam(member.id)}
-                />
-              ))}
-            </div>
-          </div>
-
           {/* The Session */}
-          <div data-reveal className="mt-20 md:mt-24">
+          <div data-reveal className="mt-16 md:mt-20">
             <div className="eyebrow mb-5 text-center text-olive-dark">Our Shepherds</div>
             <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
               The Session
@@ -371,6 +354,23 @@ function LeadershipPage() {
             <p className="mt-6 text-center text-[17px] leading-[1.55] text-body">
               <strong className="text-navy">Diaconal Assistant:</strong> Len Nicoletti
             </p>
+          </div>
+
+          {/* Our Staff */}
+          <div className="mt-20 md:mt-24">
+            <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
+              Our Staff
+            </h2>
+            <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {TEAM.map((member) => (
+                <TeamCard
+                  key={member.id}
+                  member={member}
+                  expanded={expandedTeamIds.has(member.id)}
+                  onToggle={() => toggleTeam(member.id)}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
