@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import heroImg from "@/assets/leadership-hero.jpg";
+import allisonWanaselija from "@/assets/allison-wanaselija.jpg";
 import deaconBrianMast from "@/assets/deacon-brian-mast.jpg";
 import deaconDarleneHolman from "@/assets/deacon-darlene-holman.jpg";
 import deaconEuniceKalbach from "@/assets/deacon-eunice-kalbach.jpg";
