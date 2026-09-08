@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
 
 import deaconBrianMast from "@/assets/deacon-brian-mast.jpg";
 import deaconDarleneHolman from "@/assets/deacon-darlene-holman.jpg";
@@ -190,19 +189,6 @@ function NameCard({
 
 function LeadershipPage() {
   const pageRef = useReveal<HTMLDivElement>();
-  const [expandedTeamIds, setExpandedTeamIds] = useState<Set<string>>(new Set());
-
-  const toggleTeam = (id: string) => {
-    setExpandedTeamIds((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) {
-        next.delete(id);
-      } else {
-        next.add(id);
-      }
-      return next;
-    });
-  };
 
   return (
     <div ref={pageRef} className="bg-white font-sans text-body">
@@ -317,14 +303,9 @@ function LeadershipPage() {
             <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
               Our Staff
             </h2>
-            <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {TEAM.map((member) => (
-                <TeamCard
-                  key={member.id}
-                  member={member}
-                  expanded={expandedTeamIds.has(member.id)}
-                  onToggle={() => toggleTeam(member.id)}
-                />
+                <NameCard key={member.id} name={member.name} role={member.title} />
               ))}
             </div>
           </div>
