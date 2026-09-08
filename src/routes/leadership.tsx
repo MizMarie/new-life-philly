@@ -205,10 +205,14 @@ function LeadershipPage() {
       <SiteHeader />
 
       {/* Leadership Hero */}
-      <section className="relative flex h-[55vh] min-h-[320px] max-h-[580px] items-center justify-center bg-mist">
-        <span className="absolute inset-0 flex items-center justify-center text-[15px] font-semibold text-body-faint">
-          Photo coming soon
-        </span>
+      <section className="relative flex h-[55vh] min-h-[320px] max-h-[580px] items-center justify-center overflow-hidden bg-mist">
+        <img
+          src={heroImg}
+          alt="Pastor Tim with his arm around the shoulder of another man"
+          className="absolute inset-0 h-full w-full object-cover object-[50%_25%]"
+          width={1600}
+          height={1082}
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-navy/100 via-navy/90 to-navy/80" />
         <div className="relative z-10 mx-auto max-w-[1240px] px-5 text-center md:px-8">
           <h1 className="m-0 font-display text-[clamp(36px,5vw,64px)] leading-[1.05] font-extrabold tracking-[-0.02em] text-white">
