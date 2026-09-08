@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
 
 import deaconBrianMast from "@/assets/deacon-brian-mast.jpg";
 import deaconDarleneHolman from "@/assets/deacon-darlene-holman.jpg";
@@ -159,54 +158,6 @@ const TEAM: TeamMember[] = [
   },
 ];
 
-function TeamCard({
-  member,
-  expanded,
-  onToggle,
-}: {
-  member: TeamMember;
-  expanded: boolean;
-  onToggle: () => void;
-}) {
-  return (
-    <div
-      data-reveal
-      className="rounded-[22px] bg-white p-6 shadow-[0_12px_32px_color-mix(in_oklab,var(--navy)_8%,transparent)] transition-all duration-300 md:p-8 md:hover:-translate-y-1 md:hover:shadow-[0_20px_48px_color-mix(in_oklab,var(--navy)_12%,transparent)] md:cursor-pointer"
-    >
-      <div className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-mist">
-        <span className="text-[15px] font-semibold text-body-faint">Photo coming soon</span>
-      </div>
-      <div className="mt-6">
-        <div className="font-display text-[20px] font-bold text-navy">{member.name}</div>
-        <div className="mt-1 text-[15px] font-medium text-olive-dark">{member.title}</div>
-        <button
-          type="button"
-          onClick={onToggle}
-          aria-expanded={expanded}
-          className="mt-5 inline-flex cursor-pointer items-center gap-2 border-none bg-transparent p-0 font-display text-[14px] font-bold uppercase tracking-[0.07em] text-olive-dark hover:text-olive focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2"
-        >
-          {expanded ? "Read less" : "Read more"}
-          <span
-            aria-hidden="true"
-            className={`transition-transform ${expanded ? "rotate-180" : ""}`}
-          >
-            ▼
-          </span>
-        </button>
-        {expanded && (
-          <div className="mt-4 space-y-4 text-[15px] leading-[1.6] text-body">
-            {member.qa.map(({ q, a }) => (
-              <p key={q}>
-                <strong className="text-navy">{q}</strong> {a}
-              </p>
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
-
 function NameCard({
   name,
   photoUrl,
@@ -238,19 +189,6 @@ function NameCard({
 
 function LeadershipPage() {
   const pageRef = useReveal<HTMLDivElement>();
-  const [expandedTeamIds, setExpandedTeamIds] = useState<Set<string>>(new Set());
-
-  const toggleTeam = (id: string) => {
-    setExpandedTeamIds((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) {
-        next.delete(id);
-      } else {
-        next.add(id);
-      }
-      return next;
-    });
-  };
 
   return (
     <div ref={pageRef} className="bg-white font-sans text-body">
@@ -365,14 +303,9 @@ function LeadershipPage() {
             <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
               Our Staff
             </h2>
-            <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {TEAM.map((member) => (
-                <TeamCard
-                  key={member.id}
-                  member={member}
-                  expanded={expandedTeamIds.has(member.id)}
-                  onToggle={() => toggleTeam(member.id)}
-                />
+                <NameCard key={member.id} name={member.name} role={member.title} />
               ))}
             </div>
           </div>
