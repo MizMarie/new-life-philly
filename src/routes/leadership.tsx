@@ -125,6 +125,7 @@ const TEAM: TeamMember[] = [
     id: "allison-wanaselija",
     name: "Allison Wanaselija",
     title: "Children's Ministry Director",
+    photo: allisonWanaselija,
     qa: [
       {
         q: "I feel most alive when:",
