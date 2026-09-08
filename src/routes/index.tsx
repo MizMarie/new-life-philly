@@ -394,27 +394,29 @@ function Home() {
       </section>
 
       {/* Mission */}
-      <section className="relative overflow-hidden rounded-t-[28px] bg-navy py-24 md:py-[110px]">
-        {/* Luminous layered background */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,color-mix(in_oklab,var(--olive)_22%,transparent),transparent_50%),radial-gradient(circle_at_100%_100%,color-mix(in_oklab,var(--olive-light)_18%,transparent),transparent_50%)] opacity-60"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-noise opacity-[0.035]"
-        />
-        {/* Bottom divider / separator from footer */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-olive/40 to-transparent shadow-[0_0_24px_color-mix(in_oklab,var(--olive)_45%,transparent)]"
-        />
-        <div data-reveal className="relative mx-auto max-w-[900px] px-5 text-center md:px-8">
-          <div className="eyebrow mb-5 text-olive-light">Our Mission</div>
-          <p className="m-0 font-display text-[clamp(26px,3vw,40px)] leading-[1.28] font-semibold tracking-[-0.015em] text-white">
-            To make disciples of all nations by equipping each member, serving in ministry,
-            connecting in community, and engaging our neighbors.
-          </p>
+      <section className="relative bg-sage">
+        <div className="relative overflow-hidden rounded-t-[28px] bg-navy py-24 md:py-[110px]">
+          {/* Luminous layered background */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,color-mix(in_oklab,var(--olive)_22%,transparent),transparent_50%),radial-gradient(circle_at_100%_100%,color-mix(in_oklab,var(--olive-light)_18%,transparent),transparent_50%)] opacity-60"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 bg-noise opacity-[0.035]"
+          />
+          {/* Bottom divider / separator from footer */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-olive/40 to-transparent shadow-[0_0_24px_color-mix(in_oklab,var(--olive)_45%,transparent)]"
+          />
+          <div data-reveal className="relative mx-auto max-w-[900px] px-5 text-center md:px-8">
+            <div className="eyebrow mb-5 text-olive-light">Our Mission</div>
+            <p className="m-0 font-display text-[clamp(26px,3vw,40px)] leading-[1.28] font-semibold tracking-[-0.015em] text-white">
+              To make disciples of all nations by equipping each member, serving in ministry,
+              connecting in community, and engaging our neighbors.
+            </p>
+          </div>
         </div>
       </section>
 
