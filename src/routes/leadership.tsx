@@ -298,19 +298,30 @@ function LeadershipPage() {
             </div>
           </div>
 
-          {/* Our Shepherds (Elders) */}
+          {/* The Session */}
           <div data-reveal className="mt-20 md:mt-24">
+            <div className="eyebrow mb-5 text-center text-olive-dark">Our Shepherds</div>
             <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
-              Our Shepherds (Elders)
+              The Session
             </h2>
+            <p className="mx-auto mt-5 max-w-[820px] text-center text-[18px] leading-[1.7] text-body">
+              The Session — our teaching and ruling elders — is New Life Philly's governing
+              authority. They set policy and budget, hire and shepherd our staff, and walk alongside
+              our congregation.
+            </p>
             <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {[
-                { name: "Tim Bathurst", photoUrl: elderTimBathurst },
-                { name: "Mike Del Vecchio", photoUrl: elderMikeDelVecchio },
-                { name: "Jose Negron", photoUrl: elderJoseNegron },
-                { name: "Jed Trott", photoUrl: elderJedTrott },
+                { name: "Tim Bathurst", photoUrl: elderTimBathurst, role: "Teaching Elder" },
+                { name: "Mike Del Vecchio", photoUrl: elderMikeDelVecchio, role: "Ruling Elder" },
+                { name: "Jose Negron", photoUrl: elderJoseNegron, role: "Ruling Elder" },
+                { name: "Jed Trott", photoUrl: elderJedTrott, role: "Ruling Elder" },
               ].map((elder) => (
-                <NameCard key={elder.name} name={elder.name} photoUrl={elder.photoUrl} />
+                <NameCard
+                  key={elder.name}
+                  name={elder.name}
+                  photoUrl={elder.photoUrl}
+                  role={elder.role}
+                />
               ))}
             </div>
           </div>
@@ -320,6 +331,10 @@ function LeadershipPage() {
             <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
               Elder's Council
             </h2>
+            <p className="mx-auto mt-5 max-w-[820px] text-center text-[18px] leading-[1.7] text-body">
+              An advisory panel of congregation members. It advises the Session but does not hold
+              governing authority.
+            </p>
             <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {[
                 "Pam Bryan",
