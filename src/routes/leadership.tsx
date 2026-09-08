@@ -207,7 +207,15 @@ function TeamCard({
   );
 }
 
-function NameCard({ name, photoUrl }: { name: string; photoUrl?: string }) {
+function NameCard({
+  name,
+  photoUrl,
+  role,
+}: {
+  name: string;
+  photoUrl?: string;
+  role?: string;
+}) {
   return (
     <div
       data-reveal
@@ -223,6 +231,7 @@ function NameCard({ name, photoUrl }: { name: string; photoUrl?: string }) {
         )}
       </div>
       <div className="mt-4 font-display text-[16px] font-bold text-navy md:text-[17px]">{name}</div>
+      {role && <div className="mt-1 text-[15px] font-medium text-olive-dark">{role}</div>}
     </div>
   );
 }
