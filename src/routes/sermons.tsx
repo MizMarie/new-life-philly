@@ -49,23 +49,23 @@ function SermonsPage() {
       <SiteHeader />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-navy py-24 md:py-[140px]">
+      <section className="relative flex h-[55vh] min-h-[320px] max-h-[580px] items-center justify-center overflow-hidden bg-navy">
         <BrushstrokeAccent
           drift
           rotate={-10}
-          opacity={0.16}
+          opacity={0.12}
           className="absolute -bottom-[70px] -left-[120px] h-[300px] w-[760px] text-olive"
         />
         <div data-reveal className="relative mx-auto max-w-[860px] px-5 text-center md:px-8">
           <div className="eyebrow mb-5 text-olive-light">Sermons</div>
-          <h1 className="m-0 font-display text-[clamp(40px,5.4vw,72px)] leading-[1.03] font-extrabold tracking-[-0.024em] text-white">
+          <h1 className="m-0 font-display text-[clamp(36px,5vw,64px)] leading-[1.03] font-extrabold tracking-[-0.024em] text-white">
             Practice the Way.
           </h1>
-          <p className="mx-auto mt-7 mb-0 max-w-[46ch] text-[20px] leading-[1.68] text-white/80">
+          <p className="mx-auto mt-5 mb-0 max-w-[46ch] text-[20px] leading-[1.68] text-white/80">
             Discover the way of Jesus and what it looks like on a Tuesday. Catch up on Sunday
             messages wherever you are — at home, on the El, or on your lunch break.
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-3.5">
+          <div className="mt-8 flex flex-wrap justify-center gap-3.5">
             <a
               href={YOUTUBE_LIVE_URL}
               target="_blank"
