@@ -53,6 +53,7 @@ type TeamMember = {
   id: string;
   name: string;
   title: string;
+  photo?: string;
   qa: { q: string; a: string }[];
 };
 
