@@ -101,6 +101,7 @@ const TEAM: TeamMember[] = [
     id: "greg-snow",
     name: "Greg Snow",
     title: "Pastoral Apprentice",
+    photo: gregSnow,
     qa: [
       {
         q: "I feel most alive when:",
