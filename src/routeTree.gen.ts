@@ -16,6 +16,7 @@ import { Route as PlanYourVisitRouteImport } from './routes/plan-your-visit'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as SermonsRouteImport } from './routes/sermons'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as TestErrorRouteImport } from './routes/test-error'
 import { Route as WhatWeBelieveRouteImport } from './routes/what-we-believe'
 
 const IndexRoute = IndexRouteImport.update({
@@ -53,6 +54,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TestErrorRoute = TestErrorRouteImport.update({
+  id: '/test-error',
+  path: '/test-error',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WhatWeBelieveRoute = WhatWeBelieveRouteImport.update({
   id: '/what-we-believe',
   path: '/what-we-believe',
@@ -67,6 +73,7 @@ export interface FileRoutesByFullPath {
   '/robots.txt': typeof RobotsDottxtRoute
   '/sermons': typeof SermonsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/test-error': typeof TestErrorRoute
   '/what-we-believe': typeof WhatWeBelieveRoute
 }
 export interface FileRoutesByTo {
@@ -77,6 +84,7 @@ export interface FileRoutesByTo {
   '/robots.txt': typeof RobotsDottxtRoute
   '/sermons': typeof SermonsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/test-error': typeof TestErrorRoute
   '/what-we-believe': typeof WhatWeBelieveRoute
 }
 export interface FileRoutesById {
@@ -88,6 +96,7 @@ export interface FileRoutesById {
   '/robots.txt': typeof RobotsDottxtRoute
   '/sermons': typeof SermonsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/test-error': typeof TestErrorRoute
   '/what-we-believe': typeof WhatWeBelieveRoute
 }
 export interface FileRouteTypes {
@@ -100,6 +109,7 @@ export interface FileRouteTypes {
     | '/robots.txt'
     | '/sermons'
     | '/sitemap.xml'
+    | '/test-error'
     | '/what-we-believe'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -110,6 +120,7 @@ export interface FileRouteTypes {
     | '/robots.txt'
     | '/sermons'
     | '/sitemap.xml'
+    | '/test-error'
     | '/what-we-believe'
   id:
     | '__root__'
@@ -120,6 +131,7 @@ export interface FileRouteTypes {
     | '/robots.txt'
     | '/sermons'
     | '/sitemap.xml'
+    | '/test-error'
     | '/what-we-believe'
   fileRoutesById: FileRoutesById
 }
@@ -131,6 +143,7 @@ export interface RootRouteChildren {
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SermonsRoute: typeof SermonsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TestErrorRoute: typeof TestErrorRoute
   WhatWeBelieveRoute: typeof WhatWeBelieveRoute
 }
 
@@ -185,6 +198,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/test-error': {
+      id: '/test-error'
+      path: '/test-error'
+      fullPath: '/test-error'
+      preLoaderRoute: typeof TestErrorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/what-we-believe': {
       id: '/what-we-believe'
       path: '/what-we-believe'
@@ -203,6 +223,7 @@ const rootRouteChildren: RootRouteChildren = {
   RobotsDottxtRoute: RobotsDottxtRoute,
   SermonsRoute: SermonsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TestErrorRoute: TestErrorRoute,
   WhatWeBelieveRoute: WhatWeBelieveRoute,
 }
 export const routeTree = rootRouteImport
