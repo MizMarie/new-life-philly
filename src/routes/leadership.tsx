@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import allisonWanaselija from "@/assets/allison-wanaselija.jpg";
 import deaconBrianMast from "@/assets/deacon-brian-mast.jpg";
 import deaconDarleneHolman from "@/assets/deacon-darlene-holman.jpg";
 import deaconEuniceKalbach from "@/assets/deacon-eunice-kalbach.jpg";
@@ -12,6 +13,9 @@ import elderJedTrott from "@/assets/elder-jed-trott.jpg";
 import elderJoseNegron from "@/assets/elder-jose-negron.jpg";
 import elderMikeDelVecchio from "@/assets/elder-mike-del-vecchio.jpg";
 import elderTimBathurst from "@/assets/elder-tim-bathurst.jpg";
+import gregSnow from "@/assets/greg-snow.jpg";
+import sethCross from "@/assets/seth-cross.jpg";
+import timBathurstStaff from "@/assets/tim-bathurst.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { useReveal } from "@/hooks/use-reveal";
