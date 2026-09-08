@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as NextStepsRouteImport } from './routes/next-steps'
 import { Route as PlanYourVisitRouteImport } from './routes/plan-your-visit'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as SermonsRouteImport } from './routes/sermons'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -36,6 +37,11 @@ const NextStepsRoute = NextStepsRouteImport.update({
 const PlanYourVisitRoute = PlanYourVisitRouteImport.update({
   id: '/plan-your-visit',
   path: '/plan-your-visit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
@@ -64,6 +70,7 @@ export interface FileRoutesByFullPath {
   '/leadership': typeof LeadershipRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
+  '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sermons': typeof SermonsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -74,6 +81,7 @@ export interface FileRoutesByTo {
   '/leadership': typeof LeadershipRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
+  '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sermons': typeof SermonsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -85,6 +93,7 @@ export interface FileRoutesById {
   '/leadership': typeof LeadershipRoute
   '/next-steps': typeof NextStepsRoute
   '/plan-your-visit': typeof PlanYourVisitRoute
+  '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sermons': typeof SermonsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -97,6 +106,7 @@ export interface FileRouteTypes {
     | '/leadership'
     | '/next-steps'
     | '/plan-your-visit'
+    | '/privacy'
     | '/robots.txt'
     | '/sermons'
     | '/sitemap.xml'
@@ -107,6 +117,7 @@ export interface FileRouteTypes {
     | '/leadership'
     | '/next-steps'
     | '/plan-your-visit'
+    | '/privacy'
     | '/robots.txt'
     | '/sermons'
     | '/sitemap.xml'
@@ -117,6 +128,7 @@ export interface FileRouteTypes {
     | '/leadership'
     | '/next-steps'
     | '/plan-your-visit'
+    | '/privacy'
     | '/robots.txt'
     | '/sermons'
     | '/sitemap.xml'
@@ -128,6 +140,7 @@ export interface RootRouteChildren {
   LeadershipRoute: typeof LeadershipRoute
   NextStepsRoute: typeof NextStepsRoute
   PlanYourVisitRoute: typeof PlanYourVisitRoute
+  PrivacyRoute: typeof PrivacyRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SermonsRoute: typeof SermonsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -162,6 +175,13 @@ declare module '@tanstack/react-router' {
       path: '/plan-your-visit'
       fullPath: '/plan-your-visit'
       preLoaderRoute: typeof PlanYourVisitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/robots.txt': {
@@ -200,6 +220,7 @@ const rootRouteChildren: RootRouteChildren = {
   LeadershipRoute: LeadershipRoute,
   NextStepsRoute: NextStepsRoute,
   PlanYourVisitRoute: PlanYourVisitRoute,
+  PrivacyRoute: PrivacyRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   SermonsRoute: SermonsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,

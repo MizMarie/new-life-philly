@@ -120,7 +120,15 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="mx-auto mt-13 flex max-w-[1240px] flex-wrap justify-between gap-4 border-t border-white/15 px-5 pt-6 text-sm text-white/50 md:px-8">
-        <span>© 2026 New Life Philly Church</span>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <span>© 2026 New Life Philly Church</span>
+          <Link
+            to="/privacy"
+            className="text-white/50 no-underline transition-colors hover:text-white"
+          >
+            Privacy Policy
+          </Link>
+        </div>
         <span>Made with care in Philadelphia</span>
       </div>
     </footer>
