@@ -209,7 +209,7 @@ function LeadershipPage() {
         <img
           src={heroImg}
           alt="Pastor Tim with his arm around the shoulder of another man"
-          className="absolute inset-0 h-full w-full object-cover object-[55%_25%] md:object-[50%_25%]"
+          className="absolute inset-0 h-full w-full object-cover object-[62%_25%] md:object-[50%_25%]"
           width={1600}
           height={1219}
         />
