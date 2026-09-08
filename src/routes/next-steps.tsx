@@ -48,7 +48,7 @@ function NextStepsPage() {
       <SiteHeader />
 
       {/* Hero — asymmetric, brushstroke-led */}
-      <section className="relative overflow-hidden bg-navy pt-20 pb-24 md:pt-[120px] md:pb-[140px]">
+      <section className="relative flex min-h-[320px] max-h-[520px] items-center overflow-hidden bg-navy py-16 md:py-20">
         {/* Flagship brushstroke, sweeping across the headline at large scale */}
         <BrushstrokeAccent
           rotate={-7}
