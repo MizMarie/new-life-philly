@@ -159,54 +159,6 @@ const TEAM: TeamMember[] = [
   },
 ];
 
-function TeamCard({
-  member,
-  expanded,
-  onToggle,
-}: {
-  member: TeamMember;
-  expanded: boolean;
-  onToggle: () => void;
-}) {
-  return (
-    <div
-      data-reveal
-      className="rounded-[22px] bg-white p-6 shadow-[0_12px_32px_color-mix(in_oklab,var(--navy)_8%,transparent)] transition-all duration-300 md:p-8 md:hover:-translate-y-1 md:hover:shadow-[0_20px_48px_color-mix(in_oklab,var(--navy)_12%,transparent)] md:cursor-pointer"
-    >
-      <div className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-mist">
-        <span className="text-[15px] font-semibold text-body-faint">Photo coming soon</span>
-      </div>
-      <div className="mt-6">
-        <div className="font-display text-[20px] font-bold text-navy">{member.name}</div>
-        <div className="mt-1 text-[15px] font-medium text-olive-dark">{member.title}</div>
-        <button
-          type="button"
-          onClick={onToggle}
-          aria-expanded={expanded}
-          className="mt-5 inline-flex cursor-pointer items-center gap-2 border-none bg-transparent p-0 font-display text-[14px] font-bold uppercase tracking-[0.07em] text-olive-dark hover:text-olive focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2"
-        >
-          {expanded ? "Read less" : "Read more"}
-          <span
-            aria-hidden="true"
-            className={`transition-transform ${expanded ? "rotate-180" : ""}`}
-          >
-            ▼
-          </span>
-        </button>
-        {expanded && (
-          <div className="mt-4 space-y-4 text-[15px] leading-[1.6] text-body">
-            {member.qa.map(({ q, a }) => (
-              <p key={q}>
-                <strong className="text-navy">{q}</strong> {a}
-              </p>
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
-
 function NameCard({
   name,
   photoUrl,
