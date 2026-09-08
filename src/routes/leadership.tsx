@@ -9,6 +9,10 @@ import deaconMattTheogood from "@/assets/deacon-matt-theogood.jpg";
 import deaconMikeWood from "@/assets/deacon-mike-wood.jpg";
 import deaconRobertMorales from "@/assets/deacon-robert-morales.jpg";
 import deaconTomDeRivera from "@/assets/deacon-tom-de-rivera.jpg";
+import elderJedTrott from "@/assets/elder-jed-trott.jpg";
+import elderJoseNegron from "@/assets/elder-jose-negron.jpg";
+import elderMikeDelVecchio from "@/assets/elder-mike-del-vecchio.jpg";
+import elderTimBathurst from "@/assets/elder-tim-bathurst.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { useReveal } from "@/hooks/use-reveal";
@@ -291,8 +295,13 @@ function LeadershipPage() {
               Our Shepherds (Elders)
             </h2>
             <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
-              {["Tim Bathurst", "Mike Del Vecchio", "Jose Negron", "Jed Trott"].map((name) => (
-                <NameCard key={name} name={name} />
+              {[
+                { name: "Tim Bathurst", photoUrl: elderTimBathurst },
+                { name: "Mike Del Vecchio", photoUrl: elderMikeDelVecchio },
+                { name: "Jose Negron", photoUrl: elderJoseNegron },
+                { name: "Jed Trott", photoUrl: elderJedTrott },
+              ].map((elder) => (
+                <NameCard key={elder.name} name={elder.name} photoUrl={elder.photoUrl} />
               ))}
             </div>
           </div>
