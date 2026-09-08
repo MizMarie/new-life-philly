@@ -123,7 +123,25 @@ function PlanYourVisitPage() {
           <div data-reveal>
             <div className="eyebrow mb-5 text-olive-dark">Plan a visit</div>
             <h1 className="m-0 max-w-[14ch] font-display text-[clamp(36px,3.9vw,56px)] leading-[1.07] font-extrabold tracking-[-0.022em] text-navy">
-              Your first Sunday, made simple.
+              Your first Sunday,{" "}
+              <span className="relative inline-block">
+                made simple.
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 300 14"
+                  preserveAspectRatio="none"
+                  className="absolute -bottom-[0.34em] -left-[1%] h-[0.17em] w-[104%] overflow-visible"
+                >
+                  <path
+                    d="M2 9C38 4.4 74 3.2 110 4.1c36 .9 72 3.6 108 3.1 26-.4 52-2.1 78-4.6"
+                    fill="none"
+                    stroke="var(--olive)"
+                    strokeWidth="7"
+                    strokeLinecap="round"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                </svg>
+              </span>
             </h1>
             <p className="mt-7 mb-0 max-w-[46ch] text-[20px] leading-[1.68] text-body-soft">
               No forms. No sign-up. No need to know anyone here already. Just show up — here's
