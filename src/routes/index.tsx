@@ -240,7 +240,7 @@ function Home() {
               const step = STEPS[0]!;
               const inner = (
                 <>
-                  <div className="relative h-[240px] lg:h-[340px]">
+                  <div className="relative h-[240px] lg:h-[516px]">
                     <img
                       src={step.img}
                       alt={step.alt}
