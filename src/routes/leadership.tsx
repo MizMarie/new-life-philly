@@ -337,6 +337,10 @@ function LeadershipPage() {
             <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
               Our Servants (Deacons)
             </h2>
+            <p className="mx-auto mt-5 max-w-[820px] text-center text-[18px] leading-[1.7] text-body">
+              Our Deacons offer practical, hands-on care — meeting real needs so no one walks through
+              a hard season alone.
+            </p>
             <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {[
                 { name: "Tom de Rivera", photoUrl: deaconTomDeRivera },
