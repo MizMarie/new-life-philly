@@ -66,7 +66,7 @@ function NextStepsPage() {
         <div className="relative mx-auto grid max-w-[1240px] grid-cols-12 gap-y-10 px-5 md:px-8">
           <div data-reveal className="col-span-12 lg:col-span-9">
             <div className="eyebrow mb-6 text-olive-light">Next steps</div>
-            <h1 className="m-0 max-w-[16ch] font-display text-[clamp(46px,9vw,120px)] leading-[0.94] font-extrabold tracking-[-0.035em] text-white">
+            <h1 className="m-0 max-w-[16ch] font-display text-[clamp(36px,5vw,64px)] leading-[1.05] font-extrabold tracking-[-0.02em] text-white">
               Sunday is the
               <span className="block text-olive-light">front door.</span>
             </h1>
