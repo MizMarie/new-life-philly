@@ -52,7 +52,7 @@ function NextStepsPage() {
         {/* Flagship brushstroke, sweeping across the headline at large scale */}
         <BrushstrokeAccent
           rotate={-7}
-          opacity={0.3}
+          opacity={0.15}
           className="absolute top-[24%] -left-[8%] h-[420px] w-[130%] text-olive md:h-[560px]"
         />
         <BrushstrokeAccent
