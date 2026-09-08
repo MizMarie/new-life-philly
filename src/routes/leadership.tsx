@@ -173,8 +173,8 @@ function NameCard({
   role,
 }: {
   name: string;
-  photoUrl?: string;
-  role?: string;
+  photoUrl?: string | undefined;
+  role?: string | undefined;
 }) {
   return (
     <div
