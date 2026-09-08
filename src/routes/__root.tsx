@@ -138,7 +138,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     const meta = [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "New Life Philly — Church in Olney, Philadelphia" },
+      { title: "New Life Philly" },
       {
         name: "description",
         content:

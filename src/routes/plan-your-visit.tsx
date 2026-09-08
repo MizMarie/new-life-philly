@@ -81,7 +81,7 @@ const VISIT_FAQS = [
 export const Route = createFileRoute("/plan-your-visit")({
   head: () => ({
     meta: [
-      { title: "Plan Your Visit — Sundays 10am in Olney | New Life Philly" },
+      { title: "New Life Philly" },
       {
         name: "description",
         content:

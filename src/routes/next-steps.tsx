@@ -12,7 +12,7 @@ import { abs, breadcrumbJsonLd } from "@/lib/seo";
 export const Route = createFileRoute("/next-steps")({
   head: () => ({
     meta: [
-      { title: "Next Steps — Groups, Events & Ministries | New Life Philly" },
+      { title: "New Life Philly" },
       {
         name: "description",
         content:

@@ -10,7 +10,7 @@ import { abs, breadcrumbJsonLd } from "@/lib/seo";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy | New Life Philly" },
+      { title: "New Life Philly" },
       {
         name: "description",
         content:
