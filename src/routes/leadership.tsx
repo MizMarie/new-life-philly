@@ -272,8 +272,9 @@ function LeadershipPage() {
 
           {/* Our Servants (Deacons) */}
           <div data-reveal className="mt-20 md:mt-24">
+            <div className="eyebrow mb-5 text-center text-olive-dark">Our Servants</div>
             <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
-              Our Servants (Deacons)
+              Deacons
             </h2>
             <p className="mx-auto mt-5 max-w-[820px] text-center text-[18px] leading-[1.7] text-body">
               Our Deacons offer practical, hands-on care — meeting real needs so no one walks through
