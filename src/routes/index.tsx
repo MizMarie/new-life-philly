@@ -249,12 +249,6 @@ function Home() {
                       width={1200}
                       height={800}
                     />
-                    <span
-                      aria-hidden="true"
-                      className="pointer-events-none absolute top-5 left-5 flex h-[38px] w-[38px] items-center justify-center rounded-full bg-olive font-display text-[15px] font-extrabold text-navy"
-                    >
-                      {step.n}
-                    </span>
                   </div>
                   <div className="px-[26px] pt-7 pb-[30px]">
                     <h3 className="m-0 font-display text-[24px] font-bold tracking-tight text-navy">
@@ -293,12 +287,6 @@ function Home() {
                         width={1200}
                         height={800}
                       />
-                      <span
-                        aria-hidden="true"
-                        className="pointer-events-none absolute top-5 left-5 flex h-[38px] w-[38px] items-center justify-center rounded-full bg-olive font-display text-[15px] font-extrabold text-navy"
-                      >
-                        {step.n}
-                      </span>
                     </div>
                     <div className="px-[26px] pt-6 pb-[26px]">
                       <h3 className="m-0 font-display text-[22px] font-bold tracking-tight text-navy">
