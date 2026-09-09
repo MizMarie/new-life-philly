@@ -109,7 +109,7 @@ function Home() {
               <span className="font-semibold">Sundays at 10am</span>
               <span className="hidden text-white/50 md:inline">·</span>
               <span className="w-full md:hidden" />
-              <span className="text-white/80">{ADDRESS_1}, Olney, Philadelphia</span>
+              <span className="text-white/80">425 E Roosevelt Blvd, Olney, Philly</span>
             </div>
             <h2 className="mt-5 mb-0 max-w-[34ch] text-[22px] leading-[1.55] font-normal text-white/90 md:mt-7">
               Community rooted in Olney. Open to all of Philadelphia.
