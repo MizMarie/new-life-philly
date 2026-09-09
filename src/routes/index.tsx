@@ -411,10 +411,9 @@ function Home() {
             className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-olive/40 to-transparent shadow-[0_0_24px_color-mix(in_oklab,var(--olive)_45%,transparent)]"
           />
           <div data-reveal className="relative mx-auto max-w-[900px] px-5 text-center md:px-8">
-            <div className="eyebrow mb-5 text-olive-light">Our Mission</div>
+            <div className="eyebrow mb-5 text-olive-light">OUR VISION</div>
             <p className="m-0 font-display text-[clamp(26px,3vw,40px)] leading-[1.28] font-semibold tracking-[-0.015em] text-white">
-              To make disciples of all nations by equipping each member, serving in ministry,
-              connecting in community, and engaging our neighbors.
+              New Life Philly is a thriving family in the city where the broken from all nations are made alive and whole finding hope and purpose in Jesus Christ.
             </p>
           </div>
         </div>
