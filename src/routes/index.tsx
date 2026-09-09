@@ -56,7 +56,7 @@ function Home() {
         <div className="absolute inset-y-0 right-0 left-0 md:left-[56%]">
           <img
             src={heroImg}
-            alt="Members of New Life Philly laughing together after a Sunday service"
+            alt="A man and woman praying together with heads bowed and her hand raised"
             className="h-full w-full object-cover"
             width={1280}
             height={1600}
