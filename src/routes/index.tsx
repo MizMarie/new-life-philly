@@ -185,8 +185,8 @@ function Home() {
               We believe there is more for you.
             </h2>
             <p className="mt-7 mb-0 max-w-[46ch] text-[20px] leading-[1.68] text-body-soft">
-              In a city this busy it's easy to feel invisible. At New Life Philly you'll find
-              genuine community and a purpose worth showing up for. This is where belonging begins.
+              At New Life Philly you'll find genuine community and a purpose worth showing up for.
+              This is where belonging begins.
             </p>
             <Link
               to="/plan-your-visit"
