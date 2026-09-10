@@ -108,7 +108,7 @@ export const NAV_LINKS = [
 export const FIRST_SUNDAY = [
   { title: "10:00 AM on Sundays", body: "About 90 minutes, start to finish." },
   { title: "Free street parking", body: "On D St, Bingham, and Westford." },
-  { title: "Wear whatever", body: "Most people are in jeans." },
+  { title: "Wear whatever", body: "Most of our attendees opt for a comfortable, relaxed style." },
   { title: "Kids are covered", body: "Kids worship with you first, then head to nursery, toddler care, or Kids Church." },
   { title: "We meet upstairs", body: "Someone at the door will walk you to the stairs." },
   { title: "Stay for coffee — or slip out", body: "Both are completely fine." },
