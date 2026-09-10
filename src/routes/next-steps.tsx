@@ -119,7 +119,7 @@ function NextStepsPage() {
                   Events
                 </h3>
                 <p className="mt-2.5 mb-0 text-[17px] leading-[1.6] text-body-soft">
-                  Something's always happening: worship nights, serve days, seasonal gatherings. Show up whenever works, no RSVP required.
+                  Something's always happening: worship nights, serve days, outdoor soccer games, seasonal gatherings. Show up whenever works, no RSVP required.
                 </p>
                 <span className="mt-5 inline-block rounded-full bg-olive px-6 py-3 font-display text-[13px] font-bold tracking-[0.08em] text-navy uppercase">
                   See What's Coming →
