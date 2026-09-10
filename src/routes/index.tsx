@@ -156,8 +156,8 @@ function Home() {
             </p>
             <p className="mt-5 mb-0 max-w-[44ch] text-[18px] leading-[1.7] text-body-soft">
               Maybe you grew up in church and walked away. Maybe you've never set foot in one. Maybe
-              you just moved to Philly and the city feels bigger than you expected. However you got
-              to this page — you can come as you are, sit in the back, and decide nothing.
+              you just moved to Philly and the city feels bigger than you expected. Whatever it is,
+              you can come as you are, sit in the back, and decide nothing.
             </p>
           </div>
           <div
