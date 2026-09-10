@@ -191,7 +191,7 @@ function PlanYourVisitPage() {
                   <AccordionTrigger className="py-6 font-display text-[19px] font-bold tracking-tight text-navy hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-[17px] leading-[1.65] text-body-soft">
+                  <AccordionContent className="whitespace-pre-line text-[17px] leading-[1.65] text-body-soft">
                     {"bullets" in faq && faq.bullets ? (
                       <>
                         <p className="m-0">{faq.intro}</p>
