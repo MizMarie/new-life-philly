@@ -45,7 +45,6 @@ export const RESOURCE_LINKS = [
   { label: "Resources Help", href: RESOURCES_HELP_URL },
   { label: "Baptism / Dedication", href: BAPTISM_URL },
   { label: "Building Requests", href: BUILDING_REQUEST_URL },
-  { label: "Serving Interest", href: SERVING_INTEREST_URL },
 ];
 
 /** Ministries — drafted copy and placeholder photos until real ones arrive. */
