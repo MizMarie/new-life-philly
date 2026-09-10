@@ -122,7 +122,7 @@ function NextStepsPage() {
                   Something's always happening: worship nights, serve days, outdoor soccer games, seasonal gatherings. Show up whenever works, no RSVP required.
                 </p>
                 <span className="mt-5 inline-block rounded-full bg-olive px-6 py-3 font-display text-[13px] font-bold tracking-[0.08em] text-navy uppercase">
-                  See What's Coming →
+                  SEE WHAT'S COMING UP THIS WEEK →
                 </span>
               </div>
             </a>
