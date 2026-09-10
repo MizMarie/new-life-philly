@@ -4,6 +4,7 @@ import logoAsset from "@/assets/new-life-logo-2026.png.asset.json";
 import {
   ADDRESS_1,
   ADDRESS_2,
+  BUILDING_REQUEST_URL,
   EMAIL,
   GIVE_URL,
   PHONE,
@@ -109,6 +110,14 @@ export function SiteFooter() {
               className="text-white/80 no-underline transition-colors hover:text-white"
             >
               Give
+            </a>
+            <a
+              href={BUILDING_REQUEST_URL}
+              target="_blank"
+              rel="noopener"
+              className="text-white/80 no-underline transition-colors hover:text-white"
+            >
+              Building Request Form
             </a>
             <Link
               to="/next-steps"
