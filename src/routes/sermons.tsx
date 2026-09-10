@@ -63,7 +63,7 @@ function SermonsPage() {
           </h1>
           <p className="mx-auto mt-5 mb-0 max-w-[46ch] text-[20px] leading-[1.68] text-white/80">
             Discover the way of Jesus and what it looks like on a Tuesday. Catch up on Sunday
-            messages wherever you are — at home, on the El, or on your lunch break.
+             messages wherever you are — at home, on the subway, or on your lunch break.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3.5">
             <a
