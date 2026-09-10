@@ -69,7 +69,7 @@ const VISIT_FAQS = [
   {
     question: "Do you have programs for children?",
     answer:
-      "Yes! New Life Kids Church runs most Sundays during the service for children ages 1 year through 5th grade. A nursery is also available for infants and young toddlers. Drop-off and registration takes place in the Ministry Center starting at 9:45 AM. We prioritize safety with comprehensive security measures, so you can have peace of mind while your child enjoys the program.",
+      "Yes! Your kids stay right in the service with you through worship, prayer, and the offering. Before the message, we bring every child up front to pray over them together. From there, our littlest ones head to nursery and toddler care, and kids in grades 1 through 5 move to Kids Church for their own time in God's word.\n\nDrop-off and registration takes place in the Ministry Center starting at 10:45 AM. We prioritize safety with comprehensive security measures, so you can have peace of mind while your child enjoys the program.",
   },
   {
     question: "What should I wear?",
@@ -177,7 +177,7 @@ function PlanYourVisitPage() {
           <div data-reveal className="mb-11 max-w-[600px]">
             <div className="eyebrow mb-4 text-olive-dark">Before you come</div>
             <h2 className="m-0 font-display text-[clamp(30px,3.2vw,44px)] leading-[1.1] font-bold tracking-[-0.02em] text-navy">
-              Everything you're wondering about.
+              FAQs
             </h2>
           </div>
           <div data-reveal className="rounded-[20px] border border-hairline bg-white px-7 md:px-9">
