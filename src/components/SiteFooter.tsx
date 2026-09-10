@@ -29,7 +29,7 @@ export function SiteFooter() {
             New Life Philly
           </p>
           <p className="mt-3.5 mb-0 max-w-[34ch] text-[16px] leading-[1.65] text-white/65">
-            A non-denominational church in the Olney section of Philadelphia — wherever you're
+            A local community church in the Olney section of Philadelphia — wherever you're
             coming from, you're welcome here.
           </p>
           <div className="mt-5 flex flex-wrap gap-2.5">
