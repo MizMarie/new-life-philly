@@ -78,9 +78,8 @@ function NextStepsPage() {
           >
             <div className="inline-block border-l-2 border-olive pl-6 text-left lg:border-l-0 lg:border-r-2 lg:pl-0 lg:pr-6 lg:text-right">
               <p className="m-0 max-w-[44ch] text-[17px] leading-[1.66] text-white/80 md:text-[18px]">
-                The rest of the week is where real friendships — with Jesus, and with each other —
-                get built: around tables, in the gym, on the street. Here's everything happening at
-                New Life Philly.
+                The rest of the week is where real friendships, with Jesus, and with each other,
+                get built: around tables, in homes, on playgrounds, in parks.
               </p>
             </div>
           </div>
@@ -198,10 +197,6 @@ function NextStepsPage() {
             <h2 className="m-0 font-display text-[clamp(30px,3.2vw,44px)] leading-[1.1] font-bold tracking-[-0.02em] text-white">
               Need something specific?
             </h2>
-            <p className="mt-6 mb-0 max-w-[46ch] text-[18px] leading-[1.65] text-white/75">
-              These open our secure Church Center forms in a new tab, so this page stays right where
-              you left it.
-            </p>
           </div>
           <div data-reveal className="flex flex-wrap gap-3.5">
             {RESOURCE_LINKS.map((r) => (
