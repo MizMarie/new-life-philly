@@ -246,10 +246,10 @@ function LeadershipPage() {
             </p>
             <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {[
-                { name: "Tim Bathurst", photoUrl: elderTimBathurst, role: "Teaching Elder" },
-                { name: "Mike Del Vecchio", photoUrl: elderMikeDelVecchio, role: "Ruling Elder" },
-                { name: "Jose Negron", photoUrl: elderJoseNegron, role: "Ruling Elder" },
-                { name: "Jed Trott", photoUrl: elderJedTrott, role: "Ruling Elder" },
+                { name: "Tim Bathurst", photoUrl: elderTimBathurst, role: "Elder, Pastor of Spiritual Formation" },
+                { name: "Mike Del Vecchio", photoUrl: elderMikeDelVecchio, role: "Elder" },
+                { name: "Jose Negron", photoUrl: elderJoseNegron, role: "Elder" },
+                { name: "Jed Trott", photoUrl: elderJedTrott, role: "Elder" },
               ].map((elder) => (
                 <NameCard
                   key={elder.name}
@@ -257,29 +257,6 @@ function LeadershipPage() {
                   photoUrl={elder.photoUrl}
                   role={elder.role}
                 />
-              ))}
-            </div>
-          </div>
-
-          {/* Elder's Council */}
-          <div data-reveal className="mt-20 md:mt-24">
-            <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
-              Elder's Council
-            </h2>
-            <p className="mx-auto mt-5 max-w-[820px] text-center text-[18px] leading-[1.7] text-body">
-              An advisory panel of congregation members. It advises the Session but does not hold
-              governing authority.
-            </p>
-            <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
-              {[
-                "Pam Bryan",
-                "Nes Espinosa",
-                "Jacob Good",
-                "Marissa Morales",
-                "Christiana Ogunsami",
-                "Dan Schafhauser",
-              ].map((name) => (
-                <NameCard key={name} name={name} />
               ))}
             </div>
           </div>
@@ -321,6 +298,28 @@ function LeadershipPage() {
             <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {TEAM.map((member) => (
                 <NameCard key={member.id} name={member.name} role={member.title} photoUrl={member.photo} />
+              ))}
+            </div>
+          </div>
+
+          {/* Elder's Council */}
+          <div data-reveal className="mt-20 md:mt-24">
+            <h2 className="m-0 text-center font-display text-[clamp(24px,2.5vw,32px)] leading-[1.15] font-bold tracking-[-0.012em] text-navy">
+              Elder's Council
+            </h2>
+            <p className="mx-auto mt-5 max-w-[820px] text-center text-[18px] leading-[1.7] text-body">
+              An advisory panel of congregation members. It advises the Session but does not hold
+              governing authority.
+            </p>
+            <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
+              {[
+                "Pam Bryan",
+                "Nes Espinosa",
+                "Jacob Good",
+                "Marissa Morales",
+                "Dan Schafhauser",
+              ].map((name) => (
+                <NameCard key={name} name={name} />
               ))}
             </div>
           </div>
