@@ -79,7 +79,8 @@ function NextStepsPage() {
             <div className="inline-block border-l-2 border-olive pl-6 text-left lg:border-l-0 lg:border-r-2 lg:pl-0 lg:pr-6 lg:text-right">
               <p className="m-0 max-w-[44ch] text-[17px] leading-[1.66] text-white/80 md:text-[18px]">
                 The rest of the week is where real friendships, with Jesus, and with each other,
-                get built: around tables, in homes, on playgrounds, in parks.
+                get built: around tables, in homes, on playgrounds, in parks. Here's everything
+                happening at New Life Philly.
               </p>
             </div>
           </div>
