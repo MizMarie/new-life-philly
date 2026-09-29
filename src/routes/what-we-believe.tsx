@@ -169,9 +169,8 @@ function WhatWeBelievePage() {
         <div className="mx-auto max-w-[1240px] px-5 md:px-8">
           <div data-reveal className="mx-auto max-w-[820px] text-center">
             <p className="m-0 text-[18px] leading-[1.7] text-body">
-              Our Real Hope is founded entirely on the truth of Scripture, which guides every aspect
-              of our lives and practice. We hold firmly to the essential Christian truths while
-              extending grace in all other matters.
+              Our Real Hope rests on Scripture. We hold tight to the core of the Christian faith and
+              give each other grace on the rest.
             </p>
           </div>
 
