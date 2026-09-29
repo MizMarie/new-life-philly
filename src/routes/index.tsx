@@ -228,7 +228,7 @@ function Home() {
               <h2 className="m-0 font-display text-[clamp(32px,3.4vw,48px)] leading-[1.09] font-bold tracking-[-0.02em] text-navy">
                 Three simple steps.
               </h2>
-              <p className="mt-3 mb-0 text-center text-[17px] leading-[1.55] text-body-soft">
+              <p className="mt-3 mb-0 text-[17px] leading-[1.55] text-body-soft">
                 Start with Sunday. Take the next step whenever you're ready.
               </p>
             </div>
@@ -331,7 +331,7 @@ function Home() {
               <h2 className="m-0 font-display text-[clamp(30px,3.2vw,44px)] leading-[1.1] font-bold tracking-[-0.02em] text-navy">
                 Your first Sunday, answered.
               </h2>
-              <p className="mt-3 mb-0 text-center text-[17px] leading-[1.55] text-body-soft">
+              <p className="mt-3 mb-0 text-[17px] leading-[1.55] text-body-soft">
                 Everything a first-timer wonders about, in one place.
               </p>
             </div>
