@@ -38,7 +38,7 @@ export const Route = createFileRoute("/next-steps")({
 });
 
 const CARD =
-  "block overflow-hidden rounded-tl-[20px] rounded-br-[20px] rounded-tr-none rounded-bl-none border border-hairline bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)]";
+  "block flex flex-col overflow-hidden rounded-tl-[20px] rounded-br-[20px] rounded-tr-none rounded-bl-none border border-hairline bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)]";
 
 function NextStepsPage() {
   const pageRef = useReveal<HTMLDivElement>();
@@ -96,7 +96,7 @@ function NextStepsPage() {
               Pick the room that fits your life.
             </h2>
           </div>
-          <div className="grid gap-[26px] lg:grid-cols-12 lg:items-start">
+          <div className="grid gap-[26px] lg:grid-cols-12">
             <a
               href={CALENDAR_URL}
               target="_blank"
@@ -114,16 +114,18 @@ function NextStepsPage() {
                   height={800}
                 />
               </div>
-              <div className="px-[26px] pt-7 pb-[30px]">
+              <div className="flex flex-1 flex-col px-[26px] pt-7 pb-[30px]">
                 <h3 className="m-0 font-display text-[26px] font-bold tracking-tight text-navy">
                   Events
                 </h3>
                 <p className="mt-2.5 mb-0 text-[17px] leading-[1.6] text-body-soft">
                   Something's always happening: worship nights, serve days, outdoor soccer games, seasonal gatherings. Show up whenever works, no RSVP required.
                 </p>
-                <span className="mt-5 inline-block rounded-full bg-olive px-6 py-3 font-display text-[13px] font-bold tracking-[0.08em] text-navy uppercase">
-                  SEE WHAT'S COMING UP THIS WEEK →
-                </span>
+                <div className="mt-auto pt-5">
+                  <span className="inline-block rounded-full bg-olive px-6 py-3 font-display text-[13px] font-bold tracking-[0.08em] text-navy uppercase">
+                    SEE WHAT'S COMING UP THIS WEEK →
+                  </span>
+                </div>
               </div>
             </a>
 
@@ -144,7 +146,7 @@ function NextStepsPage() {
                   height={800}
                 />
               </div>
-              <div className="px-[26px] pt-7 pb-[30px]">
+              <div className="flex flex-1 flex-col px-[26px] pt-7 pb-[30px]">
                 <div className="eyebrow mb-2.5 text-olive-dark">People to do life with</div>
                 <h3 className="m-0 font-display text-[23px] font-bold tracking-tight text-navy">
                   Life Groups
@@ -152,9 +154,11 @@ function NextStepsPage() {
                 <p className="mt-2.5 mb-0 text-[17px] leading-[1.6] text-body-soft">
                   Small groups that meet each week to eat, talk about real life, and pray together.
                 </p>
-                <span className="mt-4 inline-block font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase">
-                  How Groups Work →
-                </span>
+                <div className="mt-auto pt-4">
+                  <span className="inline-block font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase">
+                    How Groups Work →
+                  </span>
+                </div>
               </div>
             </a>
 
@@ -177,15 +181,17 @@ function NextStepsPage() {
                     height={800}
                   />
                 </div>
-                <div className="px-[26px] pt-7 pb-[30px]">
+                <div className="flex flex-1 flex-col px-[26px] pt-7 pb-[30px]">
                   <div className="eyebrow mb-2.5 text-olive-dark">{m.label}</div>
                   <h3 className="m-0 font-display text-[23px] font-bold tracking-tight text-navy">
                     {m.name}
                   </h3>
                   <p className="mt-2.5 mb-0 text-[17px] leading-[1.6] text-body-soft">{m.body}</p>
-                  <span className="mt-4 inline-block font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase">
-                    Learn More →
-                  </span>
+                  <div className="mt-auto pt-4">
+                    <span className="inline-block font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase">
+                      Learn More →
+                    </span>
+                  </div>
                 </div>
               </a>
             ))}
