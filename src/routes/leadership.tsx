@@ -28,13 +28,13 @@ export const Route = createFileRoute("/leadership")({
       {
         name: "description",
         content:
-          "Meet the team of New Life Philly — everyday people with deep faith, committed to walking alongside you through the real stuff of life.",
+          "Meet the people who lead New Life Philly. Everyday people who love Jesus and show up for you.",
       },
       { property: "og:title", content: "Meet Our Team | New Life Philly" },
       {
         property: "og:description",
         content:
-          "Meet the team of New Life Philly — everyday people with deep faith, committed to walking alongside you through the real stuff of life.",
+          "Meet the people who lead New Life Philly. Everyday people who love Jesus and show up for you.",
       },
       { property: "og:url", content: abs("/leadership") },
     ],
@@ -226,9 +226,8 @@ function LeadershipPage() {
           <div data-reveal className="mx-auto max-w-[820px] text-center">
             <div className="eyebrow mb-5 text-olive-dark">Our Leadership</div>
             <p className="mt-5 mb-0 text-[18px] leading-[1.7] text-body">
-              Our leaders are everyday people with deep faith, committed to walking alongside you
-              through the real stuff of life. They're here to guide, encourage, and help our
-              community stay rooted as we pursue Jesus together.
+              Our leaders are everyday people who love Jesus. They're here for the real stuff of
+              life.
             </p>
           </div>
 
@@ -239,9 +238,8 @@ function LeadershipPage() {
               The Session
             </h2>
             <p className="mx-auto mt-5 max-w-[820px] text-center text-[18px] leading-[1.7] text-body">
-              The Session — our teaching and ruling elders — is New Life Philly's governing
-              authority. They set policy and budget, hire and shepherd our staff, and walk alongside
-              our congregation.
+              The Session is our governing board of elders. They set policy and budget, guide our
+              staff, and care for the congregation.
             </p>
             <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {[
@@ -267,8 +265,7 @@ function LeadershipPage() {
               Deacons
             </h2>
             <p className="mx-auto mt-5 max-w-[820px] text-center text-[18px] leading-[1.7] text-body">
-              Our Deacons offer practical, hands-on care — meeting real needs so no one walks through
-              a hard season alone.
+              Our Deacons meet practical needs. Nobody here has to get through a hard season alone.
             </p>
             <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {[
@@ -306,8 +303,7 @@ function LeadershipPage() {
               Elder's Council
             </h2>
             <p className="mx-auto mt-5 max-w-[820px] text-center text-[18px] leading-[1.7] text-body">
-              An advisory panel of congregation members. It advises the Session but does not hold
-              governing authority.
+              Church members who advise the Session. They don't hold governing authority.
             </p>
             <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {[
