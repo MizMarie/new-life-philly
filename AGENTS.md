@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep manually refreshed homepage event entries in `UPCOMING` in `src/lib/site-content.ts` and use the shared `CALENDAR_URL` for the full calendar, so event URLs and calendar navigation stay centralized.
