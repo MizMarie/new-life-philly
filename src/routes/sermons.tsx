@@ -20,13 +20,13 @@ export const Route = createFileRoute("/sermons")({
       {
         name: "description",
         content:
-          "Watch and listen to Sunday messages from New Life Philly — discover the way of Jesus and what it looks like on a Tuesday.",
+          "What following Jesus looks like on a Tuesday. Watch and listen to Sunday messages from New Life Philly.",
       },
       { property: "og:title", content: "Sermons — New Life Philly" },
       {
         property: "og:description",
         content:
-          "Watch and listen to Sunday messages from New Life Philly — discover the way of Jesus and what it looks like on a Tuesday.",
+          "What following Jesus looks like on a Tuesday. Watch and listen to Sunday messages from New Life Philly.",
       },
       { property: "og:url", content: abs("/sermons") },
     ],
@@ -62,8 +62,8 @@ function SermonsPage() {
             Practice the Way.
           </h1>
           <p className="mx-auto mt-5 mb-0 max-w-[46ch] text-[20px] leading-[1.68] text-white/80">
-            Discover the way of Jesus and what it looks like on a Tuesday. Catch up on Sunday
-             messages wherever you are — at home, on the subway, or on your lunch break.
+            What following Jesus looks like on a Tuesday. Catch up on Sunday's message at home, on
+            the subway, or on your lunch break.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3.5">
             <a
@@ -115,8 +115,7 @@ function SermonsPage() {
             The sermon doesn't stop when Sunday does.
           </h2>
           <p className="mx-auto mt-6 mb-0 max-w-[50ch] text-[19px] leading-[1.65] text-body-soft">
-            Whether you're on the bus, on a break, or just not ready to walk through the doors yet,
-            the podcast is here for you.
+            On the bus, on a break, or not ready to walk in yet? The podcast is for you.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3.5">
             <a
@@ -146,15 +145,15 @@ function SermonsPage() {
           {[
             {
               title: "Rooted in Scripture",
-              body: "Every message starts with the Bible and works outward into real life in Philadelphia.",
+              body: "Every message starts in the Bible and ends up in real life.",
             },
             {
               title: "Honest, not polished",
-              body: "We preach to real people with real questions — no performance, no pretending.",
+              body: "Real people, real questions. No performance.",
             },
             {
               title: "Built for Tuesdays",
-              body: "The goal isn't a good Sunday. It's a different week — at work, at home, in your neighborhood.",
+              body: "We want your week to look different. At work, at home, on your block.",
             },
           ].map((item) => (
             <div
@@ -179,7 +178,7 @@ function SermonsPage() {
             Sermons make more sense around a table.
           </h2>
           <p className="mx-auto mt-6 mb-0 max-w-[46ch] text-[19px] leading-[1.65] text-body-soft">
-            Join us this Sunday at 10am — then stay for coffee and keep the conversation going.
+            Come this Sunday at 10am. Stay for coffee and keep talking.
           </p>
           <Link
             to="/plan-your-visit"
