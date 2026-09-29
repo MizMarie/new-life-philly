@@ -11,7 +11,7 @@ export const CHURCH_JSONLD = {
   name: "New Life Philly",
   alternateName: "New Life Philly Church",
   description:
-    "A non-denominational church in the Olney section of North Philadelphia. Sundays at 10am — real people, real love, real hope.",
+    "A non-denominational church in the Olney section of North Philadelphia. Sundays at 10am. Real people. Real love. Real hope.",
   url: SITE_URL,
   telephone: PHONE,
   email: EMAIL,
