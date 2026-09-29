@@ -130,7 +130,7 @@ export function SiteHeader() {
             onClick={() => setOpen(false)}
             className="pill mt-5 w-full justify-center bg-olive px-6 py-4 text-[14px] text-navy no-underline"
           >
-            I'm New — Plan Your Visit →
+            New here? Plan your visit →
           </Link>
           <div className="mt-5 text-[16px] leading-[1.6] text-body-soft">
             Sundays at 10am · Olney, Philadelphia

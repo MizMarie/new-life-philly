@@ -3,7 +3,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/leadership-hero.jpg";
 import allisonWanaselija from "@/assets/allison-wanaselija.jpg";
 import deaconBrianMast from "@/assets/deacon-brian-mast.jpg";
-import deaconDarleneHolman from "@/assets/deacon-darlene-holman.jpg";
 import deaconEuniceKalbach from "@/assets/deacon-eunice-kalbach.jpg";
 import deaconJacobGood from "@/assets/deacon-jacob-good.jpg";
 import deaconMattTheogood from "@/assets/deacon-matt-theogood.jpg";
@@ -276,7 +275,6 @@ function LeadershipPage() {
                 { name: "Tom de Rivera", photoUrl: deaconTomDeRivera },
                 { name: "Jacob Good", photoUrl: deaconJacobGood },
                 { name: "Eunice Kalbach", photoUrl: deaconEuniceKalbach },
-                { name: "Darlene Holman", photoUrl: deaconDarleneHolman },
                 { name: "Brian Mast", photoUrl: deaconBrianMast },
                 { name: "Robert Morales, Sr.", photoUrl: deaconRobertMorales },
                 { name: "Matt Theogood", photoUrl: deaconMattTheogood },

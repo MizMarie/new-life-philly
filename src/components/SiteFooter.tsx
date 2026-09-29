@@ -30,8 +30,8 @@ export function SiteFooter() {
             New Life Philly
           </p>
           <p className="mt-3.5 mb-0 max-w-[34ch] text-[16px] leading-[1.65] text-white/65">
-            A local community church in the Olney section of Philadelphia — wherever you're
-            coming from, you're welcome here.
+            A local church community in the Olney section of Philadelphia. Wherever you're coming
+            from, you're welcome here.
           </p>
           <div className="mt-5 flex flex-wrap gap-2.5">
             {SOCIALS.map((s) => (
@@ -138,7 +138,7 @@ export function SiteFooter() {
             Privacy Policy
           </Link>
         </div>
-        <span>Made with care in Philadelphia</span>
+        <span>Made in Philly</span>
       </div>
     </footer>
   );

@@ -112,10 +112,10 @@ export const NAV_LINKS = [
 export const FIRST_SUNDAY = [
   { title: "10:00 AM on Sundays", body: "About 90 minutes, start to finish." },
   { title: "Free street parking", body: "On D St, Bingham, and Westford." },
-  { title: "Wear whatever", body: "Most of our attendees opt for a comfortable, relaxed style." },
+  { title: "Wear whatever", body: "Comfortable is fine. Nobody's checking." },
   { title: "Kids are covered", body: "Kids worship with you first, then head to nursery, toddler care, or Kids Church." },
   { title: "We meet upstairs", body: "Someone at the door will walk you to the stairs." },
-  { title: "Stay for coffee — or slip out", body: "Both are completely fine." },
+  { title: "Stay for coffee, or slip out", body: "Both are fine." },
 ];
 
 export const STEPS = [
@@ -133,7 +133,7 @@ export const STEPS = [
     img: step2Img,
     alt: "A small group laughing together around a table",
     title: "Real Love Connects",
-    body: "Find your people. There's a place for every age and every stage.",
+    body: "Find your people. Groups for every age.",
     cta: "Find Your People →",
     to: "/next-steps",
   },
@@ -142,7 +142,7 @@ export const STEPS = [
     img: step3Img,
     alt: "Volunteers sorting donation boxes on a Philadelphia street",
     title: "Real Hope Acts",
-    body: "Serve your neighbors. Live your purpose.",
+    body: "Serve your neighbors. Use what you've got.",
     cta: "See Ways to Serve →",
     href: SERVE_URL,
   },
