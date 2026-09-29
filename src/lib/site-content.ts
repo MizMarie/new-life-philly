@@ -87,7 +87,7 @@ export const MINISTRIES = [
     url: "https://newlifephilly.churchcenter.com/pages/womens-ministry",
     img: storyImg,
     alt: "Women gathered around a table together",
-    body: "Brunches, fireside evenings in homes, and Bible study over coffee. A place for women of every age and stage to belong.",
+    body: "Brunches, fireside evenings in homes, and Bible study over coffee. Women of every age and stage.",
   },
   {
     id: "men",
@@ -97,7 +97,7 @@ export const MINISTRIES = [
     url: "https://newlifephilly.churchcenter.com/groups/fellowship-groups/men-s-ministry",
     img: step2Img,
     alt: "Men gathered outside the church building",
-    body: "Soccer, pickup baseball, and retreats, plus time in the Word together. A place for men of every age to build real friendships and grow in Christ.",
+    body: "Soccer, pickup baseball, retreats, and time in the Word together. Men of every age.",
   },
 ];
 

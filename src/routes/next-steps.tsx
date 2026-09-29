@@ -78,9 +78,8 @@ function NextStepsPage() {
           >
             <div className="inline-block border-l-2 border-olive pl-6 text-left lg:border-l-0 lg:border-r-2 lg:pl-0 lg:pr-6 lg:text-right">
               <p className="m-0 max-w-[44ch] text-[17px] leading-[1.66] text-white/80 md:text-[18px]">
-                The rest of the week is where real friendships, with Jesus, and with each other,
-                get built: around tables, in homes, on playgrounds, in parks. Here's everything
-                happening at New Life Philly.
+                The rest of the week is where friendships grow, with Jesus and with each other.
+                Around tables, in homes, on playgrounds, in parks. Here's what's happening.
               </p>
             </div>
           </div>
@@ -119,7 +118,8 @@ function NextStepsPage() {
                   Events
                 </h3>
                 <p className="mt-2.5 mb-0 text-[17px] leading-[1.6] text-body-soft">
-                  Something's always happening: worship nights, serve days, outdoor soccer games, seasonal gatherings. Show up whenever works, no RSVP required.
+                  Worship nights, serve days, outdoor soccer, seasonal gatherings. Something's
+                  always on. Come when you can. No RSVP needed.
                 </p>
                 <div className="mt-auto pt-5">
                   <span className="inline-block rounded-full bg-olive px-6 py-3 font-display text-[13px] font-bold tracking-[0.08em] text-navy uppercase">
