@@ -118,6 +118,28 @@ export const FIRST_SUNDAY = [
   { title: "Stay for coffee, or slip out", body: "Both are fine." },
 ];
 
+/** Refresh these upcoming events monthly. */
+export const UPCOMING = [
+  {
+    date: "Sun, Oct 4",
+    title: "Communion Sunday",
+    body: "Sunday worship at 10am, and we share communion together.",
+    url: "https://newlifephilly.churchcenter.com/calendar/event/200386417",
+  },
+  {
+    date: "Fri, Oct 9",
+    title: "Life Group with dinner",
+    body: "A meal and real conversation with a group in Cheltenham.",
+    url: "https://newlifephilly.churchcenter.com/calendar/event/237971735",
+  },
+  {
+    date: "Oct 9 to 11",
+    title: "Young Adult Retreat",
+    body: "A weekend away at Camp Men-O-Lan with New Life Young Adults.",
+    url: "https://newlifephilly.churchcenter.com/calendar/event/221183709",
+  },
+];
+
 export const STEPS = [
   {
     n: "1",

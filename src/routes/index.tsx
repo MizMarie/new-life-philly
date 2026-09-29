@@ -8,11 +8,13 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import {
   ADDRESS_1,
+  CALENDAR_URL,
   EMAIL,
   FIRST_SUNDAY,
   PHONE,
   PRAYER_URL,
   STEPS,
+  UPCOMING,
   YOUTUBE_LIVE_URL,
 } from "@/lib/site-content";
 import { useReveal } from "@/hooks/use-reveal";
@@ -226,6 +228,9 @@ function Home() {
               <h2 className="m-0 font-display text-[clamp(32px,3.4vw,48px)] leading-[1.09] font-bold tracking-[-0.02em] text-navy">
                 Three simple steps.
               </h2>
+              <p className="mt-3 mb-0 text-[17px] leading-[1.55] text-body-soft">
+                Start with Sunday. Take the next step whenever you're ready.
+              </p>
             </div>
             <Link
               to="/next-steps"
@@ -326,6 +331,9 @@ function Home() {
               <h2 className="m-0 font-display text-[clamp(30px,3.2vw,44px)] leading-[1.1] font-bold tracking-[-0.02em] text-navy">
                 Your first Sunday, answered.
               </h2>
+              <p className="mt-3 mb-0 text-[17px] leading-[1.55] text-body-soft">
+                Everything a first-timer wonders about, in one place.
+              </p>
             </div>
             <Link
               to="/plan-your-visit"
@@ -392,8 +400,60 @@ function Home() {
         </div>
       </section>
 
+      {/* Coming up */}
+      <section className="bg-mist py-20 md:py-24">
+        <div className="mx-auto max-w-[1240px] px-5 md:px-8">
+          <div data-reveal className="mb-11 text-center">
+            <div className="eyebrow mb-4 text-olive-dark">Coming up</div>
+            <h2 className="m-0 font-display text-[clamp(30px,3.2vw,44px)] leading-[1.1] font-bold tracking-[-0.02em] text-navy">
+              What's happening at New Life
+            </h2>
+            <p className="mt-3 mb-0 text-[17px] leading-[1.55] text-body-soft">
+              Something's always happening. Come to one, or come to them all.
+            </p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {UPCOMING.map((event) => (
+              <article
+                key={event.url}
+                data-reveal
+                className="flex flex-col rounded-2xl border border-hairline bg-white px-7 pt-[30px] pb-8 shadow-[0_2px_14px_rgba(0,0,0,0.04)]"
+              >
+                <span className="w-fit rounded bg-olive px-3 py-1 font-display text-[12px] font-bold text-navy">
+                  {event.date}
+                </span>
+                <h3 className="mt-5 mb-0 font-display text-[20px] font-extrabold text-navy">
+                  {event.title}
+                </h3>
+                <p className="mt-2 mb-0 flex-1 text-[17px] leading-[1.55] text-body-soft">
+                  {event.body}
+                </p>
+                <a
+                  href={event.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 w-fit border-b border-olive-dark pb-1 font-display text-[13px] font-bold text-olive-dark uppercase no-underline transition-colors hover:text-navy"
+                >
+                  Details →
+                </a>
+              </article>
+            ))}
+          </div>
+          <div data-reveal className="mt-10 text-center">
+            <a
+              href={CALENDAR_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-b border-olive-dark pb-1 font-display text-[13px] font-bold text-olive-dark uppercase no-underline transition-colors hover:text-navy"
+            >
+              See the full calendar →
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Mission */}
-      <section className="relative bg-sage">
+      <section className="relative bg-mist">
         <div className="relative overflow-hidden rounded-t-[28px] bg-navy py-24 md:py-[110px]">
           {/* Luminous layered background */}
           <div
@@ -414,6 +474,11 @@ function Home() {
             <p className="m-0 font-display text-[clamp(26px,3vw,40px)] leading-[1.28] font-semibold tracking-[-0.015em] text-white">
               New Life Philly is a thriving family in the city where the broken from all nations are made alive and whole, finding hope and purpose in Jesus Christ.
             </p>
+            <div aria-hidden="true" className="mx-auto mt-9 mb-8 h-[2px] w-10 bg-olive" />
+            <p className="mx-auto mb-0 max-w-[800px] text-[20px] leading-[1.6] italic text-white/80">
+              Therefore if anyone is in Christ, he is a new creation. The old things have passed away. Behold, all things have become new.
+            </p>
+            <div className="eyebrow mt-5 text-olive-light">2 Corinthians 5:17 (World English Bible)</div>
           </div>
         </div>
       </section>
