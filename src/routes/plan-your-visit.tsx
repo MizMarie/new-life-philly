@@ -17,64 +17,63 @@ import { abs, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 const VISIT_FAQS = [
   {
     question: "Where are you located?",
-    answer:
-      "We're located in the Olney section of Philadelphia at 425 E. Roosevelt Blvd, Philadelphia, PA 19120.",
+    answer: "We're at 425 E. Roosevelt Blvd in Olney, Philadelphia, PA 19120.",
   },
   {
     question: "Where can I park?",
     answer:
-      "Free street parking is available on D St, Bingham, and Westford. Use the map below for directions.",
+      "Free street parking on D St, Bingham, and Westford. The map below shows the way.",
   },
   {
     question: "How do I get there by public transportation?",
     answer:
-      "We're easily accessible by the following buses: 57, 41, 51, and 82. Use the map below and select Transit for complete directions.",
+      "Take the 57, 41, 51, or 82 bus. Tap Transit on the map below for directions.",
   },
   {
     question: "When is the Sunday Service?",
     answer:
-      "Our Sunday gathering begins at 10:00 AM. We recommend arriving about 10 minutes early so you can get settled comfortably.",
+      "Sundays at 10:00 AM. Try to get here about 10 minutes early so you can settle in.",
   },
   {
     question: "What should I expect when I arrive?",
     answer:
-      "As you step inside, you'll be greeted by members of our Welcome Team. They're happy to answer questions and help guide you and your family. Our gathering takes place on the second floor — just take either set of stairs in the lobby, and you'll find the rest of the New Life family waiting.",
+      "Our Welcome Team will meet you at the door. Ask them anything. We meet on the second floor, so take either set of stairs in the lobby.",
   },
   {
     question: "What happens during the service?",
     answer:
-      "Our gathering runs about 1.5 hours and includes: Worship — our worship team leads attendees in a unified worship experience, with song lyrics projected on screens so you can sing along or engage however you feel comfortable. Prayer & Announcements — a brief time of prayer, church announcements, and an offering. The Lord's Prayer — recited together as a congregation. The Message — one of our leaders shares an encouraging, hope-filled message about Jesus. After the service, we gather informally in the Fellowship Hall on the first floor to share snacks and connect with one another — consider it an extension of the service!",
-    intro: "Our gathering runs about 1.5 hours and includes:",
+      "About 90 minutes. Worship: songs with the lyrics on the screen. Sing along or just listen. Prayer & Announcements: a short prayer, a few announcements, and the offering. The Lord's Prayer: we say it together. The Message: one of our leaders talks about Jesus and real life. Afterward, come down to the Fellowship Hall on the first floor for snacks and conversation.",
+    intro: "About 90 minutes.",
     bullets: [
       {
         label: "Worship",
-        body: "our worship team leads attendees in a unified worship experience, with song lyrics projected on screens so you can sing along or engage however you feel comfortable.",
+        body: "songs with the lyrics on the screen. Sing along or just listen.",
       },
       {
         label: "Prayer & Announcements",
-        body: "a brief time of prayer, church announcements, and an offering.",
+        body: "a short prayer, a few announcements, and the offering.",
       },
       {
         label: "The Lord's Prayer",
-        body: "recited together as a congregation.",
+        body: "we say it together.",
       },
       {
         label: "The Message",
-        body: "one of our leaders shares an encouraging, hope-filled message about Jesus.",
+        body: "one of our leaders talks about Jesus and real life.",
       },
     ],
     closing:
-      "After the service, we gather informally in the Fellowship Hall on the first floor to share snacks and connect with one another — consider it an extension of the service!",
+      "Afterward, come down to the Fellowship Hall on the first floor for snacks and conversation.",
   },
   {
     question: "Do you have programs for children?",
     answer:
-      "Yes! Your kids stay right in the service with you through worship, prayer, and the offering. Before the message, we bring every child up front to pray over them together. From there, our littlest ones head to nursery and toddler care, and kids in grades 1 through 5 move to Kids Church for their own time in God's word.\n\nDrop-off and registration takes place in the Ministry Center starting at 10:45 AM. We prioritize safety with comprehensive security measures, so you can have peace of mind while your child enjoys the program.",
+      "Kids stay with you for worship, prayer, and the offering. Before the message, we bring every child up front and pray for them. Then the youngest go to nursery and toddler care, and grades 1 through 5 go to Kids Church.\n\nDrop-off and registration start at 10:45 AM in the Ministry Center. We take safety seriously and have security measures in place.",
   },
   {
     question: "What should I wear?",
     answer:
-      "Come as you are! Whether you dress up or keep it casual, you're welcome here. Most of our attendees opt for a comfortable, relaxed style.",
+      "Come as you are. Dressed up or dressed down, you're welcome. Most people go comfortable.",
   },
 ];
 
@@ -85,13 +84,13 @@ export const Route = createFileRoute("/plan-your-visit")({
       {
         name: "description",
         content:
-          "Your first Sunday, made simple: 10am at 425 E Roosevelt Blvd, Philadelphia. Parking, transit, kids programs, what to wear — everything answered.",
+          "Your first Sunday, made simple: 10am at 425 E Roosevelt Blvd, Philadelphia. Parking, transit, kids programs, and what to wear, all answered.",
       },
       { property: "og:title", content: "Plan Your Visit — New Life Philly" },
       {
         property: "og:description",
         content:
-          "Sundays at 10am in Olney, Philadelphia. No forms, no sign-up — just show up. Here's everything else you need to know.",
+          "Sundays at 10am in Olney, Philadelphia. No forms, no sign-up. Just show up. Here's everything you need to know.",
       },
       { property: "og:url", content: abs("/plan-your-visit") },
     ],
@@ -144,8 +143,8 @@ function PlanYourVisitPage() {
               </span>
             </h1>
             <p className="mt-7 mb-0 max-w-[46ch] text-[20px] leading-[1.68] text-body-soft">
-              No forms. No sign-up. No need to know anyone here already. Just show up — here's
-              everything else you need to know before you do.
+              No forms. No sign-up. You don't have to know anyone. Just show up. Here's what to
+              expect.
             </p>
           </div>
           <div data-reveal className="relative">
@@ -198,8 +197,8 @@ function PlanYourVisitPage() {
                         <ul className="mt-4 list-disc space-y-3 pl-5 text-[16px] leading-[1.62] text-body">
                           {faq.bullets.map((bullet) => (
                             <li key={bullet.label}>
-                              <span className="font-bold text-navy">{bullet.label}</span>{" "}
-                              — {bullet.body}
+                              <span className="font-bold text-navy">{bullet.label}</span>:{" "}
+                              {bullet.body}
                             </li>
                           ))}
                         </ul>
@@ -252,7 +251,7 @@ function PlanYourVisitPage() {
         <div data-reveal className="relative mx-auto max-w-[760px] px-5 text-center md:px-8">
           <div className="eyebrow mb-5 text-olive-light">No pressure, ever</div>
           <p className="m-0 font-display text-[clamp(26px,3vw,40px)] leading-[1.28] font-semibold tracking-[-0.015em] text-white">
-            Our greatest hope is that you find your way to Jesus. We're simply here to walk alongside you at whatever pace you need.
+            We hope you meet Jesus here. Take your time. Go at your own pace.
           </p>
         </div>
       </section>
