@@ -18,7 +18,7 @@ export const Route = createFileRoute("/next-steps")({
         content:
           "Sunday is the front door. Find Life Groups, events, and ministries for every age and stage at New Life Philly in Olney, Philadelphia.",
       },
-      { property: "og:title", content: "Next Steps — New Life Philly" },
+      { property: "og:title", content: "Next Steps | New Life Philly" },
       {
         property: "og:description",
         content:
