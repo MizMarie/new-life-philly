@@ -185,8 +185,7 @@ function Home() {
               We believe there is more for you.
             </h2>
             <p className="mt-7 mb-0 max-w-[46ch] text-[20px] leading-[1.68] text-body-soft">
-              At New Life Philly you'll find genuine community and a purpose worth showing up for.
-              This is where belonging begins.
+              You'll find people who want to know you and a reason to show up.
             </p>
             <Link
               to="/plan-your-visit"
