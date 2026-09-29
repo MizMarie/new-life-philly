@@ -145,6 +145,7 @@ function NextStepsPage() {
                 />
               </div>
               <div className="px-[26px] pt-7 pb-[30px]">
+                <div className="eyebrow mb-2.5 text-olive-dark">People to do life with</div>
                 <h3 className="m-0 font-display text-[23px] font-bold tracking-tight text-navy">
                   Life Groups
                 </h3>
@@ -177,9 +178,11 @@ function NextStepsPage() {
                   />
                 </div>
                 <div className="px-[26px] pt-7 pb-[30px]">
+                  <div className="eyebrow mb-2.5 text-olive-dark">{m.label}</div>
                   <h3 className="m-0 font-display text-[23px] font-bold tracking-tight text-navy">
                     {m.name}
                   </h3>
+                  <p className="mt-2.5 mb-0 text-[17px] leading-[1.6] text-body-soft">{m.body}</p>
                   <span className="mt-4 inline-block font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase">
                     Learn More →
                   </span>
@@ -196,8 +199,11 @@ function NextStepsPage() {
           <div data-reveal className="mb-11 max-w-[640px]">
             <div className="eyebrow mb-5 text-olive-light">Additional resources</div>
             <h2 className="m-0 font-display text-[clamp(30px,3.2vw,44px)] leading-[1.1] font-bold tracking-[-0.02em] text-white">
-              Need something specific?
+              I'm looking for...
             </h2>
+            <p className="m-0 mt-5 max-w-[44ch] text-[17px] leading-[1.66] text-white/80">
+              Start with what you need. We'll point you to the right person.
+            </p>
           </div>
           <div data-reveal className="flex flex-wrap gap-3.5">
             {RESOURCE_LINKS.map((r) => (
