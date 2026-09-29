@@ -86,7 +86,7 @@ export const Route = createFileRoute("/plan-your-visit")({
         content:
           "Your first Sunday, made simple: 10am at 425 E Roosevelt Blvd, Philadelphia. Parking, transit, kids programs, and what to wear, all answered.",
       },
-      { property: "og:title", content: "Plan Your Visit — New Life Philly" },
+      { property: "og:title", content: "Plan Your Visit | New Life Philly" },
       {
         property: "og:description",
         content:

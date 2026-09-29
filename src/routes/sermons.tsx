@@ -22,7 +22,7 @@ export const Route = createFileRoute("/sermons")({
         content:
           "What following Jesus looks like on a Tuesday. Watch and listen to Sunday messages from New Life Philly.",
       },
-      { property: "og:title", content: "Sermons — New Life Philly" },
+      { property: "og:title", content: "Sermons | New Life Philly" },
       {
         property: "og:description",
         content:

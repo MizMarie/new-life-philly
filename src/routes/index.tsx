@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Non-denominational church in Olney, North Philadelphia. Sundays at 10am, 425 E Roosevelt Blvd — free parking, casual dress, kids covered. Plan your visit.",
+          "Non-denominational church in Olney, North Philadelphia. Sundays at 10am, 425 E Roosevelt Blvd. Free parking, casual dress, kids covered. Plan your visit.",
       },
       { property: "og:title", content: "Church in Olney, Philadelphia | New Life Philly" },
       {
