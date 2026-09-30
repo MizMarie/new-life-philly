@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BrushstrokeAccent } from "@/components/BrushstrokeAccent";
 import { CALENDAR_URL, GROUPS_URL, MINISTRIES, RESOURCE_LINKS } from "@/lib/site-content";
-import groupsImg from "@/assets/nlp-story.jpg";
+import groupsImg from "@/assets/ministry-1.png.asset.json";
 import eventsImg from "@/assets/nlp-guide.jpg";
 import { useReveal } from "@/hooks/use-reveal";
 import { abs, breadcrumbJsonLd } from "@/lib/seo";
@@ -138,8 +138,8 @@ function NextStepsPage() {
             >
               <div className="h-[210px]">
                 <img
-                  src={groupsImg}
-                  alt="A Life Group gathered around a table"
+                  src={groupsImg.url}
+                  alt="Green line-art icon of two speech bubbles on a navy background"
                   className="h-full w-full object-cover"
                   loading="lazy"
                   width={1200}

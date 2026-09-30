@@ -3,6 +3,11 @@ import step2Img from "@/assets/nlp-step2.jpg";
 import step3Img from "@/assets/nlp-step3.jpg";
 import storyImg from "@/assets/nlp-story.jpg";
 import guideImg from "@/assets/nlp-guide.jpg";
+import kidsImg from "@/assets/ministry-2.png.asset.json";
+import youthImg from "@/assets/ministry-3.png.asset.json";
+import youngAdultsImg from "@/assets/ministry-4.png.asset.json";
+import womenImg from "@/assets/ministry-5.png.asset.json";
+import menImg from "@/assets/ministry-6.png.asset.json";
 
 /** Set to false when the site is ready for public search indexing. */
 export const IS_STAGING_PREVIEW = true;
@@ -55,8 +60,8 @@ export const MINISTRIES = [
     label: "A place for my kids",
     ages: "Ages 1 through 5th grade",
     url: "https://newlifephilly.churchcenter.com/pages/new-life-kids",
-    img: step1Img,
-    alt: "Children playing together at New Life Philly",
+    img: kidsImg.url,
+    alt: "Green line-art icon of crayons and blocks on a navy background",
     body: "Sunday mornings, kids have their own space with people who know their names. Ages 1 through 5th grade.",
   },
   {
@@ -65,8 +70,8 @@ export const MINISTRIES = [
     label: "A place for my teen",
     ages: "Middle and high school",
     url: "https://newlifephilly.churchcenter.com/groups/fellowship-groups/youth-ministry",
-    img: step3Img,
-    alt: "Students together at a New Life Philly youth gathering",
+    img: youthImg.url,
+    alt: "Green line-art icon of a basketball on a navy background",
     body: "Honest conversation, real friendships, and room to ask the hard questions. Middle and high school.",
   },
   {
@@ -75,8 +80,8 @@ export const MINISTRIES = [
     label: "People my age",
     ages: "College & twenties",
     url: "https://newlifephilly.churchcenter.com/groups/fellowship-groups/young-adults",
-    img: guideImg,
-    alt: "Young adults on a retreat together",
+    img: youngAdultsImg.url,
+    alt: "Green line-art icon of a campfire on a navy background",
     body: "For students, workers, and everyone figuring out what's next.",
   },
   {
@@ -85,8 +90,8 @@ export const MINISTRIES = [
     label: "Sisters to walk with",
     ages: "All seasons of life",
     url: "https://newlifephilly.churchcenter.com/pages/womens-ministry",
-    img: storyImg,
-    alt: "Women gathered around a table together",
+    img: womenImg.url,
+    alt: "Green line-art icon of a coffee mug on a navy background",
     body: "Brunches, fireside evenings in homes, and Bible study over coffee. Women of every age and stage.",
   },
   {
@@ -95,8 +100,8 @@ export const MINISTRIES = [
     label: "Brothers who show up",
     ages: "All ages",
     url: "https://newlifephilly.churchcenter.com/groups/fellowship-groups/men-s-ministry",
-    img: step2Img,
-    alt: "Men gathered outside the church building",
+    img: menImg.url,
+    alt: "Green line-art icon of a barbecue grill on a navy background",
     body: "Soccer, pickup baseball, retreats, and time in the Word together. Men of every age.",
   },
 ];
