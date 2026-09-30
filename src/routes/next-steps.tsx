@@ -138,8 +138,8 @@ function NextStepsPage() {
             >
               <div className="h-[210px]">
                 <img
-                  src={groupsImg}
-                  alt="A Life Group gathered around a table"
+                  src={groupsImg.url}
+                  alt="Green line-art icon of two speech bubbles on a navy background"
                   className="h-full w-full object-cover"
                   loading="lazy"
                   width={1200}
