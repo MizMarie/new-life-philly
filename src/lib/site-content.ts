@@ -61,7 +61,7 @@ export const MINISTRIES = [
     ages: "Ages 1 through 5th grade",
     url: "https://newlifephilly.churchcenter.com/pages/new-life-kids",
     img: kidsImg.url,
-    alt: "Green line-art icon of a box of crayons on a navy background",
+    alt: "Green line-art icon of crayons and blocks on a navy background",
     body: "Sunday mornings, kids have their own space with people who know their names. Ages 1 through 5th grade.",
   },
   {
