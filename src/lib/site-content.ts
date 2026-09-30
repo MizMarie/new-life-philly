@@ -3,6 +3,11 @@ import step2Img from "@/assets/nlp-step2.jpg";
 import step3Img from "@/assets/nlp-step3.jpg";
 import storyImg from "@/assets/nlp-story.jpg";
 import guideImg from "@/assets/nlp-guide.jpg";
+import kidsImg from "@/assets/ministry-2.png.asset.json";
+import youthImg from "@/assets/ministry-3.png.asset.json";
+import youngAdultsImg from "@/assets/ministry-4.png.asset.json";
+import womenImg from "@/assets/ministry-5.png.asset.json";
+import menImg from "@/assets/ministry-6.png.asset.json";
 
 /** Set to false when the site is ready for public search indexing. */
 export const IS_STAGING_PREVIEW = true;
