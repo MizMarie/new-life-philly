@@ -241,29 +241,29 @@ function Home() {
               See all next steps →
             </Link>
           </div>
-          <div className="grid gap-[26px] lg:items-start lg:grid-cols-12">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-[1.4fr_1fr] md:grid-rows-[1fr_1fr] md:gap-10">
             {(() => {
               const step = STEPS[0]!;
               const inner = (
                 <>
-                  <div className="relative h-[240px] lg:h-[516px]">
+                  <div className="relative flex-none">
                     <img
                       src={step.img}
                       alt={step.alt}
-                      className="h-full w-full object-cover"
+                      className="block w-full aspect-[3/2] object-cover md:aspect-[5/4]"
                       loading="lazy"
                       width={1200}
                       height={800}
                     />
                   </div>
-                  <div className="px-[26px] pt-7 pb-[30px]">
+                  <div className="flex flex-1 flex-col p-10">
                     <h3 className="m-0 font-display text-[24px] font-bold tracking-tight text-navy">
                       {step.title}
                     </h3>
                     <p className="mt-3 mb-0 text-[17px] leading-[1.6] text-body-soft">
                       {step.body}
                     </p>
-                    <span className="mt-[18px] inline-block font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase">
+                    <span className="mt-auto inline-block pt-[18px] font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase">
                       {step.cta}
                     </span>
                   </div>
@@ -274,52 +274,51 @@ function Home() {
                   key={step.n}
                   to={step.to!}
                   data-reveal
-                  className="block overflow-hidden rounded-tl-[20px] rounded-br-[20px] rounded-tr-none rounded-bl-none bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)] lg:col-span-7"
+                  className="flex h-full flex-col overflow-hidden rounded-tl-[20px] rounded-br-[20px] rounded-tr-none rounded-bl-none bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)] md:col-start-1 md:row-span-2"
                 >
                   {inner}
                 </Link>
               );
             })()}
-            <div className="grid gap-[26px] lg:col-span-5 lg:grid-rows-2">
-              {STEPS.slice(1).map((step) => {
-                const inner = (
-                  <>
-                    <div className="relative h-[240px] lg:h-[152px]">
-                      <img
-                        src={step.img}
-                        alt={step.alt}
-                        className="h-full w-full object-cover"
-                        loading="lazy"
-                        width={1200}
-                        height={800}
-                      />
-                    </div>
-                    <div className="px-[26px] pt-6 pb-[26px]">
-                      <h3 className="m-0 font-display text-[22px] font-bold tracking-tight text-navy">
-                        {step.title}
-                      </h3>
-                      <p className="mt-2.5 mb-0 text-[16px] leading-[1.55] text-body-soft">
-                        {step.body}
-                      </p>
-                      <span className="mt-4 inline-block font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase">
-                        {step.cta}
-                      </span>
-                    </div>
-                  </>
-                );
-                const cardClass =
-                  "block overflow-hidden rounded-tl-[20px] rounded-br-[20px] rounded-tr-none rounded-bl-none bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)]";
-                return "to" in step && step.to ? (
-                  <Link key={step.n} to={step.to} data-reveal className={cardClass}>
-                    {inner}
-                  </Link>
-                ) : (
-                  <a key={step.n} href={step.href} data-reveal className={cardClass}>
-                    {inner}
-                  </a>
-                );
-              })}
-            </div>
+            {STEPS.slice(1).map((step, i) => {
+              const inner = (
+                <>
+                  <div className="relative flex-none">
+                    <img
+                      src={step.img}
+                      alt={step.alt}
+                      className="block w-full aspect-[3/2] object-cover md:aspect-[10/3]"
+                      loading="lazy"
+                      width={1200}
+                      height={800}
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col p-10">
+                    <h3 className="m-0 font-display text-[22px] font-bold tracking-tight text-navy">
+                      {step.title}
+                    </h3>
+                    <p className="mt-2.5 mb-0 text-[16px] leading-[1.55] text-body-soft">
+                      {step.body}
+                    </p>
+                    <span className="mt-auto inline-block pt-4 font-display text-[13px] font-bold tracking-[0.08em] text-olive-dark uppercase">
+                      {step.cta}
+                    </span>
+                  </div>
+                </>
+              );
+              const cardClass = `flex h-full flex-col overflow-hidden rounded-tl-[20px] rounded-br-[20px] rounded-tr-none rounded-bl-none bg-white no-underline shadow-[0_3px_14px_color-mix(in_oklab,var(--navy)_7%,transparent)] transition-shadow duration-300 hover:shadow-[0_20px_46px_color-mix(in_oklab,var(--navy)_16%,transparent)] md:col-start-2 ${
+                i === 0 ? "md:row-start-1" : "md:row-start-2"
+              }`;
+              return "to" in step && step.to ? (
+                <Link key={step.n} to={step.to} data-reveal className={cardClass}>
+                  {inner}
+                </Link>
+              ) : (
+                <a key={step.n} href={step.href} data-reveal className={cardClass}>
+                  {inner}
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>
