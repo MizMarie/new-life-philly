@@ -56,22 +56,18 @@ function Home() {
 
       {/* Hero */}
       <section className="relative flex max-w-[100vw] items-end overflow-hidden bg-navy min-h-[640px] md:min-h-[760px]">
-        <div className="absolute inset-y-0 right-0 left-0 md:right-[56%]">
+        <div className="absolute inset-y-0 right-0 left-0 md:right-[38%] md:[-webkit-mask-image:linear-gradient(to_right,black_0%,black_58%,transparent_100%)] md:[mask-image:linear-gradient(to_right,black_0%,black_58%,transparent_100%)]">
           <img
             src={HERO_IMG}
             alt="A man and a woman from the worship team singing into microphones on a Sunday morning"
-            className="h-full w-full object-cover object-[0%_0%] md:object-[45%_0%] lg:object-[0%_0%]"
+            className="h-full w-full object-cover object-[0%_0%] md:object-[54%_0%] lg:object-[22%_0%]"
             width={1200}
             height={1500}
           />
         </div>
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,var(--navy)_0%,color-mix(in_oklab,var(--navy)_78%,transparent)_55%,color-mix(in_oklab,var(--navy)_55%,transparent)_100%)] opacity-95 md:bg-[linear-gradient(90deg,color-mix(in_oklab,var(--navy)_16%,transparent)_0%,color-mix(in_oklab,var(--navy)_16%,transparent)_22%,color-mix(in_oklab,var(--navy)_45%,transparent)_33%,color-mix(in_oklab,var(--navy)_62%,transparent)_40%,color-mix(in_oklab,var(--navy)_82%,transparent)_47%,var(--navy)_55%,var(--navy)_100%)]"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 left-[38%] right-[56%] hidden bg-[linear-gradient(90deg,transparent_0%,color-mix(in_oklab,var(--navy)_35%,transparent)_55%,color-mix(in_oklab,var(--navy)_70%,transparent)_80%,var(--navy)_100%)] md:block"
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,var(--navy)_0%,color-mix(in_oklab,var(--navy)_78%,transparent)_55%,color-mix(in_oklab,var(--navy)_55%,transparent)_100%)] opacity-95 md:hidden"
         />
         <div className="pointer-events-none relative mx-auto w-full max-w-[1240px] px-5 pt-28 pb-16 md:px-8 md:pt-[120px] md:pb-[84px]">
           <div className="max-w-[660px] md:ml-auto md:max-w-[52vw] md:pl-10 xl:max-w-[660px]">
