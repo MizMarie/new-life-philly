@@ -56,7 +56,7 @@ function Home() {
 
       {/* Hero */}
       <section className="relative flex max-w-[100vw] items-end overflow-hidden bg-navy min-h-[640px] md:min-h-[760px]">
-        <div className="absolute inset-y-0 right-0 left-0 md:right-1/2 md:[-webkit-mask-image:linear-gradient(to_right,black_0%,black_78%,rgba(0,0,0,0.9)_82%,rgba(0,0,0,0.72)_86%,rgba(0,0,0,0.5)_90%,rgba(0,0,0,0.28)_94%,rgba(0,0,0,0.1)_97%,transparent_100%)] md:[mask-image:linear-gradient(to_right,black_0%,black_78%,rgba(0,0,0,0.9)_82%,rgba(0,0,0,0.72)_86%,rgba(0,0,0,0.5)_90%,rgba(0,0,0,0.28)_94%,rgba(0,0,0,0.1)_97%,transparent_100%)]">
+        <div className="absolute inset-y-0 right-0 left-0 md:right-1/2 md:[-webkit-mask-image:linear-gradient(to_right,black_0%,black_60%,rgba(0,0,0,0.94)_66%,rgba(0,0,0,0.85)_72%,rgba(0,0,0,0.72)_78%,rgba(0,0,0,0.55)_84%,rgba(0,0,0,0.38)_89%,rgba(0,0,0,0.22)_94%,rgba(0,0,0,0.08)_97%,transparent_100%)] md:[mask-image:linear-gradient(to_right,black_0%,black_60%,rgba(0,0,0,0.94)_66%,rgba(0,0,0,0.85)_72%,rgba(0,0,0,0.72)_78%,rgba(0,0,0,0.55)_84%,rgba(0,0,0,0.38)_89%,rgba(0,0,0,0.22)_94%,rgba(0,0,0,0.08)_97%,transparent_100%)]">
           <img
             src={HERO_IMG}
             alt="A man and a woman from the worship team singing into microphones on a Sunday morning"
