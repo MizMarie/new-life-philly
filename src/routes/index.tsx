@@ -61,7 +61,7 @@ function Home() {
           <img
             src={HERO_IMG}
             alt="A man and a woman from the worship team singing into microphones on a Sunday morning"
-            className="h-full w-full object-cover object-[0%_0%] md:object-[45%_0%] lg:object-[5%_0%]"
+            className="h-full w-full object-cover object-[0%_0%] md:object-[45%_0%] lg:object-[0%_0%]"
             width={1200}
             height={1500}
           />
