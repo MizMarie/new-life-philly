@@ -56,7 +56,7 @@ function Home() {
 
       {/* Hero */}
       <section className="relative flex max-w-[100vw] items-end overflow-hidden bg-navy min-h-[640px] md:min-h-[760px]">
-        <div className="absolute inset-y-0 right-0 left-0 md:right-[38%] md:[-webkit-mask-image:linear-gradient(to_right,black_0%,black_58%,transparent_100%)] md:[mask-image:linear-gradient(to_right,black_0%,black_58%,transparent_100%)]">
+        <div className="absolute inset-y-0 right-0 left-0 md:right-[38%] md:[-webkit-mask-image:linear-gradient(to_right,black_0%,black_40%,transparent_80%)] md:[mask-image:linear-gradient(to_right,black_0%,black_40%,transparent_80%)]">
           <img
             src={HERO_IMG}
             alt="A man and a woman from the worship team singing into microphones on a Sunday morning"
@@ -70,7 +70,7 @@ function Home() {
           className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,var(--navy)_0%,color-mix(in_oklab,var(--navy)_78%,transparent)_55%,color-mix(in_oklab,var(--navy)_55%,transparent)_100%)] opacity-95 md:hidden"
         />
         <div className="pointer-events-none relative mx-auto w-full max-w-[1240px] px-5 pt-28 pb-16 md:px-8 md:pt-[120px] md:pb-[84px]">
-          <div className="max-w-[660px] md:ml-auto md:max-w-[52vw] md:pl-10 xl:max-w-[660px]">
+          <div className="max-w-[660px] md:ml-auto md:max-w-[min(588px,calc(50vw-32px))]">
             <h1 className="m-0 max-w-[13ch] font-display text-[clamp(46px,6.4vw,92px)] leading-[0.98] font-extrabold tracking-[-0.028em] text-white">
               Real People.
               <br />
