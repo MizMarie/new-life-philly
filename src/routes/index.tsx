@@ -55,8 +55,8 @@ function Home() {
       <SiteHeader />
 
       {/* Hero */}
-      <section className="relative flex max-w-[100vw] items-end overflow-hidden bg-navy min-h-[640px] md:min-h-[760px]">
-        <div className="absolute inset-y-0 right-0 left-0 md:right-[45%] md:[-webkit-mask-image:linear-gradient(to_right,black_0%,black_74%,rgba(0,0,0,0.88)_80%,rgba(0,0,0,0.65)_86%,rgba(0,0,0,0.38)_91%,rgba(0,0,0,0.14)_96%,transparent_100%)] md:[mask-image:linear-gradient(to_right,black_0%,black_74%,rgba(0,0,0,0.88)_80%,rgba(0,0,0,0.65)_86%,rgba(0,0,0,0.38)_91%,rgba(0,0,0,0.14)_96%,transparent_100%)]">
+      <section className="relative flex max-w-[100vw] items-end overflow-hidden bg-navy min-h-[640px] md:min-h-[760px] md:items-center md:bg-[linear-gradient(to_bottom_left,#2A6496,#1F4E79)]">
+        <div className="absolute inset-y-0 right-0 left-0 md:right-[45%] md:[-webkit-mask-image:linear-gradient(to_right,black_0%,black_68%,rgba(0,0,0,0.9)_73%,rgba(0,0,0,0.72)_78%,rgba(0,0,0,0.5)_84%,rgba(0,0,0,0.28)_90%,rgba(0,0,0,0.1)_96%,transparent_100%)] md:[mask-image:linear-gradient(to_right,black_0%,black_68%,rgba(0,0,0,0.9)_73%,rgba(0,0,0,0.72)_78%,rgba(0,0,0,0.5)_84%,rgba(0,0,0,0.28)_90%,rgba(0,0,0,0.1)_96%,transparent_100%)]">
           <img
             src={HERO_IMG}
             alt="A man and a woman from the worship team singing into microphones on a Sunday morning"
@@ -95,7 +95,7 @@ function Home() {
                 </svg>
               </span>
             </h1>
-            <div className="pointer-events-auto mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-[17px] leading-[1.5] text-white md:mt-7">
+            <div className="pointer-events-auto mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-[17px] leading-[1.5] text-white md:mt-11">
               <svg
                 aria-hidden="true"
                 className="h-5 w-5 flex-none text-white/80"
