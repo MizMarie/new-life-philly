@@ -56,7 +56,7 @@ function Home() {
 
       {/* Hero */}
       <section className="relative flex max-w-[100vw] items-end overflow-hidden bg-navy min-h-[640px] md:min-h-[760px]">
-        <div className="absolute inset-y-0 right-0 left-0 md:right-1/2 md:[-webkit-mask-image:linear-gradient(100deg,black_0%,black_76%,rgba(0,0,0,0.92)_80%,rgba(0,0,0,0.75)_84%,rgba(0,0,0,0.5)_88%,rgba(0,0,0,0.28)_92%,rgba(0,0,0,0.1)_96%,transparent_100%)] md:[mask-image:linear-gradient(100deg,black_0%,black_76%,rgba(0,0,0,0.92)_80%,rgba(0,0,0,0.75)_84%,rgba(0,0,0,0.5)_88%,rgba(0,0,0,0.28)_92%,rgba(0,0,0,0.1)_96%,transparent_100%)]">
+        <div className="absolute inset-y-0 right-0 left-0 md:right-1/2">
           <img
             src={HERO_IMG}
             alt="A man and a woman from the worship team singing into microphones on a Sunday morning"
@@ -65,6 +65,10 @@ function Home() {
             height={1500}
           />
         </div>
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-y-0 left-[36%] right-[44%] hidden bg-[radial-gradient(ellipse_55%_22%_at_30%_12%,color-mix(in_oklab,var(--navy)_55%,transparent),transparent_70%),radial-gradient(ellipse_60%_18%_at_22%_38%,color-mix(in_oklab,var(--navy)_48%,transparent),transparent_72%),radial-gradient(ellipse_50%_24%_at_34%_62%,color-mix(in_oklab,var(--navy)_58%,transparent),transparent_70%),radial-gradient(ellipse_58%_20%_at_26%_86%,color-mix(in_oklab,var(--navy)_50%,transparent),transparent_72%),radial-gradient(ellipse_46%_26%_at_38%_27%,color-mix(in_oklab,var(--navy)_42%,transparent),transparent_74%),radial-gradient(ellipse_52%_23%_at_31%_74%,color-mix(in_oklab,var(--navy)_46%,transparent),transparent_73%),linear-gradient(to_right,transparent_0%,color-mix(in_oklab,var(--navy)_6%,transparent)_12%,color-mix(in_oklab,var(--navy)_18%,transparent)_26%,color-mix(in_oklab,var(--navy)_38%,transparent)_42%,color-mix(in_oklab,var(--navy)_62%,transparent)_58%,color-mix(in_oklab,var(--navy)_84%,transparent)_74%,var(--navy)_90%,var(--navy)_100%)] md:block md:[-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_25%)] md:[mask-image:linear-gradient(to_right,transparent_0%,black_25%)]"
+        />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,var(--navy)_0%,color-mix(in_oklab,var(--navy)_78%,transparent)_55%,color-mix(in_oklab,var(--navy)_55%,transparent)_100%)] opacity-95 md:hidden"
