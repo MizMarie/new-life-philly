@@ -246,11 +246,11 @@ function Home() {
               const step = STEPS[0]!;
               const inner = (
                 <>
-                  <div className="relative aspect-[3/2] flex-none md:aspect-[5/4]">
+                  <div className="relative flex-none">
                     <img
                       src={step.img}
                       alt={step.alt}
-                      className="h-full w-full object-cover"
+                      className="block w-full aspect-[3/2] object-cover md:aspect-[5/4]"
                       loading="lazy"
                       width={1200}
                       height={800}
@@ -283,11 +283,11 @@ function Home() {
             {STEPS.slice(1).map((step, i) => {
               const inner = (
                 <>
-                  <div className="relative aspect-[3/2] flex-none md:aspect-[10/3]">
+                  <div className="relative flex-none">
                     <img
                       src={step.img}
                       alt={step.alt}
-                      className="h-full w-full object-cover"
+                      className="block w-full aspect-[3/2] object-cover md:aspect-[10/3]"
                       loading="lazy"
                       width={1200}
                       height={800}
