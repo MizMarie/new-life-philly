@@ -11,7 +11,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import {
   ADDRESS_1,
   CALENDAR_URL,
-  EMAIL,
+  CONNECT_URL,
   FIRST_SUNDAY,
   PHONE,
   PRAYER_URL,
@@ -377,10 +377,12 @@ function Home() {
                 {PHONE}
                 <br />
                 <a
-                  href={`mailto:${EMAIL}`}
+                  href={CONNECT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-body-soft no-underline transition-colors hover:text-navy"
                 >
-                  {EMAIL}
+                  Connect with us
                 </a>
               </div>
             </div>
