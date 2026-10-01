@@ -25,6 +25,7 @@ export const COUNSELING_URL = "https://docs.google.com/forms/d/e/1FAIpQLScWzQqmw
 export const BAPTISM_URL = "https://newlifephilly.churchcenter.com/people/forms/474912";
 export const RESOURCES_HELP_URL = "https://newlifephilly.churchcenter.com/people/forms/875034";
 export const BUILDING_REQUEST_URL = "https://newlifephilly.churchcenter.com/people/forms/400853";
+export const CONNECT_URL = "https://newlifephilly.churchcenter.com/people/forms/224507";
 export const YOUTUBE_URL = "https://www.youtube.com/@NewLifePhilly";
 export const YOUTUBE_LIVE_URL = "https://www.youtube.com/@NewLifePhilly/streams";
 export const YOUTUBE_PLAYLISTS_URL = "https://www.youtube.com/@NewLifePhilly/playlists";

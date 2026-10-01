@@ -5,7 +5,7 @@ import {
   ADDRESS_1,
   ADDRESS_2,
   BUILDING_REQUEST_URL,
-  EMAIL,
+  CONNECT_URL,
   GIVE_URL,
   PHONE,
   PRAYER_URL,
@@ -76,10 +76,12 @@ export function SiteFooter() {
             {PHONE}
             <br />
             <a
-              href={`mailto:${EMAIL}`}
+              href={CONNECT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white/80 no-underline transition-colors hover:text-white"
             >
-              {EMAIL}
+              Connect with us
             </a>
           </div>
         </div>
