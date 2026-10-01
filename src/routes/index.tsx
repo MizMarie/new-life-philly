@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { cn } from "@/lib/utils";
-import heroImg from "@/assets/worship-hero.jpg.asset.json";
+import heroImg from "@/assets/homepage-hero.jpg.asset.json";
 
 const HERO_IMG = heroImg.url;
 import problemImg from "@/assets/nlp-problem.jpg";
@@ -61,10 +61,9 @@ function Home() {
           <img
             src={HERO_IMG}
             alt="A man and a woman from the worship team singing into microphones on a Sunday morning"
-            className="h-full w-full object-cover object-[38%_28%]"
-
-            width={1280}
-            height={1600}
+            className="h-full w-full object-cover object-[0%_0%] md:object-[45%_0%] lg:object-[0%_0%]"
+            width={1200}
+            height={1500}
           />
         </div>
         <div
