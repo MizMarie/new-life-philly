@@ -1,7 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { cn } from "@/lib/utils";
-import heroImg from "@/assets/nlp-hero.jpg";
+import heroImg from "@/assets/worship-hero.jpg.asset.json";
+
+const HERO_IMG = heroImg.url;
 import problemImg from "@/assets/nlp-problem.jpg";
 import guideImg from "@/assets/nlp-guide.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -57,8 +59,8 @@ function Home() {
         <div className="absolute inset-0 bg-mist" />
         <div className="absolute inset-y-0 right-0 left-0 md:right-[56%]">
           <img
-            src={heroImg}
-            alt="A man and woman praying together with heads bowed and her hand raised"
+            src={HERO_IMG}
+            alt="A man and a woman from the worship team singing into microphones on a Sunday morning"
             className="h-full w-full object-cover object-[center_28%]"
 
             width={1280}
