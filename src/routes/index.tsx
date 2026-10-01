@@ -56,7 +56,7 @@ function Home() {
 
       {/* Hero */}
       <section className="relative flex max-w-[100vw] items-end overflow-hidden bg-navy min-h-[640px] md:min-h-[760px] md:items-center md:bg-[linear-gradient(to_bottom_left,#2A6496,#1F4E79)]">
-        <div className="absolute inset-y-0 right-0 left-0 md:right-[45%] md:[-webkit-mask-image:linear-gradient(to_right,black_0%,black_66%,rgba(0,0,0,0.96)_69.5%,rgba(0,0,0,0.85)_73%,rgba(0,0,0,0.69)_77%,rgba(0,0,0,0.5)_80.5%,rgba(0,0,0,0.31)_84%,rgba(0,0,0,0.15)_87.5%,rgba(0,0,0,0.04)_91%,transparent_95%,transparent_100%)] md:[mask-image:linear-gradient(to_right,black_0%,black_66%,rgba(0,0,0,0.96)_69.5%,rgba(0,0,0,0.85)_73%,rgba(0,0,0,0.69)_77%,rgba(0,0,0,0.5)_80.5%,rgba(0,0,0,0.31)_84%,rgba(0,0,0,0.15)_87.5%,rgba(0,0,0,0.04)_91%,transparent_95%,transparent_100%)]">
+        <div className="absolute inset-y-0 right-0 left-0 md:right-[45%] md:[-webkit-mask-image:linear-gradient(to_right,black_0%,black_68%,rgba(0,0,0,0.9)_73%,rgba(0,0,0,0.72)_78%,rgba(0,0,0,0.5)_84%,rgba(0,0,0,0.28)_90%,rgba(0,0,0,0.1)_96%,transparent_100%)] md:[mask-image:linear-gradient(to_right,black_0%,black_68%,rgba(0,0,0,0.9)_73%,rgba(0,0,0,0.72)_78%,rgba(0,0,0,0.5)_84%,rgba(0,0,0,0.28)_90%,rgba(0,0,0,0.1)_96%,transparent_100%)]">
           <img
             src={HERO_IMG}
             alt="A man and a woman from the worship team singing into microphones on a Sunday morning"
