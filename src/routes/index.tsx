@@ -56,7 +56,6 @@ function Home() {
 
       {/* Hero */}
       <section className="relative flex max-w-[100vw] items-end overflow-hidden bg-navy min-h-[640px] md:min-h-[760px]">
-        <div className="absolute inset-0 bg-mist" />
         <div className="absolute inset-y-0 right-0 left-0 md:right-[56%]">
           <img
             src={HERO_IMG}
