@@ -56,7 +56,7 @@ function Home() {
 
       {/* Hero */}
       <section className="relative flex max-w-[100vw] items-end overflow-hidden bg-navy min-h-[640px] md:min-h-[760px]">
-        <div className="absolute inset-y-0 right-0 left-0 md:right-[45%] md:[-webkit-mask-image:linear-gradient(to_right,black_0%,black_74%,rgba(0,0,0,0.998)_75.6%,rgba(0,0,0,0.984)_77.1%,rgba(0,0,0,0.951)_78.7%,rgba(0,0,0,0.896)_80.2%,rgba(0,0,0,0.820)_81.8%,rgba(0,0,0,0.725)_83.4%,rgba(0,0,0,0.616)_84.9%,rgba(0,0,0,0.500)_86.5%,rgba(0,0,0,0.384)_88.1%,rgba(0,0,0,0.275)_89.6%,rgba(0,0,0,0.180)_91.2%,rgba(0,0,0,0.104)_92.8%,rgba(0,0,0,0.049)_94.3%,rgba(0,0,0,0.016)_95.9%,rgba(0,0,0,0.002)_97.4%,transparent_99%)] md:[mask-image:linear-gradient(to_right,black_0%,black_74%,rgba(0,0,0,0.998)_75.6%,rgba(0,0,0,0.984)_77.1%,rgba(0,0,0,0.951)_78.7%,rgba(0,0,0,0.896)_80.2%,rgba(0,0,0,0.820)_81.8%,rgba(0,0,0,0.725)_83.4%,rgba(0,0,0,0.616)_84.9%,rgba(0,0,0,0.500)_86.5%,rgba(0,0,0,0.384)_88.1%,rgba(0,0,0,0.275)_89.6%,rgba(0,0,0,0.180)_91.2%,rgba(0,0,0,0.104)_92.8%,rgba(0,0,0,0.049)_94.3%,rgba(0,0,0,0.016)_95.9%,rgba(0,0,0,0.002)_97.4%,transparent_99%)]">
+        <div className="absolute inset-y-0 right-0 left-0 md:right-[45%] md:[-webkit-mask-image:linear-gradient(to_right,black_0%,black_74%,rgba(0,0,0,0.88)_80%,rgba(0,0,0,0.65)_86%,rgba(0,0,0,0.38)_91%,rgba(0,0,0,0.14)_96%,transparent_100%)] md:[mask-image:linear-gradient(to_right,black_0%,black_74%,rgba(0,0,0,0.88)_80%,rgba(0,0,0,0.65)_86%,rgba(0,0,0,0.38)_91%,rgba(0,0,0,0.14)_96%,transparent_100%)]">
           <img
             src={HERO_IMG}
             alt="A man and a woman from the worship team singing into microphones on a Sunday morning"
