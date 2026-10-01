@@ -70,7 +70,7 @@ function Home() {
           className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,var(--navy)_0%,color-mix(in_oklab,var(--navy)_78%,transparent)_55%,color-mix(in_oklab,var(--navy)_55%,transparent)_100%)] opacity-95 md:bg-[linear-gradient(90deg,color-mix(in_oklab,var(--navy)_16%,transparent)_0%,color-mix(in_oklab,var(--navy)_16%,transparent)_22%,color-mix(in_oklab,var(--navy)_45%,transparent)_33%,color-mix(in_oklab,var(--navy)_80%,transparent)_40%,var(--navy)_44%,var(--navy)_100%)]"
         />
         <div className="pointer-events-none relative mx-auto w-full max-w-[1240px] px-5 pt-28 pb-16 md:px-8 md:pt-[120px] md:pb-[84px]">
-          <div className="max-w-[660px] md:ml-auto md:pl-10">
+          <div className="max-w-[660px] md:ml-auto md:max-w-[52vw] md:pl-10 xl:max-w-[660px]">
             <h1 className="m-0 max-w-[13ch] font-display text-[clamp(46px,6.4vw,92px)] leading-[0.98] font-extrabold tracking-[-0.028em] text-white">
               Real People.
               <br />
