@@ -5,21 +5,23 @@ Make the desktop hero photo's right-edge dissolve start further left so it reads
 
 ## Change (one file: src/routes/index.tsx, desktop mask only)
 
-Replace the current photo-container mask (fade starts at 78%, about 140px at 1280px) with a longer eased mask that starts at 66% (about 215px at 1280px):
+Replace the current photo-container mask (fade starts at 78%, about 140px at 1280px) with a long, slow eased mask that begins at 60% of the photo width (about 190px at 1280px) and eases all the way to the photo edge, so the picture melts into the navy behind the text rather than stopping at a line:
 
 ```text
 linear-gradient(to right,
   black 0%,
-  black 66%,
-  rgba(0,0,0,0.92) 72%,
-  rgba(0,0,0,0.78) 78%,
-  rgba(0,0,0,0.58) 84%,
-  rgba(0,0,0,0.36) 90%,
-  rgba(0,0,0,0.16) 95%,
+  black 60%,
+  rgba(0,0,0,0.94) 66%,
+  rgba(0,0,0,0.85) 72%,
+  rgba(0,0,0,0.72) 78%,
+  rgba(0,0,0,0.55) 84%,
+  rgba(0,0,0,0.38) 89%,
+  rgba(0,0,0,0.22) 94%,
+  rgba(0,0,0,0.08) 97%,
   transparent 100%)
 ```
 
-Applied to both `mask-image` and `-webkit-mask-image`.
+Applied to both `mask-image` and `-webkit-mask-image`. The stops are spread evenly so the falloff is gradual the whole way, which is what makes the photo and the navy panel read as one surface instead of two blocks meeting.
 
 ## Why this is safe
 - The front singer's face, hand and microphone all sit left of ~60% of the photo width, so they stay fully opaque; only the back wall, mic stands and the far-right area soften.
